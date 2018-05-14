@@ -5,7 +5,9 @@ height: 800px;
 background-color: #4ABDAC;
 }
 
-
+a{
+  font-size: 12px;
+}
 #first{
   margin-left: 300px;
 }
@@ -24,7 +26,7 @@ background-color: #4ABDAC;
   position: absolute;
   font-size: 23px;
   left: 40%;
-  top: 5.5%;
+  top: 8.5%;
 }
 #logo{
 
@@ -47,6 +49,7 @@ background-color: #4ABDAC;
   width: 28%;
   left: 5%;
   top: 20%;
+  font-size: 12px;
   background-image: url("barcelona.png");
   background-size: cover;
 }
@@ -56,6 +59,7 @@ background-color: #4ABDAC;
   width: 28%;
   left: 35%;
   top: 20%;
+  font-size: 12px;
   background-image: url("photography.png");
   background-size: cover;
 }
@@ -65,6 +69,7 @@ background-color: #4ABDAC;
   width: 28%;
   left: 65%;
   top: 20%;
+  font-size: 12px;
   background-image: url('vintage.png');
   background-size: cover;
 }
@@ -74,8 +79,10 @@ background-color: #4ABDAC;
   width: 28%;
   left: 5%;
   top: 57%;
+  font-size: 12px;
   background-image: url("rock.png");
-  background-size: contain;
+  background-size: cover;
+  background-position: top;
 }
 #item-5{
   position: absolute;
@@ -85,6 +92,7 @@ background-color: #4ABDAC;
   top: 57%;
   background-image: url("generator.png");
   background-size: cover;
+  background-position: center;
 }
 #item-6{
   position: absolute;
@@ -92,6 +100,7 @@ background-color: #4ABDAC;
   width: 28%;
   left: 65%;
   top: 57%;
+  font-size: 12px;
   background-image: url("pong.png");
   background-size: cover;
 }
@@ -103,9 +112,13 @@ background-color: #4ABDAC;
   background-color: rgba(255, 255, 255, 0.6);
   transition: .2s ease-in-out;
   transform: translate(0,325px);
+  font-size: 12px;
+  color: black;
 }
 
-
+#size{
+  font-size: 50px;
+}
 .portfolio:hover .cover{
   transform: translate(0,0);
 }
