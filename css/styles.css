@@ -10890,7 +10890,7 @@ p.lead {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 17rem;
+    width: 12rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
