@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Resume - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/prism.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Nicholas Michaud</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html">Nicholas Michaud</a></li>
+                <br> 
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#education">Education</a></li>
+                <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#skills">Skills</a></li>-->
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#interests">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <h2 class="mb-0">
+                    Unveiling Hidden Patterns: Clustering and Statistical Validation of Walmart Store Sales Performance
+                </h2>
+                <div class="subheading mb-5">
+                    Python / Hierarchical Clustering / ANOVA / EDA
+
+                </div>
+                <p class="mb-5">
+                    <strong>Hypothetical: We have been asked by a marketing decision maker to determine if there are any trends across store performance that might not be initially obvious.
+                    </strong>
+                    <br><br>
+                    The dataset we’ll be working with a selection of data from Walmart sales by store. The scope of our analysis here is pretty tight so we’re limited in our predictive capabilities, but this is a great opportunity for an EDA leading to further analysis or a discussion on metrics, segmentation and marketing.
+                    <br><br>
+                    Moving forward we’ll be working with this hypothetical as our motivation and we’ll try to see if we can get a satisfying answer that is convincing, useful, and we can statistically defend.
+                    <br><br>    
+                    As before, our dataset is relatively limited, so this investigation can be considered an initial step to assess if further investigation is worth the time.
+                    
+                    Taking a look at our columns here: </p>
+                    <pre><code class="language-python">df = pd.read_csv("Walmart_Sales.csv") 
+df.columns</code></pre>
+                    
+                    <img src="/assets/img/dataframe.png">
+                    
+       
+                    
+             <p class="mb-5">
+                <br>
+
+
+                    We primarily have store information, and sales for a number of years. Alongside this we also have some general society metrics like weather, gas prices, unemployment rates, and CPI.
+                    <br> <br>
+
+                    Not a ton of business metrics/data to work with, but let’s see what we can learn and what questions we can answer. Our data is coming in very clean, so we don’t need to worry about cleaning or imputation much at all in this instance. 
+                    
+                    <br> <br>
+                    So let’s get right to it and see if there’s any initial indications of a relationship between variables.
+                    
+                    Our primary metric for investigation here is going to be weekly sales as it’s our only real indicator of performance for now. So with special attention to sales let’s see our correlation matrix:
+                    </p>
+                    <pre><code class="language-python">numeric_cols = df.select_dtypes(include=[np.number])
+correlation = numeric_cols.corr()
+sns.heatmap(correlation,annot=True)</code></pre>
+                                            
+                    <img src="/assets/img/heatmap.png">
+                    
+                    <p class="mb-5">
+                     
+                    Given the size of weekly_sales, we might see a bit more correlation if we brought the numeric columns to similar orders of magnitude, but there doesn’t seem to be very much of a meaningful relationship between any of the variables of weekly_sales.
+                    <br> <br>
+                    Also none of these are really very actionable as well(Is our marketing team going to scale budgets against gas price? Probably not) Holidays are probably driving higher sales, but I’m sure this is well known and likely consistent across most or all of the stores.
+                    <br> <br>
+                    One interesting thing we do see is the -0.34 correlation between sales and store id. 
+                   <br> <br>
+                    The relationship isn’t too strong but it does imply a potential for meaningful variation in sales between stores.
+                    <br><br> 
+                    Let’s create a histogram of all of our store sales to see if we eyeball “typical sales” and identify any differences.
+                    
+                </p>
+                    <pre><code class="language-python">for store in df["Store"].unique():
+    store_df = df[df["Store"] == store]
+    store_sales = store_df['Weekly_Sales']
+    plt.hist(store_sales,bins=30)
+plt.xlabel('Weekly_Sales')
+plt.ylabel('Count')</code></pre>
+    
+
+                     
+                
+                  
+                    <img src="/assets/img/walmart_hist.png">
+                    
+                    
+                    <p class="mb-5">
+                    From our histogram it definitely seems like some stores are doing better than others. Another very interesting thing we can see is that most or all of the sales for these stores seem symmetrical and potentially normally distributed.
+                    <br> <br>
+                    The question now is, do these differences matter?
+                    
+                    We won’t make any formalisms but given these distributions are so symmetrical, we can argue that a measure of central tendency would be a pretty good analog for each distribution. We’ll use the median here which makes our investigation into this question a lot more simple.
+                    <br><br>
+                    Before we do that let’s plot some box plots to see if there’s a lot variance overlap
+               
+                    </p>
+                    <pre><code class="language-python">fig, ax = plt.subplots( figsize=(15, 11))
+sns.boxplot(x="Store",y="Weekly_Sales",data=df)</code></pre>
+                        
+                    <img src="/assets/img/boxplot.png"  style="width:100%;height:100%;">
+                    <p class="mb-5">
+
+                    It’s a little messy but there does seem to be some pretty big differences in sales across the board.
+                    
+                    This is definitely getting more promising, but we need to clean it up a bit. 
+                    
+                    <br> <br>
+                    Let’s take the sales median for each store and plot a scatter
+                    </p>
+                    <pre><code class="language-python">plt.scatter(result["Store"],result["Weekly_Sales"])
+plt.xlabel("Store Id")
+plt.ylabel("Median Weekly Sales")</code></pre>
+
+                    <img src="/assets/img/scatter_no_cluster.png"> 
+                    <p class="mb-5">
+                    No surprise it looks a lot like the box plots, but it’s much easier to see some tendencies here. We’ve got a range of performances and some pretty big gaps between groups. This is starting to look like a great candidate for a cluster analysis.
+                    <br> <br>
+                    While we can’t say what’s driving this performance, we may be able to separate stores into useful groups for our marketing team to allocate their budget against.
+                    <br><br>
+                    Let’s see if we can get a clustering algorithm to get us a good fit here.
+                    <br><br>
+                    After trying a few we had great results from hierarchical clustering. It’s not perfect, but our Silhouette score is pretty strong so these clusters may be meaningful. 
+                    </p>
+                    <pre><code class="language-python">distance_matrix = hierarchy.distance.pdist(result[["Store","Weekly_Sales"]])
+linkage = hierarchy.linkage(distance_matrix, method='ward')
+cut_off_distance = 4  # Adjust this value to control cluster granularity
+cluster_labels = hierarchy.fcluster(linkage, cut_off_distance, criterion='maxclust')
+result["dendro_labels"] = cluster_labels
+result_cluster = result.groupby('dendro_labels')['Weekly_Sales'].median().reset_index()
+weekly = result[["Weekly_Sales"]]
+silhouette_coeff = silhouette_score(weekly, result["dendro_labels"])
+print("Silhouette score:", silhouette_coeff)
+
+plt.scatter(result["Store"],result["Weekly_Sales"],c=result["dendro_labels"])
+plt.xlabel("Store Id")
+plt.ylabel("Median Weekly Sales")
+</code></pre>
+                    <img src="/assets/img/scatter_dendro.png">
+                    
+                    <p class="mb-5">
+                    <strong>Silhouette score: 0.640</strong>
+
+                    <br> <br>
+                    
+                    Now even visually this makes intuitive sense and the clusters which checks out with our Silhouette score. The marketing team may find this useful but it’s also a great justification to a larger analysis. There definitely seems to be potential here if we can find some drivers for these distinctions that our marketing team can use.
+                    <br> <br>
+                    But before we get there, we want to make sure that these clusters are actually useful and actionable for the team. By that I mean we should see if grouping these stores like this is statistically significant. 
+                    <br> <br>
+                    To do that we’re going to investigate if we can use ANOVA here to test the groups. Our histograms were pretty messy and we’ve moved to a more simple abstraction with our cluster, so let’s take a look at the density function for each cluster. 
+                    </p>
+                    <pre><code class="language-python">sns.kdeplot(data=merged_df,x="Weekly_Sales_x",hue="dendro_labels")
+plt.legend([1,2,3,4],title = "Cluster Labels")
+plt.xlabel("Weekly Sales")  </code></pre>
+                    <img src="/assets/img/cluster_density.png">
+                    <p class="mb-5">
+                    There’s some overlap here but definitely some eyeballed potential for statistical significance. With pretty solid sample sizes, our pdfs seem approximately normal enough that we don’t need to worry much about the distributions.  One thing to be worried about though is the Heteroskedasticity as ANOVA assumes equal variances.
+                    <br> <br>
+                    In practice, though, we have a bit more leeway here. A general rule of thumb is we can treat our variances as effectively equal as long as our highest variance is <a href="https://byuistats.github.io/BYUI_M221_Book/Lesson14.html#:~:text=To%20determine%20if%20the%20population,square%20of%20the%20standard%20deviation.">not more than 4x our smallest variance.</a>
+                </p>
+                    <pre><code class="language-python"># #We have solid clusters and also a series of distributions without too much overlap at all.
+variance_array = []
+for x in  merged_df["dendro_labels"].unique():
+    std = merged_df.loc[merged_df['dendro_labels']==x,"Weekly_Sales_x"].std()
+    variance = (std**2)
+    variance_array.append(variance)
+print("variance max range: " + str(max(variance_array)/min(variance_array)))
+#variance max range: 3.2
+                </code></pre>
+                    
+                  
+                <p class="mb-5">
+                    Looks like we’re good to move forward here. Running a quick ANOVA here gives us the following F statistic and P value.
+                    <pre><code class="language-python">merged_df_array = []
+for x in merged_df["dendro_labels"].unique():
+    merged_df_array.append(merged_df.loc[merged_df["dendro_labels"] == x,"Weekly_Sales_x"])
+f_statistic, pval = f_oneway(merged_df_array[0],merged_df_array[1],merged_df_array[2],merged_df_array[3])
+print("F_stat: " + str(f_statistic)) #F_stat: 260.3847504816406
+print("P-value: " + str(pval)) #P-value: 1.025880404099981e-26
+                </code> </pre>
+                    <br> <br>
+                    Looking great! We can reject the null hypothesis here as the differences appear to be statistically significant.
+                    <br> <br>
+                    Now the final check if these clusters are meaningful is our effect size which we’ll calculate using Cohen’s D.
+                    <br> <br>
+                    We’ll have to do it without a function but it’s quite simple. And that gives us: 
+
+                    <pre><code class="language-python">#Cohen's d = (mean1 - mean2) / standard deviation (pooled)
+#calculating pooled_std first
+pooled_standard_deviation = 0
+for x in range(0,len(merged_df_array)):
+    y = np.var(merged_df_array[x]) / len(merged_df_array[x])
+    pooled_standard_deviation += y
+pooled_standard_deviation = np.sqrt(pooled_standard_deviation)
+cohens_d = []
+#Calculation Cohen's D for each pairwise relationship
+for x in range(0,len(merged_df_array)):
+    for y in range(0,len(merged_df_array)):
+        cohens_d.append(np.absolute((np.mean(merged_df_array[x]) - np.mean(merged_df_array[y]))/pooled_standard_deviation))
+
+
+                    </code></pre>
+                    All of our pairwise Cohen's D calculations were >0.8, so it seems like we have a very strong effect size between each and every one of our clusters. 
+                    <br> <br>
+                    Our clustering looks to be both statistically significant and useful with a strong effect. As an initial investigation into our store performance, we’re seeing some really strong indicators that we can assign these stores to groups. 
+                    <br> <br>
+                    From this information, it may be best to track performance and future predictive models for each store independently. When we can compare whether a store is doing well or not, we can also compare it to peer stores on more granular store metrics which should be very helpful for upcoming marketing campaigns analysis.
+                    
+                    That said for future analysis we’d want to look into our other metrics to see if anything else is correlative with these groupings. Finding out more about what attributes each group shares in common would be a worthwhile next step here. 
+                    
+                    
+</p>
+
+            
+            </div>
+        </section>
+
+
+
+</body>
