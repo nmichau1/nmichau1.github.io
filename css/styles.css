@@ -10881,6 +10881,7 @@ p.lead {
     flex-direction: column;
     width: 12rem;
     height: 30vh;
+    
   }
   #sideNav .navbar-brand {
     display: flex;
