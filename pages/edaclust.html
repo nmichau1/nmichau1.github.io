@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Resume - Start Bootstrap Theme</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -15,15 +15,15 @@
         type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/prism.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/prism.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
     <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
-    <script src="js/prism.js"></script>
+    <script src="../js/prism.js"></script>
     <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
@@ -40,13 +40,12 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html">Nicholas Michaud</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html">Nicholas Michaud</a></li>
                 <br> 
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#education">Education</a></li>
-                <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#skills">Skills</a></li>-->
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/index.html#interests">Projects</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Projects</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
             </ul>
         </div>
     </nav>
@@ -57,10 +56,7 @@
                 <h2 class="mb-0">
                     Unveiling Hidden Patterns: Clustering and Statistical Validation of Walmart Store Sales Performance
                 </h2>
-                <div class="subheading mb-5">
-                    Python / Hierarchical Clustering / ANOVA / EDA
-
-                </div>
+               <br>
                 <p class="mb-5">
                     <strong>Hypothetical: We have been asked by a marketing decision maker to determine if there are any trends across store performance that might not be initially obvious.
                     </strong>
@@ -75,7 +71,7 @@
                     <pre><code class="language-python">df = pd.read_csv("Walmart_Sales.csv") 
 df.columns</code></pre>
                     
-                    <img src="/assets/img/dataframe.png">
+                    <img src="../assets/img/dataframe.png">
                     
        
                     
@@ -97,7 +93,8 @@ df.columns</code></pre>
 correlation = numeric_cols.corr()
 sns.heatmap(correlation,annot=True)</code></pre>
                                             
-                    <img src="/assets/img/heatmap.png">
+                    <img src="../assets/img/heatmap.png">
+                    
                     
                     <p class="mb-5">
                      
@@ -123,7 +120,7 @@ plt.ylabel('Count')</code></pre>
                      
                 
                   
-                    <img src="/assets/img/walmart_hist.png">
+                    <img src="../assets/img/walmart_hist.png">
                     
                     
                     <p class="mb-5">
@@ -139,7 +136,7 @@ plt.ylabel('Count')</code></pre>
                     <pre><code class="language-python">fig, ax = plt.subplots( figsize=(15, 11))
 sns.boxplot(x="Store",y="Weekly_Sales",data=df)</code></pre>
                         
-                    <img src="/assets/img/boxplot.png"  style="width:100%;height:100%;">
+                    <img src="../assets/img/boxplot.png"  style="width:100%;height:100%;">
                     <p class="mb-5">
 
                     It’s a little messy but there does seem to be some pretty big differences in sales across the board.
@@ -153,7 +150,7 @@ sns.boxplot(x="Store",y="Weekly_Sales",data=df)</code></pre>
 plt.xlabel("Store Id")
 plt.ylabel("Median Weekly Sales")</code></pre>
 
-                    <img src="/assets/img/scatter_no_cluster.png"> 
+                    <img src="../assets/img/scatter_no_cluster.png"> 
                     <p class="mb-5">
                     No surprise it looks a lot like the box plots, but it’s much easier to see some tendencies here. We’ve got a range of performances and some pretty big gaps between groups. This is starting to look like a great candidate for a cluster analysis.
                     <br> <br>
@@ -177,7 +174,7 @@ plt.scatter(result["Store"],result["Weekly_Sales"],c=result["dendro_labels"])
 plt.xlabel("Store Id")
 plt.ylabel("Median Weekly Sales")
 </code></pre>
-                    <img src="/assets/img/scatter_dendro.png">
+                    <img src="../assets/img/scatter_dendro.png">
                     
                     <p class="mb-5">
                     <strong>Silhouette score: 0.640</strong>
@@ -193,7 +190,7 @@ plt.ylabel("Median Weekly Sales")
                     <pre><code class="language-python">sns.kdeplot(data=merged_df,x="Weekly_Sales_x",hue="dendro_labels")
 plt.legend([1,2,3,4],title = "Cluster Labels")
 plt.xlabel("Weekly Sales")  </code></pre>
-                    <img src="/assets/img/cluster_density.png">
+                    <img src="../assets/img/cluster_density.png">
                     <p class="mb-5">
                     There’s some overlap here but definitely some eyeballed potential for statistical significance. With pretty solid sample sizes, our pdfs seem approximately normal enough that we don’t need to worry much about the distributions.  One thing to be worried about though is the Heteroskedasticity as ANOVA assumes equal variances.
                     <br> <br>
@@ -226,7 +223,7 @@ print("P-value: " + str(pval)) #P-value: 1.025880404099981e-26
                     <br> <br>
                     We’ll have to do it without a function but it’s quite simple. And that gives us: 
 
-                    <pre><code class="language-python">#Cohen's d = (mean1 - mean2) / standard deviation (pooled)
+                    <pre><code class="../language-python">#Cohen's d = (mean1 - mean2) / standard deviation (pooled)
 #calculating pooled_std first
 pooled_standard_deviation = 0
 for x in range(0,len(merged_df_array)):

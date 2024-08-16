@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Resume - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/prism.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/default.min.css">
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+    <script src="../js/prism.js"></script>
+    <script type="text/javascript" id="MathJax-script" async
+    
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+
+
+</script>
+</head>
+<body id="page-top">
+     <!-- Navigation-->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Nicholas Michaud</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Nicholas Michaud</a></li>
+                <br> 
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#about">About</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#interests">Projects</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#experience">Experience</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="../index.html#education">Education</a></li>
+
+            </ul>
+        </div>
+    </nav>
+<!-- Page Content-->
+<div class="container-fluid p-0">
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+            <h2 class="mb-0">
+              Predicting Marketing Success Based on Education
+            </h2>
+             <br>
+            <p class="mb-5">This analysis takes a look into a <a href= "https://www.kaggle.com/datasets/jackdaoud/marketing-data">dataset provided by iFood</a>, a food delivery company based on Brazil. 
+                There's a lot we could do with this dataset, but for now we'll be examining how Education impacts the likelihood a user accepts a marketing campaign offer.
+
+                <br><br>
+                Starting out the data is stored in a csv so we'll format the data into a dataframe and take a look at the columns. As you can see there's a lot to work with 
+                and we won't be needing most of the columns for the scope of this project.
+                </p>
+                <pre><code class="language-python">df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df.columns
+
+Index(['Income', 'Kidhome', 'Teenhome', 'Recency', 'MntWines', 'MntFruits',
+       'MntMeatProducts', 'MntFishProducts', 'MntSweetProducts',
+       'MntGoldProds', 'NumDealsPurchases', 'NumWebPurchases',
+       'NumCatalogPurchases', 'NumStorePurchases', 'NumWebVisitsMonth',
+       'AcceptedCmp3', 'AcceptedCmp4', 'AcceptedCmp5', 'AcceptedCmp1',
+       'AcceptedCmp2', 'Complain', 'Z_CostContact', 'Z_Revenue', 'Response',
+       'Age', 'Customer_Days', 'marital_Divorced', 'marital_Married',
+       'marital_Single', 'marital_Together', 'marital_Widow',
+       'education_2n Cycle', 'education_Basic', 'education_Graduation',
+       'education_Master', 'education_PhD', 'MntTotal', 'MntRegularProds',
+       'AcceptedCmpOverall'],
+      dtype='object')
+        </pre></code>
+        <br>
+        <p class="mb-3"> We'll be focusing around education as a factor in AcceptedCMPOverall(our feature for accepting a marketing deal). As you can see in the columns list above, there's 5 mutually exclusive dichotomous columns to work with.
+            The data doesn't have any NAs so we can move ahead.
+            <br> <br>
+            We have 4 education categories as seen below (Basic, College Grade, Masters Degree, & PhD). They're already broken out in a one-hot style so the work is done for us this time. They’re also all mutually exclusive & exhaustive, so all we need to do is break out separate dataframes for each education level.
+
+      </p>
+      <pre><code class="language-python">edu_basic =ifood_df.loc[df["education_Basic"] == 1]
+edu_grad = ifood_df.loc[df["education_Graduation"] == 1]
+edu_mas = ifood_df.loc[df["education_Master"] == 1]
+edu_phd = ifood_df.loc[df["education_PhD"] == 1]
+
+print("basic: " +str(len(edu_basic)))
+#basic: 54
+print("grad: " +str(len(edu_grad)))
+#grad: 1113
+print("mas: " +str(len(edu_mas)))
+#mas: 364
+print("phd: " +str(len(edu_phd)))
+#phd: 476
+        </code></pre>
+        
+        <p class="mb-3">
+
+            <br>
+We have a pretty unequal distribution of samples for each group which we should keep in mind as we’re comparing or look at aggregate data. This shouldn't be much of a worry though as we have enough values in each group that their individual distributions should still be meaningful.
+<br> <br>
+Now that we have our education level isolated, let’s take a look at how total sales are distributed for each group.
+        </p>
+
+        <pre><code class="language-python">fig, ax = plt.subplots(figsize=(40, 20))
+plt.xlim(0,500)
+
+plt.hist(edu_grad["MntTotal"],bins=300)
+plt.hist(edu_mas["MntTotal"],bins=300)
+plt.hist(edu_phd["MntTotal"],bins=300)
+plt.hist(edu_basic["MntTotal"],bins=300) </code></pre>
+
+
+<img src="../assets/img/ifood_hist.png" style="width:100%;height:100%;">
+
+<p class="mb-5">
+    <br>
+    As sales data tends to be, most of the distributions are pretty right skewed. 
+    <br> <br>
+    Edu_grad is dominant as it is by far our largest category, but the histograms show that grad/mas/phd are following similar distributions so education may not be a strong factor in sales.
+    <br> <br> 
+    Basic is being overshadowed in this visualization, so we can't read too much about it's distribution. Lets move to probability plots as we’ll be able to see basic much better.
+    </p>
+
+    <pre><code class="language-python">sns.kdeplot(edu_grad["MntTotal"])
+sns.kdeplot(edu_mas["MntTotal"])
+sns.kdeplot(edu_phd["MntTotal"])
+sns.kdeplot(edu_basic["MntTotal"])
+plt.xlim(0,1000)
+
+print("variance range grad/basic: " + str((df_grad["Income"].std()**2)/ (df_basic["Income"].std()**2)))
+#variance range grad/basic: 11.255547357602374
+</code></pre>
+
+<img src = "../assets/img/ifood_density.png">
+<p class="mb-5">
+    Now that's looking a lot different. Looks like the variance between basic and the rest are quite different as well (11x!).
+    <br><br>
+     We'll want to do an ANOVA to test if basic's difference is statistically significant, so this big variance difference is an obstacle. 
+     <br><br>
+     No worries though, we should be able to solve this via transformation.
+     <br><br>
+     After a few tests, the best fit was a cuberoot transformation as you'll see in the code below:
+     </p>
+     <pre><code class="language-python">edu_basic['income_cuberoot_values'] = (np.power(df_basic['Income'],0.333))
+edu_grad['income_cuberoot_values'] = (np.power(df_grad['Income'],0.333))
+edu_mas['income_cuberoot_values'] = (np.power(df_mas['Income'],0.333))
+edu_phd['income_cuberoot_values'] = (np.power(df_phd['Income'],0.333))
+
+fig, ax = plt.subplots(figsize=(40, 20))
+
+sns.kdeplot(edu_grad["income_cuberoot_values"],label = "Undergraduate Degree")
+sns.kdeplot(edu_basic["income_cuberoot_values"],label = "Basic Education")
+sns.kdeplot(edu_mas["income_cuberoot_values"],label = "Masters Degree")
+sns.kdeplot(edu_phd["income_cuberoot_values"],label = "PhD")
+plt.legend(title = "Line Labels")
+
+print("variance range cuberoot grad/basic: " + str((edu_grad['income_cuberoot_values'].std()**2)/ (edu_basic["income_cuberoot_values"].std()**2)))
+#variance range grad/basic: : 3.3974961994884088
+</code></pre>
+<img src = "../assets/img/cuberoot_density.png"style="width:100%;height:100%;">
+<p class="mb-5">
+    <br>
+    Now that’s a lot easier to read. Our initial reading of the histograms for undergraduate and above seems to hold but our distribution for basic looks quite different than the other 3.
+     This also solves our variance issue and the distributions are close enough to normal after the transformation to move forward with ANOVA.
+     </p>
+   
+     <pre><code class="language-python"># Perform ANOVA test
+     f_statistic, p_value = stats.f_oneway(df_basic["cuberoot_values"],df_grad["cuberoot_values"],df_mas["cuberoot_values"],df_phd["cuberoot_values"])
+     
+     # Print the results
+     print("F-statistic:", f_statistic)
+     #67.40835318608156
+     print("p-value:", p_value)
+     #1.5908755235152288e-41
+
+     <p class="mb-5">''' As a reminder the null hypothesis that we typically test with one way ANOVA is that there is no difference between group means. We've recieved a very low P value so we can reject this null hypothesis.
+        
+        We could continue here with a Cohens D to measure effect size and rejecting the null hypothesis does not explicity tell us which specific mean(s) is/are different, but given we have 3 very similiar distributions and one outlier it shouldn't be too necessary.
+        '''
+</code></pre>
+
+<p class="mb-5">
+   <br>
+    Now the question is why is there a difference in purchase totals, particularly between basic education and >undergraduate groups?
+
+    One thought may be a difference in income between the groups. Conveniently we do have income information for these customers.
+    
+    So let’s see if there’s even a relationship between income and total sales. Just because someone’s income is higher doesn’t necessarily mean they’re spending more on food.
+    <pre><code class="language-python">sns.scatterplot(x=df["Income"],y=df["MntTotal"])
+plt.xlabel("Customer Income")
+plt.ylabel("Revenue")
+
+print(df['Income'].corr(df['MntTotal']))
+#0.8230660021398378</code></pre>
+</p>
+<img src="../assets/img/ifood_income_scatter.png">
+<p class="mb-5">
+    <br>
+    Wow this completely matches what we’re seeing. The distribution of income level for education we’re seeing here matches pretty closely to the spend by education we looked at earlier. 
+    <br><br>
+    The recorded income quantities for basic education is significantly less than the other groups and while the other groups aren’t identical, they are MUCH closer together, especially their median.
+    <br><br>
+    We’ll want to reduce our input features to our regression as much as possible and based on this information, income should be a pretty analogous variable to education levels. This means we should just be able to use income in our regressions instead of 4 education variables.
+    
+</p>
+<p class="mb-5">
+    Now the real question we’re looking to solve is if education (and now income) has a relationship with receptivity to marketing deals.
+</p>
+<pre><code class="language-python">fig, (ax1) = plt.subplots(1, 1)
+sns.boxplot(x=ifood_df["AcceptedCmpOverall"],y= df["Income"],  ax =ax1)
+</code></pre>
+
+<img src="../assets/img/ifood_income_boxplot.png">
+<p class="mb-5">
+    <br>
+    We can see here that generally higher income groups are really the only groups that accept a large amount of deals.
+    <br><br>
+    When we break this out by income per education group we see a really similar pattern to just the income information. Basic which has low income isn’t super likely to participate and generally the higher income groups of each education group are more likely to participate.
+    
+</p>
+<img src="../assets/img/ifood_income_group_boxplot.png" style="width:100%;height:100%;">
+
+<p class = "mb-5">
+    <br>
+    Now let’s formalize this into a logistic model. <br><br>
+
+We can make a logistic regression model to determine how the probability of a customer accepting >1 offer based on their income.
+Based on the logistic regression Income is a statistically significant predictor. While it isn’t going to be the only factor, income is a strong predictor.
+Our overall goal here isn’t to make the best model for predicting marketing success. Investigating other potential factors would definitely help us along to that goal, but we can stop here for now and report our results.
+
+</p>
+
+<pre><code class="language-python">model = sm.Logit(df["AcceptedCmpOverall"],df['Income'])
+results = model.fit()
+
+# Print the model summary
+print(results.summary())
+
+# Access specific results
+print("Coefficients:", results.params)
+print("Odds Ratios:", np.exp(results.params))
+print("Likelihood ratio:", np.exp(results.llr))
+print("pr-squared:", np.exp(results.prsquared))
+test = []
+
+'''
+Optimization terminated successfully.
+         Current function value: 0.590613
+         Iterations 4
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:     AcceptedCmpOverall   No. Observations:                 2205
+Model:                          Logit   Df Residuals:                     2204
+Method:                           MLE   Df Model:                            0
+Date:                Wed, 03 Jul 2024   Pseudo R-squ.:                 -0.1560
+Time:                        17:40:26   Log-Likelihood:                -1302.3
+converged:                       True   LL-Null:                       -1126.5
+Covariance Type:            nonrobust   LLR p-value:                       nan
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Income     -1.768e-05   9.02e-07    -19.598      0.000   -1.95e-05   -1.59e-05
+==============================================================================
+Coefficients: Income   -0.000018
+dtype: float64
+Odds Ratios: Income    0.999982
+dtype: float64
+Likelihood ratio: 2.200026681544946e-153
+pr-squared: 0.8555501241440545
+'''
+</code></pre>
+</div>
+
+    </section>
+    
+    
+   
+</body>
