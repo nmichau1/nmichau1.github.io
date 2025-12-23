@@ -9,8 +9,92 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "my-site",
+    "title": "HELLO, I’M NICK.",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "LINKEDIN GITHUB DOWNLOAD RESUME"
+  },
+  {
+    "objectID": "index.html#tech-stack",
+    "href": "index.html#tech-stack",
+    "title": "HELLO, I’M NICK.",
+    "section": "🛠️ Tech Stack",
+    "text": "🛠️ Tech Stack\n\n\n\nLanguages\nTools\nDomains\n\n\n\n\nPython, R, SQL\nPyTorch, Scikit-Learn\nNLP, Time Series\n\n\nQuarto, Shiny\nDocker, AWS\nBayesian Inference"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "HELLO, I’M NICK.",
+    "section": "🚀 Featured Projects",
+    "text": "🚀 Featured Projects\n\n\n\n:: {.brutal-card} :: {.project-grid} ## PROJECT ONE A Data Science Tool \n\n\nShort description goes here. Built with Python and Scikit-Learn. This project analyzes complex datasets to predict housing prices with 95% accuracy.\n\n\n\n\nVIEW PROJECT ::\n\n\nPROJECT TWO\nNeural Network Viz An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.\nVIEW PROJECT"
+  },
+  {
+    "objectID": "index.html#the-mission",
+    "href": "index.html#the-mission",
+    "title": "NICHOLAS MICHAUD",
+    "section": "💡 The Mission",
+    "text": "💡 The Mission\nI bridge the gap between complex raw data and actionable business strategy. Specializing in predictive modeling and automated reporting pipelines using Python and R."
+  },
+  {
+    "objectID": "index.html#stack",
+    "href": "index.html#stack",
+    "title": "NICHOLAS MICHAUD",
+    "section": "🛠️ Stack",
+    "text": "🛠️ Stack\n\nLanguages: Python, R, SQL\nModels: XGBoost, PyTorch\nViz: Plotly, ggplot2"
+  },
+  {
+    "objectID": "index.html#current-focus",
+    "href": "index.html#current-focus",
+    "title": "NICHOLAS MICHAUD",
+    "section": "🚀 Current Focus",
+    "text": "🚀 Current Focus\nCurrently building a Bayesian inference engine for marketing attribution. Read the latest technical write-up →"
+  },
+  {
+    "objectID": "index.html#featured-projects-1",
+    "href": "index.html#featured-projects-1",
+    "title": "HELLO, I’M NICK.",
+    "section": "FEATURED PROJECTS",
+    "text": "FEATURED PROJECTS"
+  },
+  {
+    "objectID": "index.html#project-one",
+    "href": "index.html#project-one",
+    "title": "HELLO, I’M NICK.",
+    "section": "PROJECT ONE",
+    "text": "PROJECT ONE\nA Data Science Tool \nVIEW PROJECT"
+  },
+  {
+    "objectID": "index.html#project-two",
+    "href": "index.html#project-two",
+    "title": "HELLO, I’M NICK.",
+    "section": "PROJECT TWO",
+    "text": "PROJECT TWO\nNeural Network Viz An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.\nVIEW PROJECT"
+  },
+  {
+    "objectID": "index.html#project-three",
+    "href": "index.html#project-three",
+    "title": "HELLO, I’M NICK.",
+    "section": "PROJECT THREE",
+    "text": "PROJECT THREE\nNeural Network Viz An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.\nVIEW PROJECT"
+  },
+  {
+    "objectID": "index.html#currently-building",
+    "href": "index.html#currently-building",
+    "title": "HELLO, I’M NICK.",
+    "section": "🛠️ CURRENTLY BUILDING",
+    "text": "🛠️ CURRENTLY BUILDING\nAn interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time. I’m currently deep-diving into **Large Language Model fiom RAG pipeline for local documentation. VIEW PROJECT"
+  },
+  {
+    "objectID": "index.html#currently-building-1",
+    "href": "index.html#currently-building-1",
+    "title": "HELLO, I’M NICK.",
+    "section": "🛠️ CURRENTLY BUILDING",
+    "text": "🛠️ CURRENTLY BUILDING\nI’m currently deep-diving into Large Language Model fine-tuning and building a custom RAG pipeline for local documentation."
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "HELLO, I’M NICK.",
+    "section": "💼 EXPERIENCE",
+    "text": "💼 EXPERIENCE\n\n\nCURRENT ROLE • 2023-Present\nSenior Data Analyst @ TechCorp Leading the development of automated reporting pipelines. Saved 20+ hours of manual work weekly using Python and SQL.\n\n\nINTERN • 2022\nData Science Intern Optimized NLP models for sentiment analysis.\n\n\nUNIVERSITY • 2021\nBS in Computer Science Focus on Machine Learning.\n\n\nUNIVERSITY • 2021\nBS in Computer Science Focus on Machine Learning.\n\n\nUNIVERSITY • 2021\nBS in Computer Science Focus on Machine Learning."
   }
 ]

@@ -1,7 +1,107 @@
 ---
-title: "my-site"
+title: ""
+page-layout: full
 ---
 
-This is a Quarto website.
+::: {.column-screen .bg-yellow style="padding: 80px 20px; border-bottom: 5px solid black; text-align: center;"}
+# HELLO, I'M NICK.
+### I build data-driven solutions with mathematical rigor and clean code.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+<div style="margin-top: 20px;">
+  <a href="https://linkedin.com/in/yourprofile" class="btn-hero">LINKEDIN</a>
+  <a href="https://github.com/yourusername" class="btn-hero">GITHUB</a>
+  <a href="resume.pdf" class="btn-hero btn-resume">DOWNLOAD RESUME</a>
+</div>
+:::
+
+::: {.column-page style="margin-top: 50px;"}
+::: {.brutal-card}
+## 🛠️ Tech Stack
+| Languages | Tools | Domains |
+| :--- | :--- | :--- |
+| Python, R, SQL | PyTorch, Scikit-Learn | NLP, Time Series |
+| Quarto, Shiny | Docker, AWS | Bayesian Inference |
+:::
+<div style="margin-bottom: 40px;"></div>
+::::: {.featured-projects-container}
+# 🚀 FEATURED PROJECTS
+
+:::: {.project-grid}
+
+::: {.brutal-card}
+## PROJECT ONE
+**A Data Science Tool**
+![](project-thumbnail.png){width="100%" style="border: 3px solid black; margin-bottom: 15px;"}
+
+
+[VIEW PROJECT](#){.btn-hero}
+:::
+
+::: {.brutal-card}
+## PROJECT TWO
+**Neural Network Viz**
+An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.
+
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero}
+:::
+::: {.brutal-card}
+## PROJECT THREE
+**Neural Network Viz**
+An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.
+
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero}
+:::
+
+::::
+
+:::::
+
+::: {.brutal-card }
+## 🛠️ CURRENTLY BUILDING
+An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.
+I'm currently deep-diving into **Large Language Model fiom RAG pipeline for local documentation.
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero}
+:::
+
+<div style="margin-bottom: 120px;"></div>
+:::: {.brutal-card}
+## 💼 EXPERIENCE
+::: {.experience-grid}
+
+::: {.brutal-card .exp-main}
+### CURRENT ROLE • 2023-Present
+**Senior Data Analyst @ TechCorp**
+Leading the development of automated reporting pipelines. Saved 20+ hours of manual work weekly using Python and SQL.
+:::
+
+::: {.brutal-card .exp-small}
+### INTERN • 2022
+**Data Science Intern**
+Optimized NLP models for sentiment analysis.
+:::
+
+::: {.brutal-card .exp-small}
+### UNIVERSITY • 2021
+**BS in Computer Science**
+Focus on Machine Learning.
+:::
+::: {.brutal-card .exp-small}
+### UNIVERSITY • 2021
+**BS in Computer Science**
+Focus on Machine Learning.
+:::
+::: {.brutal-card .exp-small}
+### UNIVERSITY • 2021
+**BS in Computer Science**
+Focus on Machine Learning.
+:::
+:::
+::::
+<div style="margin-bottom: 120px;"></div>
+::: {.brutal-footer .column-screen}
+# LET'S WORK TOGETHER
+
+[EMAIL ME](mailto:yourname@email.com){.btn-hero style="background-color: #CFFC00; color: black;"}
+
+Designed by Nick &bull; Built with Quarto &bull; 2024
+:::

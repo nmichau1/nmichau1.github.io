@@ -1,1 +1,531 @@
 /* css styles */
+.navbar {
+  background-color: #FFD700 !important; /* Replace with your preferred color */
+}
+
+.navbar-brand, .nav-link {
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  color: black !important;
+}
+.navbar .nav-link {
+  color: rgb(0, 0, 0) !important;
+  
+}
+/* Styling the Quarto Navbar */
+.navbar {
+  border-bottom: 5px solid black !important;
+  background-color: #FFD700 !important;
+  padding: 1rem 0;
+}
+/* Style the text and search icon to be high-contrast */
+.navbar-title, .nav-link, .quarto-search-toggle {
+  color: #000000 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+}
+
+.navbar-toggler {
+  border: 3px solid black !important;
+  border-radius: 0px !important;
+}
+
+.navbar-toggler-icon {
+  /* This ensures the lines inside the hamburger icon are black */
+  filter: invert(100%) !important; 
+}
+.nav-link:hover {
+  color: #2D5BFF !important; /* Blue highlight on hover */
+}
+a {
+  color: #2D5BFF;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.quarto-post-articletitle {
+  background: #FFFFFF;
+  border: 3px solid #000000;
+  box-shadow: 8px 8px 0px #000000; /* The classic hard shadow */
+  padding: 20px;
+}
+/* Target the container of each post in the 'default' list */
+.quarto-listing-default .quarto-post {
+  border: 3px solid black !important;
+  margin-bottom: 20px !important;
+  padding: 15px !important;
+  box-shadow: 8px 8px 0px black !important;
+  background-color: white !important;
+}
+
+/* Target the title specifically */
+.quarto-listing-default .quarto-post-articletitle a {
+  color: #2D5BFF !important; /* Use one of your palette colors */
+  font-weight: 900 !important;
+  text-decoration: none !important;
+}
+/* Optional: Change the site title color */
+.navbar-title {
+  color: rgb(0, 0, 0) !important;
+}
+
+
+
+/* Style the Tech Stack table to look brutalist */
+table {
+  border: 3px solid black !important;
+  box-shadow: 8px 8px 0px black;
+  background: white;
+}
+
+th {
+  background-color: #CFFC00 !important; /* Acid Lime */
+  color: black !important;
+  border-bottom: 3px solid black !important;
+}
+.btn-hero {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: white;
+  color: black !important;
+  border: 4px solid black;
+  font-weight: 900;
+  text-decoration: none !important;
+  margin: 10px;
+  box-shadow: 6px 6px 0px black; /* The Neobrutalist Shadow */
+  transition: all 0.1s;
+  text-transform: uppercase;
+}
+
+.btn-hero:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px black;
+  background-color: #CFFC00; /* Pops lime green on hover */
+}
+/* Special styling for the Resume Button */
+.btn-resume {
+  background-color: #2D5BFF !important; /* Electric Blue */
+  color: white !important;
+}
+
+.btn-resume:hover {
+  background-color: #FF61D2 !important; /* Switches to Hot Pink on hover */
+  color: black !important;
+}
+table, .table {
+  border: 4px solid black !important;
+  box-shadow: 10px 10px 0px black;
+  background-color: white;
+  margin: 2em 0;
+}
+
+thead {
+  background-color: #CFFC00 !important; /* Acid Lime header */
+  border-bottom: 4px solid black !important;
+}
+
+th, td {
+  padding: 15px !important;
+  border: 1px solid #ddd;
+  color: black;
+}
+/* The Floating Card Style */
+.brutal-card {
+  background-color: #ffffff !important;
+  border: 4px solid #000000 !important;
+  padding: 40px;
+  box-shadow: 12px 12px 0px #000000; /* Heavy hard shadow */
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+/* Subtle lift effect when hovering over a section */
+.brutal-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 16px 16px 0px #000000;
+}
+
+
+.brutal-card h2 {
+  margin-top: 0 !important;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 8px 20px;
+  border: 3px solid black;
+  margin-bottom: 30px;
+  /* THE DEPTH */
+  background-color: #CFFC00; 
+  box-shadow: 4px 4px 0px black; 
+  position: relative;
+  top: -10px; /* This makes it "float" slightly above the card content */
+}
+.bg-yellow {
+  background-color: #FFD700 !important;
+  border-top: 5px solid black !important;
+  border-bottom: 10px solid black !important; /* Very thick bottom line */
+  margin-top: -50px !important; 
+  position: relative;
+  z-index: 1; 
+
+  /* The "Push Down" Padding */
+  /* Increase the 120px if you want even more space above your name */
+  padding-top: 200px !important; 
+  padding-bottom: 100px !important; 
+  
+  border-bottom: 10px solid black !important;
+  width: 100%;
+  text-align: center;
+}
+.brutal-card:active {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0px black;
+}
+/* Style the site title as a bold badge */
+.navbar-brand {
+  border: 3px solid black !important;
+  padding: 5px 15px !important;
+  background-color: #ffffff; /* Or use #CFFC00 for an Acid Lime pop */
+  font-weight: 950 !important;
+  letter-spacing: -1px;
+  box-shadow: 4px 4px 0px black;
+  transition: all 0.2s ease;
+  margin-right: 20px;
+}
+
+/* Make it "squish" when you click it */
+.navbar-brand:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px black;
+}
+
+/* Optional: Change color on hover */
+.navbar-brand:hover {
+  background-color: #FFD700; /* Cyber Yellow hover */
+  color: black !important;
+}
+/* 1. Remove padding/margin from the main page containers */
+#quarto-content.page-columns {
+  padding-top: 0 !important;
+}
+
+#quarto-margin-sidebar {
+  padding-top: 0 !important;
+}
+
+/* 2. Target the specific header container */
+header#quarto-header {
+  margin-bottom: 0 !important;
+}
+
+/* 3. Ensure the main body starts exactly where the navbar ends */
+.quarto-container-fluid {
+  padding-top: 0 !important;
+}
+.navbar {
+  margin-bottom: 0px !important;
+  border-bottom: 5px solid black !important;
+}
+/* This targets the main content area padding */
+main.content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* This targets the grid container Quarto uses for layout */
+.quarto-container-fluid {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* This removes the margin from the header wrapper */
+#quarto-header {
+  margin-bottom: 0 !important;
+}
+
+
+/* 1. Remove the gap between navbar and the start of the page content */
+#quarto-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 2. Target the main content area specifically */
+main.content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 3. Remove default padding on the fluid container */
+.container-fluid {
+  padding-top: 0 !important;
+}
+
+
+/* Hide the automatically generated title header space */
+.quarto-title {
+  display: none !important;
+}
+/* --- 1. THE GAP KILLER --- */
+/* Remove the auto-generated title block space */
+header.quarto-title-block.entry-header,
+.quarto-title-block,
+#title-block-header {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0px !important;
+}
+
+/* Force the main document content to start at y=0 */
+#quarto-document-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure no padding on the page grid */
+.page-columns .content {
+  padding-top: 0 !important;
+}
+
+/* One final check on the Body/HTML itself */
+html, body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Ensure the grid doesn't have weird default margins */
+.quarto-layout-panel {
+  margin-top: 40px !important;
+}
+
+/* Add space between the two cards on mobile */
+@media (max-width: 768px) {
+  .brutal-card {
+    margin-bottom: 40px !important;
+  }
+}
+
+/* Make the project links look like smaller versions of the hero buttons */
+.brutal-card .btn-hero {
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  margin-top: 20px;
+  background-color: #2D5BFF; /* Blue */
+  color: white !important;
+}
+/* 1. The Master Outer Box */
+.featured-projects-container {
+  background-color: #ffffff !important;
+  border: 6px solid black !important;
+  padding: 40px !important;
+  box-shadow: 15px 15px 0px black !important;
+  margin: 60px 0 !important;
+  display: block !important;
+  font-family: inherit !important;
+  
+}
+
+/* 2. The Section Title */
+.featured-projects-container h1 {
+  margin-top: 0 !important;
+  font-family: inherit;
+  font-weight: 950 !important;
+  text-transform: uppercase;
+  background-color: #FF61D2; /* Acid Lime */
+  display: inline-block;
+  padding: 10px 20px;
+  border: 4px solid black;
+  box-shadow: 5px 5px 0px black;
+  margin-bottom: 40px !important;
+}
+
+/* 3. The Grid Layout */
+.project-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 30px !important;
+}
+
+
+/* 4. The Individual Cards (Re-applying your style) */
+.featured-projects-container .brutal-card {
+  background-color: #ffffff !important;
+  border: 4px solid black !important;
+  padding: 30px !important;
+  box-shadow: 10px 10px 0px black !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  transition: all 0.2s ease;
+}
+/* --- 1. GENERAL CARD HEADERS (Tech Stack, etc.) --- */
+/* This gives the clean, underlined look */
+.brutal-card h2, 
+.brutal-card h3 {
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  border-bottom: 4px solid black; /* The underline */
+  display: inline-block;
+  margin-bottom: 20px;
+  background-color: #FF61D2;
+  box-shadow: none;
+  position: static;
+  border: 3px solid black !important;
+  padding: 8px 20px !important;
+  box-shadow: 4px 4px 0px black !important;
+  position: relative !important;
+  top: -15px !important; 
+  margin-bottom: 30px !important;
+}
+
+/* --- 2. PROJECT CARD HEADERS (The Floating Pink Box) --- */
+/* We use the parent container to 'Reset' the underline and 'Apply' the box */
+.featured-projects-container .brutal-card h2,
+.featured-projects-container .brutal-card h3 {
+  border-bottom: none !important; /* REMOVES the underline from project titles */
+  
+  /* Restores the floating pink box look */
+  background-color: #CFFC00 !important; 
+  border: 3px solid black !important;
+  padding: 8px 20px !important;
+  box-shadow: 4px 4px 0px black !important;
+  position: relative !important;
+  top: -15px !important; 
+  margin-bottom: 30px !important;
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .project-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+footer {
+  border-top: 10px solid black;
+  background-color: #000;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  margin-top: 100px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.experience-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* One wide column, one narrow */
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* The Main Role takes up two rows on the left */
+.exp-main {
+  grid-row: span 2; 
+  background-color: #f0f0f0 !important;
+}
+
+.exp-small {
+  background-color: #ffffff !important;
+  font-size: 0.9rem;
+}
+/* Make sure the headings inside these cards aren't floating */
+.experience-grid h3 {
+  background-color: transparent !important;
+  border-bottom: 3px solid black !important;
+  box-shadow: none !important;
+  top: 0 !important;
+  margin-bottom: 10px !important;
+  padding: 0 !important;
+}
+
+/* Mobile: Stack everything into one column */
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  .exp-main {
+    grid-row: span 1;
+  }
+}
+.brutal-footer {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  padding: 80px 20px !important;
+  margin-top: 100px !important;
+  text-align: center;
+  border-top: 10px solid #CFFC00; /* Acid Lime top border */
+}
+
+.brutal-footer h1 {
+  font-size: clamp(2rem, 8vw, 4rem) !important; /* Resizes based on screen */
+  font-weight: 950 !important;
+  margin-bottom: 40px !important;
+  color: #ffffff !important;
+}
+
+/* Ensure the button in the footer still has its hard shadow */
+.brutal-footer .btn-hero {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  border: 4px solid white !important;
+  box-shadow: 8px 8px 0px #CFFC00 !important;
+  transition: all 0.1s ease;
+}
+
+.brutal-footer .btn-hero:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px #CFFC00 !important;
+}
+body, 
+#quarto-container, 
+#quarto-content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ensure the footer covers the full width and sticks to the bottom */
+.brutal-footer {
+  margin-bottom: 0 !important;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+#quarto-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* This pushes the footer to the very bottom of the flex container */
+.brutal-footer {
+  margin-top: auto !important;
+}
+body {
+  padding-bottom: 0 !important;
+  overflow-x: hidden; /* Prevents horizontal scroll from the 100vw footer */
+}
+/* 1. Target the paragraph inside the footer */
+.brutal-footer p {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* 2. Remove Quarto's default 'bottom-padding' on the main container */
+#quarto-content, 
+.quarto-container, 
+#quarto-document-content {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* 3. The 'Nuclear' Footer Fix */
+.brutal-footer {
+  margin-bottom: -10px !important; /* Pulls the footer slightly 'past' the bottom */
+  padding-bottom: 60px !important; /* Keeps the content from being cut off */
+}
