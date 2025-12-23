@@ -1,5 +1,6 @@
 ---
-title: "About"
+title: "Portfolio"
+listing:
+  contents: posts
+  type: default
 ---
-
-About this site
