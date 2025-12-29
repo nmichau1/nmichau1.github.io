@@ -26,6 +26,8 @@ We tested a new "Single-Page Checkout" against the baseline. The test reached st
 Metric: Conversion Rate (Binary/Dichotomous)
 Statistical Test: Two-Sample Z-Test for Proportions
 Power (β): 0.80 | Confidence (α): 0.05
+Putting our information into a power analysis calculator gives us around 14k total needed to hit .80 power. We should be safe to move forward here.
+<br><br>
 Minimum Detectable Effect (MDE): 2% 
 :::
 ::: {.brutal-card style="background: #FF61D2;"}
@@ -78,16 +80,7 @@ Index(['user id', 'test group', 'converted', 'total ads','most ads day', 'most a
      As part of this, we'll want to look into the details of each group individually. The easiest way to do this is to create one dataframe for the experimental group and the control group.
 </p>
 <pre><code class="language-python">#a/b test & control results split into two dataframes  
-df_A = df[df["test group"] != "ad"]
-df_B = df[df["test group"] == "ad"]
-</code></pre>
-<p class="mb-3"> Now since the only variable of concern here is conversions the following is all true:
-    <ul>
-        <li> our experiment counts are finite </li>
-        <li> all users in our experiment are independent of eachother </li>
-        <li> Our outcome (conversions) is dichotomous </li>
-        <li> our probability of success/failure is constant for each trial in the test </li>
-    </ul>
+
 
     By meeting all of these requirements, we can consider a single user as a bernoulli trial and our full experiment as a series of independent bernoulli trials.
     This means our data is best modelled by a binomial distribution.
@@ -168,47 +161,6 @@ As before, our A/B binomial distributions approximately resemble a normal distri
 \(\sigma\)= estimated via standard error
 <br><br>
 Using this conversion, we can essentially work with only normal distributions now.
-
-<br><br>
-Now to take a pause before we move forward with our hypothesis testing, we'll next want to do a power analysis to ensure our chance of committing type II errors is tolerable.
-<br><br>
-Theres no point in calculating our test statistic if our sample size is too small for the results to be actionable yet.
-<br><br>
-
-
-Putting our information into a power analysis calculator gives us around 14k total needed to hit .80 power. We should be safe to move forward here.
-<br><br>
-
-
-
-Now we can do a simple Z test
-<br><br>
-
-calculate the z statistic
- \(z = { \Large\frac{p_{hat1} - p_{hat2}}{SE}} \)
-<br><br>
-In essence, we're calculating the difference between the two proportions by how many standard errors we expect.
-Our goal is to see how unlikely this distance would be to occur in our null hypothesis by chance
-<br><br>
-We'll be using a one-side test here with A = .05. this gives us our acceptable chance of commiting a type I error
-
-<br><br>
- Now based on this we're able to reject /not able to reject the null.
- <br><br> I won't finish the full reject/not reject in this exercise,
- but all that is required is to compare the z statistic against the z table value for our critical value (A) to see if we can reject. 
- <br><br>
- And we're done!
-
-
-
-
-
-
-
-
-
-
-
 
 
 

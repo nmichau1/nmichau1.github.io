@@ -143,31 +143,40 @@ Integrated ML-driven risk models into core commercial workflows to proactively h
 ::: {.brutal-card .exp-small .no-internal-borders .exp-past}
 # Google
 ### Data Analyst / Solutions Engineer • 2020-2024
-**@ Google**
-Optimized NLP models for sentiment analysis.
+* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
+* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
+* **Strategy:** Developed performance models for RFP responses and budget reallocation.
+* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
 <div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
 :::
 
 ::: {.brutal-card .exp-small .no-internal-borders .exp-past}
 # Google
 ### Data Analyst • 2019-2020
-**BS in Computer Science**
-Focus on Machine Learning.
+* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
+* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
+* **Strategy:** Developed performance models for RFP responses and budget reallocation.
+* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
 <div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
 :::
 ::: {.brutal-card .exp-small .no-internal-borders .exp-past}
 # Columbia University
 ### Technical Instructor • 2019-2020
-**BS in Computer Science**
-Focus on Machine Learning.
+* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
+* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
+* **Strategy:** Developed performance models for RFP responses and budget reallocation.
+* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
 <div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
 :::
 ::: {.brutal-card .exp-small .no-internal-borders .exp-past} 
 # Labelium
 ### Analyst • 2018-2019
-**BS in Computer Science**
-Focus on Machine Learning.
+* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
+* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
+* **Strategy:** Developed performance models for RFP responses and budget reallocation.
+* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
 <div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
+::::::
 :::
 
 :::

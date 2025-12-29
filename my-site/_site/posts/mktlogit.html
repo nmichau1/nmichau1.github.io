@@ -101,10 +101,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary">⚡ EXECUTIVE SUMMARY</a></li>
   <li><a href="#project-motivation" id="toc-project-motivation" class="nav-link" data-scroll-target="#project-motivation">📋 Project Motivation</a></li>
-  <li><a href="#initial-load-correcting-the-filename-from-your-snippet" id="toc-initial-load-correcting-the-filename-from-your-snippet" class="nav-link" data-scroll-target="#initial-load-correcting-the-filename-from-your-snippet">Initial Load (Correcting the filename from your snippet)</a></li>
-  <li><a href="#variance-check" id="toc-variance-check" class="nav-link" data-scroll-target="#variance-check">Variance Check</a></li>
-  <li><a href="#after-transformation-the-variance-range-dropped-to-3.4x-which" id="toc-after-transformation-the-variance-range-dropped-to-3.4x-which" class="nav-link" data-scroll-target="#after-transformation-the-variance-range-dropped-to-3.4x-which">After transformation, the variance range dropped to ~3.4x, which</a></li>
-  <li><a href="#falls-within-the-acceptable-range-for-anova-4x." id="toc-falls-within-the-acceptable-range-for-anova-4x." class="nav-link" data-scroll-target="#falls-within-the-acceptable-range-for-anova-4x.">falls within the acceptable range for ANOVA (&lt; 4x).</a></li>
+  <li><a href="#applying-cubroot-to-stabilize-variance" id="toc-applying-cubroot-to-stabilize-variance" class="nav-link" data-scroll-target="#applying-cubroot-to-stabilize-variance">Applying Cubroot to stabilize variance</a></li>
   </ul>
 </nav>
     </div>
@@ -145,21 +142,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="project-motivation" class="level2">
 <h2 class="anchored" data-anchor-id="project-motivation">📋 Project Motivation</h2>
 <p>Using a <a href="https://www.kaggle.com/datasets/jackdaoud/marketing-data">dataset provided by iFood</a>, we examine the relationship between a user’s educational background and their likelihood to accept marketing offers.</p>
-<p>import pandas as pd import numpy as np import seaborn as sns import matplotlib.pyplot as plt import scipy.stats as stats import statsmodels.api as sm</p>
 </section>
-<section id="initial-load-correcting-the-filename-from-your-snippet" class="level1">
-<h1>Initial Load (Correcting the filename from your snippet)</h1>
-<p>df = pd.read_csv(“ifood_marketing_data.csv”) df.columns # Applying Cubroot to stabilize variance df[‘income_cuberoot’] = np.power(df[‘Income’], 0.333)</p>
-</section>
-<section id="variance-check" class="level1">
-<h1>Variance Check</h1>
-</section>
-<section id="after-transformation-the-variance-range-dropped-to-3.4x-which" class="level1">
-<h1>After transformation, the variance range dropped to ~3.4x, which</h1>
-</section>
-<section id="falls-within-the-acceptable-range-for-anova-4x." class="level1">
-<h1>falls within the acceptable range for ANOVA (&lt; 4x).</h1>
-<p>#| echo: true f_stat, p_val = stats.f_oneway( df[df[‘education_Basic’]==1][‘income_cuberoot’], df[df[‘education_Graduation’]==1][‘income_cuberoot’], df[df[‘education_Master’]==1][‘income_cuberoot’], df[df[‘education_PhD’]==1][‘income_cuberoot’] ) print(f”F-statistic: {f_stat:.2f}“) print(f”p-value: {p_val:.2e}“) #| label: fig-income-scatter #| fig-cap:”The relationship between Household Income and Revenue” sns.scatterplot(x=df[“Income”], y=df[“MntTotal”]) plt.show() #| echo: true # Logistic Model model = sm.Logit(df[“AcceptedCmpOverall”], df[‘Income’]) results = model.fit() print(results.summary())</p>
+<section id="applying-cubroot-to-stabilize-variance" class="level1">
+<h1>Applying Cubroot to stabilize variance</h1>
+<p>df[‘income_cuberoot’] = np.power(df[‘Income’], 0.333)</p>
+<p>#| fig-cap: “The relationship between Household Income and Revenue” sns.scatterplot(x=df[“Income”], y=df[“MntTotal”]) plt.show() #| echo: true # Logistic Model model = sm.Logit(df[“AcceptedCmpOverall”], df[‘Income’]) results = model.fit() print(results.summary())</p>
 
 
 </section>

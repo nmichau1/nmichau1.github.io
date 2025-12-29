@@ -166,6 +166,7 @@ window.Quarto = {
   <li><a href="#test-parameters" id="toc-test-parameters" class="nav-link" data-scroll-target="#test-parameters">🧪 TEST PARAMETERS</a></li>
   <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">🚀 RECOMMENDATIONS</a></li>
   <li><a href="#the-statistical-model" id="toc-the-statistical-model" class="nav-link" data-scroll-target="#the-statistical-model">The Statistical Model</a></li>
+  <li><a href="#power-analysis" id="toc-power-analysis" class="nav-link" data-scroll-target="#power-analysis">⚡ Power Analysis</a></li>
   </ul>
 </nav>
 </nav>
@@ -212,7 +213,7 @@ Buisness Case
 </section>
 <section id="test-parameters" class="level3 brutal-card" style="background: #CFFC00;">
 <h3 class="anchored" data-anchor-id="test-parameters">🧪 TEST PARAMETERS</h3>
-<p>Metric: Conversion Rate (Binary/Dichotomous) Statistical Test: Two-Sample Z-Test for Proportions Power (β): 0.80 | Confidence (α): 0.05 Minimum Detectable Effect (MDE): 2%</p>
+<p>Metric: Conversion Rate (Binary/Dichotomous) Statistical Test: Two-Sample Z-Test for Proportions Power (β): 0.80 | Confidence (α): 0.05 Putting our information into a power analysis calculator gives us around 14k total needed to hit .80 power. We should be safe to move forward here. <br><br> Minimum Detectable Effect (MDE): 2%</p>
 </section>
 <section id="recommendations" class="level2 brutal-card" style="background: #FF61D2;">
 <h2 class="anchored" data-anchor-id="recommendations">🚀 RECOMMENDATIONS</h2>
@@ -250,11 +251,10 @@ Buisness Case
 <h3 class="anchored" data-anchor-id="the-statistical-model">The Statistical Model</h3>
 <p>Since our outcome is <span class="glossary-term" data-definition="A variable that can only take two possible values (e.g., Yes/No, 1/0).">dichotomous</span> (Converted vs.&nbsp;Not), the experiment meets the requirements for a <span class="glossary-term" data-definition="A probability distribution of the number of successes in a sequence of n independent trials.">Binomial Distribution</span>.</p>
 </section>
-<div class="brutal-card" style="background: #CFFC00;">
-<section id="power-analysis" class="level3">
+<section id="power-analysis" class="level3 brutal-card" style="background: #CFFC00;">
 <h3 class="anchored" data-anchor-id="power-analysis">⚡ Power Analysis</h3>
 Before running the test, a power analysis confirms that we avoid <span class="glossary-term" data-definition="A 'false negative'—failing to reject a null hypothesis that is actually false.">Type II errors</span>.
-</section></div>
+</section></main></div>
 <pre><code>            &lt;p class="mb-2"&gt;For this analysis we'll be looking into the results of customer churn based on an A/B test.
 
                 &lt;br&gt;&lt;br&gt;
@@ -268,68 +268,95 @@ df.columns Index([‘user id’, ‘test group’, ‘converted’, ‘total ads
 This is the results of an A/B test so we’re mostly concerned with ‘test group’ as it identifies which experimental group the user was a part of. We’re also concerned with ‘converted’ as our variable of interest. It’s a 1/0 dichotmous variable so we’re not concerned with revenue of any sort. <br><br> For the sake of this example, we’ll assume all conversions are valued the same. We’ll do the same with ad cost. We’ll keep things simple and just examine the incrementality of the campaign. <br><br> As part of this, we’ll want to look into the details of each group individually. The easiest way to do this is to create one dataframe for the experimental group and the control group.
 </p>
 <pre><code class="language-python">#a/b test &amp; control results split into two dataframes  
-df_A = df[df["test group"] != "ad"]
-df_B = df[df["test group"] == "ad"]
-</code></pre>
+
+
+    By meeting all of these requirements, we can consider a single user as a bernoulli trial and our full experiment as a series of independent bernoulli trials.
+    This means our data is best modelled by a binomial distribution.
+    <br><br>
+    Now how does this help us? Modeling to a binomial distribution gives us more tools and insight that we would have otherwise. 
+
+    First and foremost it allows us to define the probability of conversion as a binomial random variable, which comes with some attributes.
+    <br><br>
+    The mean of of our random variable X is equal to \( E(X) = np \)
+    <br><br>
+    The standard deviation is \(\sigma = \sqrt{(np)*(1-p)} \).
+    <br><br>
+    So just like that we have formulas to represent our distribution.
+    Now that we know this, in order to graph our probability mass function, we can just plug and chug.
+
+     <p></p>
+     <pre><code class="language-python">#We'll start by graphing out our probability mass function for our experimental group
+
+#number of bernoulli trials
+n_b = len(df_B)
+
+# proportion of converted users(i.e probability)
+p_b = len(df_B[df_B["converted"]==True])/len(df_B)#0.025546559636683747
+
+#range of values to be graphed on
+r_values_B = list(range(n+1))
+
+#We can do the same for our control group as well
+n_A = len(df_A) #23524
+p_A = len(df_A[df_A["converted"]==True])/len(df_A)#0.01785410644448223
+r_values_A = list(range(n_A+1))
+
+std = math.sqrt((n*p)*(1-p))
+
+     </code></pre>
+
 <p class="mb-3">
-Now since the only variable of concern here is conversions the following is all true:
-</p><ul>
-<li>
-our experiment counts are finite
-</li>
-<li>
-all users in our experiment are independent of eachother
-</li>
-<li>
-Our outcome (conversions) is dichotomous
-</li>
-<li>
-our probability of success/failure is constant for each trial in the test
-</li>
-</ul>
-<pre><code>By meeting all of these requirements, we can consider a single user as a bernoulli trial and our full experiment as a series of independent bernoulli trials.
-This means our data is best modelled by a binomial distribution.
-&lt;br&gt;&lt;br&gt;
-Now how does this help us? Modeling to a binomial distribution gives us more tools and insight that we would have otherwise. 
+Now that we have a basic intuition of our distributions here we can move onto hypothesis testing.
 
-First and foremost it allows us to define the probability of conversion as a binomial random variable, which comes with some attributes.
-&lt;br&gt;&lt;br&gt;
-The mean of of our random variable X is equal to \( E(X) = np \)
-&lt;br&gt;&lt;br&gt;
-The standard deviation is \(\sigma = \sqrt{(np)*(1-p)} \).
-&lt;br&gt;&lt;br&gt;
-So just like that we have formulas to represent our distribution.
-Now that we know this, in order to graph our probability mass function, we can just plug and chug.
+We'll be using a classic test seen below:
+<br><br>
+ \( \text{Null Hypothesis } (H_0) \text{: There is no significant difference between the two groups: } p_{test} = p_{control} \)
+ \( \text{Alternate Hypothesis } (H_a) \text{: There is significant difference between the two groups: } p_{test} \neq p_{control} \)
+<br><br>
 
- &lt;/p&gt;
- &lt;pre&gt;&lt;code class="language-python"&gt;#We'll start by graphing out our probability mass function for our experimental group</code></pre>
-<p>#number of bernoulli trials n_b = len(df_B)</p>
 
-<section id="proportion-of-converted-usersi.e-probability" class="level1">
-<h1>proportion of converted users(i.e probability)</h1>
-<p>p_b = len(df_B[df_B[“converted”]==True])/len(df_B)#0.025546559636683747</p>
-<p>#range of values to be graphed on r_values_B = list(range(n+1))</p>
-<p>#We can do the same for our control group as well n_A = len(df_A) #23524 p_A = len(df_A[df_A[“converted”]==True])/len(df_A)#0.01785410644448223 r_values_A = list(range(n_A+1))</p>
-<p>std = math.sqrt((n<em>p)</em>(1-p))</p>
-<pre><code> &lt;/code&gt;&lt;/pre&gt;</code></pre>
-<p class="mb-3">
-</p><p>Now that we have a basic intuition of our distributions here we can move onto hypothesis testing.</p>
-<p>We’ll be using a classic test seen below: <br><br> ( (H_0) p_{test} = p_{control} ) ( (H_a) p_{test} p_{control} ) <br><br></p>
-Taking a quick look at our overall count we can see N is quite high. Given this we assume that the distribution is essentially normal. Even with a bit lower probability, this still holds true given our large sample size.
-<p></p>
+Taking a quick look at our overall count we can see N is quite high. Given this we assume that the distribution is essentially normal. 
+Even with a bit lower probability, this still holds true given our large sample size.
+ </p>
 <pre><code class="language-python">print(len(df))#588101
 print(len(df_b))#564577
 print(len(df_A))##23524
 </code></pre>
-<p>Using this we can build estimates for a shared population distribution given the null hypothesis of no difference <br><br> To do so, we’ll start by calculating the pooled proportion between control and test groups. Since our assumption is no difference, it makes sense that the shared “parent” population would be best estimated using both distributions. <br><br> The pooled proportion is an estimate for the probability of the shared population distribution between A/B is: <br><br> (p_{pooled} = ) <br><br> In other words p-pool acts as our estimate for (E(H_0)) aka the center of our null distribution. <br><br> Next we just need to calculate standard error of the null distribution. Given we’re working with binomial distributions here it as below: <br><br> (SE = ) <br><br> This gives us the attributes of our null distribution we need. <br><br> Now how do we connect our binomial distributions and the normal null distribution? <br><br> As before, our A/B binomial distributions approximately resemble a normal distribution with the follow attributes: <br><br> (= p_{hat} ) <br><br> ()= estimated via standard error <br><br> Using this conversion, we can essentially work with only normal distributions now.</p>
-<p><br><br> Now to take a pause before we move forward with our hypothesis testing, we’ll next want to do a power analysis to ensure our chance of committing type II errors is tolerable. <br><br> Theres no point in calculating our test statistic if our sample size is too small for the results to be actionable yet. <br><br></p>
-<p>Putting our information into a power analysis calculator gives us around 14k total needed to hit .80 power. We should be safe to move forward here. <br><br></p>
-<p>Now we can do a simple Z test <br><br></p>
-<p>calculate the z statistic (z = { } ) <br><br> In essence, we’re calculating the difference between the two proportions by how many standard errors we expect. Our goal is to see how unlikely this distance would be to occur in our null hypothesis by chance <br><br> We’ll be using a one-side test here with A = .05. this gives us our acceptable chance of commiting a type I error</p>
-<p><br><br> Now based on this we’re able to reject /not able to reject the null. <br><br> I won’t finish the full reject/not reject in this exercise, but all that is required is to compare the z statistic against the z table value for our critical value (A) to see if we can reject. <br><br> And we’re done!</p>
 
-<p></p>
-<p>:::</p>
+Using this we can build estimates for a shared population distribution given the null hypothesis of no difference
+<br><br>
+ To do so, we'll start by calculating the pooled proportion between control and test groups. 
+ Since our assumption is no difference, it makes sense that the shared "parent" population would be best estimated using both distributions.
+ <br><br>
+The pooled proportion is an estimate for the probability of the shared population distribution between A/B is:
+<br><br>
+\(\Large p_{pooled} = \frac{(p_{test} + p_{control})}{2} \)
+<br><br>
+In other words p-pool acts as our estimate for \(E(H_0)\) aka the center of our null distribution.
+<br><br>
+Next we just need to calculate standard error of the null distribution. Given we're working with binomial distributions here it as below:
+<br><br>
+ \(SE = \sqrt{ \Large\frac{p_{pooled} * (1- p_{pooled})}{(n_{test} + n_{control})}} \)
+ <br><br>
+This gives us the attributes of our null distribution we need.
+<br><br>
+Now how do we connect our binomial distributions and the normal null distribution?
+<br><br>
+As before, our A/B binomial distributions approximately resemble a normal distribution with the follow attributes:
+<br><br>
+\(\mu = p_{hat} \)
+<br><br>
+\(\sigma\)= estimated via standard error
+<br><br>
+Using this conversion, we can essentially work with only normal distributions now.
+
+
+
+
+
+</code></pre><code class="language-python">
+</code><p><code class="language-python"></code></p>
+
 <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
 TOP ↑
 </button>
@@ -347,8 +374,6 @@ window.onscroll = function() {
 </script>
 
 
-</section>
-</main></div>
 
  <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

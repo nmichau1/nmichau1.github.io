@@ -165,7 +165,7 @@
     "href": "posts/ab-test.html",
     "title": "Marketing A/B Test",
     "section": "",
-    "text": "Python • Stats  \n\nBuisness Case\nFor this analysis, we’ll examine customer churn results based on an A/B test. We’ll pull our data from a CSV into a pandas dataframe.\nThis is the results of an A/B test so we’re mostly concerned with ‘test group’ as it identifies which experimental group the user was a part of. We’re also concerned with ‘converted’ as our variable of interest. It’s a 1/0 dichotmous variable so we’re not concerned with revenue of any sort.  For the sake of this example, we’ll assume all conversions are valued the same. We’ll do the same with ad cost. We’ll keep things simple and just examine the incrementality of the campaign.  As part of this, we’ll want to look into the details of each group individually. The easiest way to do this is to create one dataframe for the experimental group and the control group.\nNow since the only variable of concern here is conversions the following is all true:\n#number of bernoulli trials n_b = len(df_B)"
+    "text": "Python • Stats  \n\nBuisness Case\nFor this analysis, we’ll examine customer churn results based on an A/B test. We’ll pull our data from a CSV into a pandas dataframe."
   },
   {
     "objectID": "posts/ab-test.html#executive-summary",
@@ -221,6 +221,6 @@
     "href": "posts/mktlogit.html#project-motivation",
     "title": "Predicting Marketing Success",
     "section": "📋 Project Motivation",
-    "text": "📋 Project Motivation\nUsing a dataset provided by iFood, we examine the relationship between a user’s educational background and their likelihood to accept marketing offers.\nimport pandas as pd import numpy as np import seaborn as sns import matplotlib.pyplot as plt import scipy.stats as stats import statsmodels.api as sm"
+    "text": "📋 Project Motivation\nUsing a dataset provided by iFood, we examine the relationship between a user’s educational background and their likelihood to accept marketing offers."
   }
 ]
