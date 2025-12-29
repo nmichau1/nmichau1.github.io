@@ -1,0 +1,61 @@
+---
+title: "Common Search Algorithms Applied to Mazes"
+format: 
+  html:
+    css: ../styles.css
+    include-in-header:
+      - text: |
+          <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+          <script type="module" src="mazes.js"></script>
+---
+
+::: {.project-hero}
+# Maze & Pathing Generator
+**Data viz • Javascript • D3.js**
+<br>
+<div class="article-tag tag-viz">Data Viz</div>
+:::
+::: {.brutal-card}
+A 20x20 maze generated using **Prim's minimum spanning tree algorithm**. Navigate using common search algorithms to visualize how each finds the solution. 
+
+Every time you click **RUN**, a new random maze is formed.
+:::
+
+::: {.brutal-card style="background: #CFFC00;"}
+### 🕹️ CONTROLS
+<select id="methodSelect" class="brutal-select">
+    <option value="">Select an Algorithm</option>
+    <option value="breadthfirst">Breadth First Search</option>
+    <option value="depthfirst">Depth First Search</option>
+</select>
+
+<button id="runMethodButton" class="btn-hero">RUN ALGORITHM</button>
+:::
+
+<div id="maze-container" class="brutal-card" style="background: white; text-align: center;">
+</div>
+
+
+<script>
+const buttonElement = document.getElementById("runMethodButton");
+const selectElement = document.getElementById("methodSelect");
+
+buttonElement.addEventListener("click", () => {
+    const algo = selectElement.value; // "breadthfirst" or "depthfirst"
+    
+    // Map your select values to the 'bfs'/'dfs' expected by maze_maker
+    const type = algo === "breadthfirst" ? "bfs" : "dfs";
+    
+    if(window.draw_maze) {
+        window.draw_maze(type);
+    } else {
+        console.error("draw_maze function not loaded yet!");
+    }
+});
+</script>
+
+
+
+                    
+

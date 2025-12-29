@@ -15,14 +15,71 @@ page-layout: full
 :::
 
 ::: {.column-page style="margin-top: 50px;"}
-::: {.brutal-card}
+:::: {.brutal-card}
 ## 🛠️ Tech Stack
-| Languages | Tools | Domains |
-| :--- | :--- | :--- |
-| Python, R, SQL | PyTorch, Scikit-Learn | NLP, Time Series |
-| Quarto, Shiny | Docker, AWS | Bayesian Inference |
+::::: {.columns}
+::: {.column width="48%"}
+::: {.brutal-card}
+#### ⌨️ LANGUAGES & ENG
+<div class="skill-pill">A/B Testing</div>
+<div class="skill-pill">Causal Inference</div>
+<div class="skill-pill">Time-Series</div>
+<div class="skill-pill">Machine Learning</div>
+<div class="skill-pill">Statistical Analysis</div>
+<div class="skill-pill">ETL</div>
+<div class="skill-pill">GIT</div> 
+<div class="skill-pill">WEB APPS</div>
 :::
+:::
+::: {.column width="4%"}
+:::
+
+
+::: {.column width="48%"}
+::: {.brutal-card}
+#### ☁️ DATA WAREHOUSING
+<div class="skill-pill">Snowflake</div>
+<div class="skill-pill">Google Bigquery</div>
+<div class="skill-pill">Time-Series</div>
+<div class="skill-pill">ETL Pipeline Design</div>
+<div class="skill-pill">Data Governance</div>
+:::
+:::
+:::::
+
+::::: {.columns}
+
+
+::: {.column width="48%"}
+::: {.brutal-card}
+#### 🧪 MODELING & ANALYTICS
+<div class="skill-pill">A/B Testing</div>
+<div class="skill-pill">Causal Inference</div>
+<div class="skill-pill">Time-Series</div>
+<div class="skill-pill">Machine Learning</div>
+<div class="skill-pill">Statistical Analysis</div>
+<div class="skill-pill">MATH</div>
+<div class="skill-pill">STATS</div>
+:::
+:::
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.brutal-card}
+#### 📊 VISUALIZATION
+<div class="skill-pill">Tableau</div>
+<div class="skill-pill">Looker</div>
+<div class="skill-pill">D3.js</div>
+<div class="skill-pill">Dashboard Design</div>
+
+:::
+
+:::
+:::::
 <div style="margin-bottom: 40px;"></div>
+
+::::
 ::::: {.featured-projects-container}
 # 🚀 FEATURED PROJECTS
 
@@ -31,8 +88,6 @@ page-layout: full
 ::: {.brutal-card}
 ## PROJECT ONE
 **A Data Science Tool**
-![](project-thumbnail.png){width="100%" style="border: 3px solid black; margin-bottom: 15px;"}
-
 
 [VIEW PROJECT](#){.btn-hero}
 :::
@@ -68,33 +123,53 @@ I'm currently deep-diving into **Large Language Model fiom RAG pipeline for loca
 ## 💼 EXPERIENCE
 ::: {.experience-grid}
 
-::: {.brutal-card .exp-main}
-### CURRENT ROLE • 2023-Present
-**Senior Data Analyst @ TechCorp**
-Leading the development of automated reporting pipelines. Saved 20+ hours of manual work weekly using Python and SQL.
+::: {.brutal-card .exp-main .no-internal-borders }
+## FREEWHEEL 
+
+### Lead Analyst • 2025-Present
+* Founded, architected, and governed the analytics function for a 0-to-1 Commercial Operations business unit. Served as the primary C-Suite advisor to the Chief Commercial Officer (CCO), directing strategic decision support and scaling performance measurement across six sales organizations.
+>
+>
+>
+Architected the end-to-end Sales Performance Monitoring ecosystem, deploying real-time pacing and KPI dashboards across six distinct sales organizations. This initiative streamlined operations by eliminating 120 hrs/week of manual data compilation and directly enabled >$1 billion in annual quota attainment.
+Instituted and governed the unified metrics definition for the CCO’s Monthly Business Review (MBR) and Weekly Readouts. This established the single source of truth for growth and profitability, driving cross-organizational consensus at the C-level within the Comcast ecosystem
+Integrated ML-driven risk models into core commercial workflows to proactively highlight emerging portfolio risks and attention gaps, accelerating critical high-value commercial decisions by 48 hours and improving resource targeting
+
+<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
+> #### ⚡ IMPACT: 20+ HOURS SAVED / WEEK
+> Automated reporting pipelines using Python and SQL, eliminating manual bottleneck for the executive team.
 :::
 
-::: {.brutal-card .exp-small}
-### INTERN • 2022
-**Data Science Intern**
+::: {.brutal-card .exp-small .no-internal-borders .exp-past}
+# Google
+### Data Analyst / Solutions Engineer • 2020-2024
+**@ Google**
 Optimized NLP models for sentiment analysis.
+<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
 :::
 
-::: {.brutal-card .exp-small}
-### UNIVERSITY • 2021
+::: {.brutal-card .exp-small .no-internal-borders .exp-past}
+# Google
+### Data Analyst • 2019-2020
 **BS in Computer Science**
 Focus on Machine Learning.
+<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
 :::
-::: {.brutal-card .exp-small}
-### UNIVERSITY • 2021
+::: {.brutal-card .exp-small .no-internal-borders .exp-past}
+# Columbia University
+### Technical Instructor • 2019-2020
 **BS in Computer Science**
 Focus on Machine Learning.
+<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
 :::
-::: {.brutal-card .exp-small}
-### UNIVERSITY • 2021
+::: {.brutal-card .exp-small .no-internal-borders .exp-past} 
+# Labelium
+### Analyst • 2018-2019
 **BS in Computer Science**
 Focus on Machine Learning.
+<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
 :::
+
 :::
 ::::
 <div style="margin-bottom: 120px;"></div>

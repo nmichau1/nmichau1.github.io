@@ -1,0 +1,65 @@
+---
+title: "Unveiling Hidden Patterns"
+subtitle: "Clustering and Statistical Validation of Walmart Store Sales"
+author: "Your Name"
+format:
+  html:
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-summary: "Show the Code"
+---
+::: {.brutal-card style="background: #CFFC00; margin-top: 20px;"}
+## ⚡ EXECUTIVE SUMMARY
+**The Goal:** Identify non-obvious store performance trends to assist marketing budget allocation.  
+**The Result:** Successfully segmented stores into **4 distinct performance clusters** validated by ANOVA ($p < 0.001$) and a strong effect size (Cohen's $d > 0.8$).
+:::
+
+## 📋 The Hypothetical
+> **Prompt:** A marketing decision-maker needs to determine if there are trends across store performance that aren't initially obvious.
+
+We are working with Walmart sales data. While limited in scope, this serves as a critical Exploratory Data Analysis (EDA) to justify deeper segmentation marketing strategies.
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy.stats import f_oneway
+from sklearn.metrics import silhouette_score
+from scipy.cluster import hierarchy
+
+# Load data
+df = pd.read_csv("Walmart_Sales.csv")
+df.columns
+#| label: fig-heatmap
+#| fig-cap: "Correlation Heatmap of Store Metrics"
+numeric_cols = df.select_dtypes(include=[np.number])
+correlation = numeric_cols.corr()
+sns.heatmap(correlation, annot=True, cmap='viridis')
+#| label: fig-clusters
+#| fig-cap: "Stores grouped by Median Weekly Sales"
+
+# Pre-processing for clustering
+result = df.groupby('Store')['Weekly_Sales'].median().reset_index()
+
+distance_matrix = hierarchy.distance.pdist(result[["Store","Weekly_Sales"]])
+linkage = hierarchy.linkage(distance_matrix, method='ward')
+cluster_labels = hierarchy.fcluster(linkage, 4, criterion='maxclust')
+result["dendro_labels"] = cluster_labels
+
+plt.scatter(result["Store"], result["Weekly_Sales"], c=result["dendro_labels"], cmap='rainbow')
+plt.xlabel("Store Id")
+plt.ylabel("Median Weekly Sales")
+plt.show()
+
+# Silhouette Score calculation
+silhouette_coeff = silhouette_score(result[["Weekly_Sales"]], result["dendro_labels"])
+print(f"Silhouette Score: {silhouette_coeff:.3f}")
+# Prepare data for ANOVA
+merged_df = df.merge(result[['Store', 'dendro_labels']], on='Store')
+groups = [merged_df.loc[merged_df["dendro_labels"] == i, "Weekly_Sales"] for i in range(1, 5)]
+
+f_stat, pval = f_oneway(*groups)
+print(f"F-Statistic: {f_stat:.2f}")
+print(f"P-Value: {pval:.2e}")

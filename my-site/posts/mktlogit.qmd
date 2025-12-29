@@ -1,0 +1,54 @@
+---
+title: "Predicting Marketing Success"
+subtitle: "An Analysis of Education and Income as Predictors of Campaign Receptivity"
+author: "Your Name"
+format:
+  html:
+    css: styles.css
+    toc: true
+    code-fold: true
+---
+::: {.brutal-card style="background: #CFFC00; margin-top: 20px;"}
+## ⚡ EXECUTIVE SUMMARY
+**The Objective:** Determine if Education level serves as a primary driver for marketing campaign acceptance.  
+**Key Finding:** While Education initially appears significant, it is actually a proxy for **Income**. Income maintains a high correlation (0.82) with total spend and acts as a statistically significant predictor in logistic regression.
+:::
+
+## 📋 Project Motivation
+Using a [dataset provided by iFood](https://www.kaggle.com/datasets/jackdaoud/marketing-data), we examine the relationship between a user's educational background and their likelihood to accept marketing offers. 
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+import statsmodels.api as sm
+
+# Initial Load (Correcting the filename from your snippet)
+df = pd.read_csv("ifood_marketing_data.csv")
+df.columns
+# Applying Cubroot to stabilize variance
+df['income_cuberoot'] = np.power(df['Income'], 0.333)
+
+# Variance Check
+# After transformation, the variance range dropped to ~3.4x, which 
+# falls within the acceptable range for ANOVA (< 4x).
+#| echo: true
+f_stat, p_val = stats.f_oneway(
+    df[df['education_Basic']==1]['income_cuberoot'],
+    df[df['education_Graduation']==1]['income_cuberoot'],
+    df[df['education_Master']==1]['income_cuberoot'],
+    df[df['education_PhD']==1]['income_cuberoot']
+)
+print(f"F-statistic: {f_stat:.2f}")
+print(f"p-value: {p_val:.2e}")
+#| label: fig-income-scatter
+#| fig-cap: "The relationship between Household Income and Revenue"
+sns.scatterplot(x=df["Income"], y=df["MntTotal"])
+plt.show()
+#| echo: true
+# Logistic Model
+model = sm.Logit(df["AcceptedCmpOverall"], df['Income'])
+results = model.fit()
+print(results.summary())

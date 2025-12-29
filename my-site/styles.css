@@ -1,4 +1,7 @@
 /* css styles */
+html {
+  scroll-behavior: smooth;
+}
 .navbar {
   background-color: #FFD700 !important; /* Replace with your preferred color */
 }
@@ -528,4 +531,620 @@ body {
 .brutal-footer {
   margin-bottom: -10px !important; /* Pulls the footer slightly 'past' the bottom */
   padding-bottom: 60px !important; /* Keeps the content from being cut off */
+}
+/* Project Hero Section */
+
+  .project-hero {
+  background-color: #CFFC00; 
+  border: 6px solid black;
+  padding: 80px 40px !important; /* Bigger padding for a 'premium' feel */
+  margin-top: 40px !important;
+  margin-bottom: 60px !important; /* This pushes the Key Results card down */
+  box-shadow: 15px 15px 0px black;
+  text-align: center;
+}
+
+.project-hero {
+  clear: both; /* Ensures it doesn't float next to the nav */
+  display: block;
+}
+
+/* If you have a navbar, this prevents the content from hiding behind it */
+body {
+  padding-top: 20px;
+}
+
+.project-hero h1 {
+  font-size: 4rem !important;
+  font-weight: 950 !important;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Brutalist Code Blocks */
+.cell-output-display img, .img-fluid {
+  border: 4px solid black !important;
+  box-shadow: 10px 10px 0px black !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styling the Code Itself */
+div.sourceCode {
+  border: 3px solid black !important;
+  box-shadow: 8px 8px 0px black !important;
+  border-radius: 0px !important;
+}
+
+/* Add a "Back to Home" floating button */
+.back-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: white;
+  border: 3px solid black;
+  padding: 10px 15px;
+  font-weight: 900;
+  text-decoration: none;
+  color: black;
+  box-shadow: 4px 4px 0px black;
+  z-index: 1000;
+}
+
+.back-home:hover {
+  background: #FF61D2;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px black;
+}
+/* Container for the code block */
+div.sourceCode {
+  background-color: #1a1a1a !important; /* Dark background for contrast */
+  border: 4px solid black !important;
+  box-shadow: 10px 10px 0px black !important;
+  border-radius: 0px !important; /* Remove rounded corners */
+  margin: 40px 0 !important;
+  padding: 10px !important;
+}
+
+/* Style for the code text itself */
+pre.sourceCode code {
+  font-family: 'Courier New', monospace !important;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+}
+
+/* Customizing the "Copy" button */
+.quarto-code-copy-button {
+  background-color: #CFFC00 !important; /* Lime green button */
+  border: 2px solid black !important;
+  border-radius: 0px !important;
+  color: black !important;
+}
+
+.quarto-code-copy-button:hover {
+  background-color: #FF61D2 !important; /* Pink on hover */
+}
+/* Keywords (if, for, while, import) */
+.sourceCode .kw { color: #FF61D2 !important; font-weight: bold; } 
+
+/* Strings ("hello world") */
+.sourceCode .st { color: #CFFC00 !important; } 
+
+/* Comments (# This is a comment) */
+.sourceCode .co { color: #7a7a7a !important; font-style: italic; }
+
+/* Numbers and Functions */
+.sourceCode .dv, .sourceCode .fu { color: #2D5BFF !important; }
+/* Style for code outputs (like print statements) */
+.cell-output-stdout pre {
+  background-color: #ffffff !important;
+  border: 3px dashed black !important; /* Dashed border for 'output' */
+  color: black !important;
+  padding: 20px !important;
+  box-shadow: none !important;
+}
+.code-tab {
+  background: black;
+  color: #CFFC00;
+  display: inline-block;
+  padding: 2px 12px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.brutal-card.reflective {
+  border-style: dashed !important;
+  background-color: #ffffff !important;
+  /* Optional: make the shadow a bit lighter to look 'softer' */
+  box-shadow: 6px 6px 0px #7a7a7a !important; 
+
+}
+/* 3. Individual Tab Buttons */
+.nav-link {
+  border: 3px solid black !important;
+  border-bottom: none !important; /* Sit on the line */
+  border-radius: 0px !important;
+  font-weight: 900 !important;
+  color: black !important;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+  margin-bottom: -4px !important; /* Overlap the bottom border */
+  padding: 10px 20px !important;
+}
+
+/* 4. The Active (Selected) Tab */
+.nav-link.active {
+  background-color: #CFFC00 !important; /* Acid Lime for active tab */
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px black;
+}
+
+/* 5. Hover state */
+.nav-link:hover {
+  background-color: #FF61D2 !important; /* Pink on hover */
+}
+.brutal-tabs {
+  border: 4px solid black;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 12px 12px 0px black;
+  margin: 40px 0;
+}
+
+/* 2. The Navigation Bar (where the buttons live) */
+.nav-tabs {
+  border-bottom: 4px solid black !important;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.article-tag {
+  display: inline-block;
+  background-color: black;
+  color: #ffffff;
+  padding: 4px 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 2px solid black;
+  margin-bottom: 15px; /* Space between tag and Title */
+  letter-spacing: 1px;
+}
+.tag-biz { background-color: #2D5BFF; } /* Blue for Business */
+.tag-tech { background-color: #FF61D2; } /* Pink for Tech */
+.tag-viz { background-color: #2D5BFF; color: black; } /* Lime for Viz */
+/* Specificity Fix: No space between the classes means "must have both" */
+.article-tag.tag-tech {
+  background-color: #FF61D2 !important; /* Neon Pink */
+  color: black !important;
+}
+
+.article-tag.tag-biz {
+  background-color: #2D5BFF !important; /* Blue */
+  color: white !important;
+}
+
+.article-tag.tag-viz {
+  background-color: #2D5BFF!important; /* Lime */
+  color: white !important;
+}
+.brutal-card h3 {
+  border-bottom: 2px solid #eee; /* A very light separator instead of a box */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+/* This styles the OUTER box */
+.brutal-card {
+  border: 4px solid black !important;
+  padding: 20px;
+  background: white;
+  box-shadow: 8px 8px 0px black;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Remove borders only when this specific class is present */
+.no-internal-borders h1, 
+.no-internal-borders h2, 
+.no-internal-borders h3 {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+
+/* Past Experience - Clean and secondary */
+.exp-past {
+  background-color: #ffffff !important;
+  border-width: 2px !important;
+  box-shadow: 4px 4px 0px black !important;
+  opacity: 0.9;
+}
+.highlight {
+  background-color: #FF61D2; /* Neon Pink */
+  color: black;
+  font-weight: bold;
+  padding: 0 4px;
+}
+.skill-chip {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  margin-right: 5px;
+  background: white;
+  text-transform: uppercase;
+}
+.brutal-card.exp-featured {
+  background-color: #CFFC00 !important; /* Acid Lime */
+  transform: scale(1.02); /* Makes it slightly larger than other cards */
+  border-width: 6px !important; /* Thicker border */
+  box-shadow: 10x 10px 0px black !important; /* Heavier shadow */
+  z-index: 10;
+}
+
+/* Styling the text inside a featured card to stay readable */
+
+
+
+.edu-card {
+  background-color: #ffffff !important;
+  border: 2px solid black !important; /* Dashed border signals 'Secondary' */
+  box-shadow: 5px 5px 0px black !important; /* Use a 'School Blue' shadow */
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  opacity: 0.9;
+  transition: all 0.2s ease;
+}
+.edu-card h3 {
+  border: none !important;
+  
+}
+
+/* Add a "Binder Hole" effect for the academic vibe */
+
+.edu-stamp {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: black;
+  color: white;
+  font-size: 0.6rem;
+  padding: 5px;
+  font-weight: bold;
+}
+/* The Card Container */
+.skill-box {
+  min-height: 180px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+/* Individual Skill Chips */
+.skill-tag {
+  display: inline-block;
+  background-color: black;
+  color: #CFFC00; /* Acid Lime text */
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 5px 3px 0 0;
+  border: 1px solid black;
+}
+
+/* Emphasize the "Expert" parts */
+code {
+  background-color: #f0f0f0;
+  color: #2D5BFF; /* Electric Blue for the actual tech names */
+  font-weight: bold;
+}
+.skill-container {
+  display: flex;
+  flex-wrap: wrap; /* This makes them wrap to the next line automatically */
+  gap: 10px;
+  padding: 25px;
+}
+
+.skill-pill {
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px 12px;
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  box-shadow: 3px 3px 0px black; /* Small brutal shadow */
+  transition: transform 0.1s;
+  cursor: default;
+}
+
+/* Hover effect to make it feel interactive */
+.skill-pill:hover {
+  background-color: #FF61D2; /* Acid Lime */
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px black;
+}
+.brutal-card h4 {
+  background-color: #CFFC00 !important; /* Acid Lime */
+  color: black !important;             /* Black text for contrast */
+  display: inline-block;
+  padding: 4px 12px;
+  border: 2px solid black;             /* Thin border to define the shape */
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 0px black;       /* Mini shadow for depth */
+}
+.brutal-card h4 {
+  color: black !important;           /* Acid Lime text */
+  background-color:#CFFC00!important;  /* Black background makes lime pop */
+  display: inline-block;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}.btn-hero:hover {
+  background-color: #FFD700 !important; /* Your Brand Yellow */
+  color: black;
+  transform: translate(2px, 2px);      /* Moves it "into" the shadow */
+  box-shadow: 2px 2px 0px black;       /* Makes the shadow smaller */
+  cursor: pointer;
+}
+.edu-card:hover{
+  transform: translate(-4px, -4px);
+  box-shadow: 16px 16px 0px #000000;
+}
+.brutal-card .exp-main:hover{
+ transform: translate(-4px, -4px);
+  box-shadow: 16px 16px 0px #000000;
+}
+.brutal-card .exp-main{
+transition: all 0.2s ease;
+}
+.bg-white {
+  background-color: white!important;
+  margin-top: -50px !important; 
+  position: relative;
+  z-index: 1; 
+
+  /* The "Push Down" Padding */
+  /* Increase the 120px if you want even more space above your name */
+  padding-top: 50px !important; 
+  padding-bottom: 100px !important; 
+  
+  
+  width: 100%;
+  text-align: center;
+}
+.exp-main h1 {
+  font-family: 'Courier New', monospace !important;
+  font-weight: 900;
+  margin-bottom: 0;
+  background-color: None !important;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px; /* Tighter letters look more modern/brutal */
+}
+.brutal-card .exp-main h2 {
+  font-family: 'Courier New', monospace !important;
+  font-weight: 900;
+  background-color: #CFFC00 !important;
+  font-size: 2.5rem;
+  margin-bottom: 0 !important;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px; /* Tighter letters look more modern/brutal */
+}
+
+/* The Role and Dates Sub-header */
+.exp-main h3 {
+ 
+  color: black;
+  display: inline-block;
+  padding: 4px 10px;
+
+  margin-top: 5px;
+  border: 2px solid black;
+}
+.exp-main {
+  font-family: 'Courier New', Courier, monospace !important;
+  background-color: #CFFC00  !important; /* Dark mode terminal feel */
+  border: 3px solid black !important;
+  box-shadow: 8px 8px 0px black !important;
+}
+
+
+
+.exp-main h3 {
+   color: black !important;
+  border: none;
+  
+}
+/* The Company Name - The "Stamp" */
+.exp-past {
+  font-family: 'Courier New', Courier, monospace !important;
+  background-color: #1a1a1a !important; /* Dark mode terminal feel */
+  border: 3px solid black !important;
+  box-shadow: 8px 8px 0px black !important;
+}
+
+.exp-past h1 {
+  font-family: 'Courier New', monospace !important;
+  color: black !important; /* Pink Company Name to pop from Green text */
+  font-weight: 900;
+}
+
+.exp-past h3 {
+   /* Green Label */
+  color: black !important;
+  border: none;
+}
+
+/* Optional: Make the whole card slightly less 'loud' */
+.brutal-card.exp-past {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  box-shadow: 4px 4px 0px black !important;
+  opacity: 0.9;
+}
+/* Education Cards: The Formal Style */
+
+.edu-card h1 {
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  border-bottom: 3px solid black; /* Underline for a "Official" look */
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.edu-card h3 {
+  font-family: inherit;
+  font-style: italic; /* Italics often signal 'Degree' titles */
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #333;
+}
+
+.brutal-select {
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-weight: 900;
+    border: 3px solid black;
+    box-shadow: 4px 4px 0px black;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+/* Ensure the SVG is responsive */
+#maze-container svg {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #eee;
+    margin-top: 20px;
+}
+pre.code-bash, pre.python, .sourceCode {
+  background-color: #1a1a1a !important;
+  border: 4px solid black !important;
+  box-shadow: 8px 8px 0px #FF61D2 !important; /* Pink shadow for code */
+  padding: 20px !important;
+  border-radius: 0 !important;
+}
+
+code {
+  color: #00FF41 !important; /* Matrix Green text */
+  font-family: 'Courier New', monospace !important;
+}
+
+/* MathJax Equation Styling */
+.math {
+  font-size: 1.2rem;
+  background: #f0f0f0;
+  padding: 10px;
+  border-left: 5px solid #2D5BFF; /* Blue accent for math */
+  display: block;
+  margin: 20px 0;
+}
+
+/* Bullet points in the list */
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "> ";
+  color: #FF61D2;
+  font-weight: bold;
+}
+
+
+/* Styling the term itself */
+.glossary-term {
+  text-decoration: underline wavy #CFFC00; /* Lime wavy underline */
+  cursor: help;
+  position: relative;
+  font-weight: 700;
+  color: black;
+}
+
+/* The hidden definition box */
+.glossary-term::after {
+  content: attr(data-definition); /* Pulls text from the HTML attribute */
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background-color: #CFFC00; /* Lime Green */
+  color: black;
+  padding: 10px;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0px black;
+  font-size: 0.8rem;
+  font-family: 'Courier New', monospace;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 100;
+  pointer-events: none;
+  line-height: 1.2;
+}
+
+/* Show the box on hover */
+.glossary-term:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+#back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none; /* Hidden by default, shown via JS */
+  background-color: #FFD700; /* Yellow to match your header */
+  color: black;
+  border: 3px solid black;
+  padding: 10px 15px;
+  font-family: 'Courier New', monospace;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 4px 4px 0px black;
+  z-index: 1000;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#back-to-top:hover {
+  background-color: #FF61D2; /* Flips to Pink on hover */
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px black;
+}
+
+#back-to-top:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px black;
+}
+#maze-container {
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+  min-height: 620px;       /* Slightly taller than your 600px SVG */
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 10px 10px 0px black;
+  margin: 20px auto;       /* Centers the container itself */
+  overflow: hidden;        /* Prevents the maze from leaking out */
+}
+
+/* Ensure the SVG itself behaves as a block */
+#maze-container svg {
+  display: block;
 }

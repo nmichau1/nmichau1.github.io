@@ -2,8 +2,12 @@
   {
     "listing": "/about.html",
     "items": [
+      "/posts/mazes.html",
+      "/posts/ab-test.html",
+      "/posts/mktlogit.html",
+      "/posts/one.html",
       "/posts/two.html",
-      "/posts/one.html"
+      "/posts/edaclust.html"
     ]
   }
 ]

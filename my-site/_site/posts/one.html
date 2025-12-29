@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>one – my-site</title>
+<title>Project One: Housing Price Predictor – Nicholas Michaud</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,16 +20,47 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -37,23 +68,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6c19c941ea7738e33ab6ff84dd6fcc50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -73,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -81,10 +100,9 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">my-site</span>
+    <span class="navbar-title">Nicholas Michaud</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -109,15 +127,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">one</h1>
+<h1 class="title">Project One: Housing Price Predictor</h1>
 </div>
 
 
@@ -134,6 +150,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="housing-price-predictor" class="level1 project-hero">
+<h1>HOUSING PRICE PREDICTOR</h1>
+<strong>Data Science • Python • Scikit-Learn</strong> <br>
+<div class="article-tag tag-biz">
+BUSINESS CASE
+</div>
+</section>
+<section id="key-results" class="level3 brutal-card" style="background-color: #f0f0f0;">
+<h3 class="anchored" data-anchor-id="key-results">📊 KEY RESULTS</h3>
+<ul>
+<li><strong>95% Accuracy</strong> on testing data.</li>
+<li><strong>30% Reduction</strong> in processing time.</li>
+<li><strong>Deployed</strong> via Streamlit.</li>
+</ul>
+</section>
+<div class="project-grid">
+<section id="the-problem" class="level3 brutal-card">
+<h3 class="anchored" data-anchor-id="the-problem">THE PROBLEM</h3>
+<p>Manually predicting housing prices was taking too long and had a high margin of error. Stakeholders needed a reliable tool.</p>
+</section>
+<section id="the-solution" class="level3 brutal-card" style="background-color: #2D5BFF; color: white;">
+<h3 class="anchored" data-anchor-id="the-solution">THE SOLUTION</h3>
+<p>I built a Random Forest Regressor that automates the process, reducing error by 40% and providing instant valuations.</p>
+</section>
+</div>
+<section id="exploratory-data-analysis" class="level2 brutal-card">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis">📈 EXPLORATORY DATA ANALYSIS</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="correlation-plot.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Correlation matrix showing the relationship between square footage and price.</figcaption>
+</figure>
+</div>
+<p><em>Insight: We found that location had a 3x higher impact on price than the number of bedrooms.</em></p>
+</section>
+<section id="technical-implementation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-implementation">💻 TECHNICAL IMPLEMENTATION</h2>
+<section id="the-logic" class="level3 brutal-card">
+<h3 class="anchored" data-anchor-id="the-logic">THE LOGIC</h3>
+<p>I used a <code>StandardScaler</code> to ensure the housing features were on the same scale, which improved the model convergence time.</p>
+</section>
+<div class="tabset-margin-container"></div><div class="panel-tabset brutal-tabs">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">🐍 PREPROCESSING</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">🐍 PRNGsdsdd</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">🐍 Psdsdsd</a></li></ul>
+<div class="tab-content brutal-tabs">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="code-tab">
+model_preprocessing.py
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>X_scaled <span class="op">=</span> scaler.fit_transform(X)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="code-tab">
+01_LOAD_DATA.PY
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    THIS IS THE COE FOR PART <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="code-tab">
+01_LOA.PY
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>    THIS IS THE COE FOR PART <span class="dv">3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<section id="lessons-learned" class="level3 brutal-card" style="border-style: dashed;">
+<h3 class="anchored" data-anchor-id="lessons-learned">💡 LESSONS LEARNED</h3>
+<p>This section will now render correctly because the code block above it is closed.</p>
+</section>
+<section id="lessons-learned-1" class="level3 brutal-card reflective">
+<h3 class="anchored" data-anchor-id="lessons-learned-1">💡 LESSONS LEARNED</h3>
+<ol type="1">
+<li><strong>Feature Engineering:</strong> Simple features often beat complex ones.</li>
+<li><strong>Data Cleaning:</strong> Spending 80% of the time on cleaning was worth it.</li>
+</ol>
+</section>
+</section>
+<section id="the-challenge" class="level2 project-grid">
+<h2 class="anchored" data-anchor-id="the-challenge">THE CHALLENGE</h2>
+<p>This project solves the problem of…</p>
+<p><a href="https://github.com/yourlink" class="btn-hero" style="background-color: #CFFC00;">VIEW GITHUB REPO</a> <a href="index.qmd" class="btn-hero" style="background-color: #FF61D2;">BACK TO ALL PROJECTS</a></p>
+</section>
 
 
 

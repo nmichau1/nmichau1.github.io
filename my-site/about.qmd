@@ -4,3 +4,6 @@ listing:
   contents: posts
   type: default
 ---
+
+::: { .bg-white}
+:::

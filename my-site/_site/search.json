@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "Portfolio",
     "section": "",
-    "text": "Two\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\none\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Common Search Algorithms Applied to Mazes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarketing A/B Test\n\n\nStatistical Significance Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPredicting Marketing Success\n\n\nAn Analysis of Education and Income as Predictors of Campaign Receptivity\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\n\nProject One: Housing Price Predictor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTwo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnveiling Hidden Patterns\n\n\nClustering and Statistical Validation of Walmart Store Sales\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -18,14 +18,14 @@
     "href": "index.html#tech-stack",
     "title": "HELLO, I’M NICK.",
     "section": "🛠️ Tech Stack",
-    "text": "🛠️ Tech Stack\n\n\n\nLanguages\nTools\nDomains\n\n\n\n\nPython, R, SQL\nPyTorch, Scikit-Learn\nNLP, Time Series\n\n\nQuarto, Shiny\nDocker, AWS\nBayesian Inference"
+    "text": "🛠️ Tech Stack\n\n\n\n⌨️ LANGUAGES & ENG\n\nA/B Testing\n\n\nCausal Inference\n\n\nTime-Series\n\n\nMachine Learning\n\n\nStatistical Analysis\n\n\nETL\n\n\nGIT\n\n\nWEB APPS\n\n\n\n\n\n\n☁️ DATA WAREHOUSING\n\nSnowflake\n\n\nGoogle Bigquery\n\n\nTime-Series\n\n\nETL Pipeline Design\n\n\nData Governance\n\n\n\n\n\n\n\n🧪 MODELING & ANALYTICS\n\nA/B Testing\n\n\nCausal Inference\n\n\nTime-Series\n\n\nMachine Learning\n\n\nStatistical Analysis\n\n\nMATH\n\n\nSTATS\n\n\n\n\n\n\n📊 VISUALIZATION\n\nTableau\n\n\nLooker\n\n\nD3.js\n\n\nDashboard Design"
   },
   {
     "objectID": "index.html#featured-projects",
     "href": "index.html#featured-projects",
     "title": "HELLO, I’M NICK.",
-    "section": "🚀 Featured Projects",
-    "text": "🚀 Featured Projects\n\n\n\n:: {.brutal-card} :: {.project-grid} ## PROJECT ONE A Data Science Tool \n\n\nShort description goes here. Built with Python and Scikit-Learn. This project analyzes complex datasets to predict housing prices with 95% accuracy.\n\n\n\n\nVIEW PROJECT ::\n\n\nPROJECT TWO\nNeural Network Viz An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.\nVIEW PROJECT"
+    "section": "🚀 FEATURED PROJECTS",
+    "text": "🚀 FEATURED PROJECTS"
   },
   {
     "objectID": "index.html#the-mission",
@@ -60,7 +60,7 @@
     "href": "index.html#project-one",
     "title": "HELLO, I’M NICK.",
     "section": "PROJECT ONE",
-    "text": "PROJECT ONE\nA Data Science Tool \nVIEW PROJECT"
+    "text": "PROJECT ONE\nA Data Science Tool\nVIEW PROJECT"
   },
   {
     "objectID": "index.html#project-two",
@@ -95,6 +95,132 @@
     "href": "index.html#experience",
     "title": "HELLO, I’M NICK.",
     "section": "💼 EXPERIENCE",
-    "text": "💼 EXPERIENCE\n\n\nCURRENT ROLE • 2023-Present\nSenior Data Analyst @ TechCorp Leading the development of automated reporting pipelines. Saved 20+ hours of manual work weekly using Python and SQL.\n\n\nINTERN • 2022\nData Science Intern Optimized NLP models for sentiment analysis.\n\n\nUNIVERSITY • 2021\nBS in Computer Science Focus on Machine Learning.\n\n\nUNIVERSITY • 2021\nBS in Computer Science Focus on Machine Learning.\n\n\nUNIVERSITY • 2021\nBS in Computer Science Focus on Machine Learning."
+    "text": "💼 EXPERIENCE"
+  },
+  {
+    "objectID": "posts/one.html",
+    "href": "posts/one.html",
+    "title": "Project One: Housing Price Predictor",
+    "section": "",
+    "text": "Data Science • Python • Scikit-Learn \n\nBUSINESS CASE"
+  },
+  {
+    "objectID": "posts/one.html#the-challenge",
+    "href": "posts/one.html#the-challenge",
+    "title": "Project One: Housing Price Predictor",
+    "section": "THE CHALLENGE",
+    "text": "THE CHALLENGE\nThis project solves the problem of…\nVIEW GITHUB REPO BACK TO ALL PROJECTS"
+  },
+  {
+    "objectID": "posts/one.html#exploratory-data-analysis",
+    "href": "posts/one.html#exploratory-data-analysis",
+    "title": "Project One: Housing Price Predictor",
+    "section": "📈 EXPLORATORY DATA ANALYSIS",
+    "text": "📈 EXPLORATORY DATA ANALYSIS\n\n\n\nCorrelation matrix showing the relationship between square footage and price.\n\n\nInsight: We found that location had a 3x higher impact on price than the number of bedrooms."
+  },
+  {
+    "objectID": "posts/one.html#technical-implementation",
+    "href": "posts/one.html#technical-implementation",
+    "title": "Project One: Housing Price Predictor",
+    "section": "💻 TECHNICAL IMPLEMENTATION",
+    "text": "💻 TECHNICAL IMPLEMENTATION\n\nTHE LOGIC\nI used a StandardScaler to ensure the housing features were on the same scale, which improved the model convergence time.\n\n\n🐍 PREPROCESSING🐍 PRNGsdsdd🐍 Psdsdsd\n\n\n\nmodel_preprocessing.py\n\nfrom sklearn.preprocessing import StandardScaler\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n\n\n01_LOAD_DATA.PY\n\n    THIS IS THE COE FOR PART 2\n\n\n\n01_LOA.PY\n\n    THIS IS THE COE FOR PART 3\n\n\n\n\n💡 LESSONS LEARNED\nThis section will now render correctly because the code block above it is closed.\n\n\n💡 LESSONS LEARNED\n\nFeature Engineering: Simple features often beat complex ones.\nData Cleaning: Spending 80% of the time on cleaning was worth it."
+  },
+  {
+    "objectID": "index.html#languages-eng",
+    "href": "index.html#languages-eng",
+    "title": "HELLO, I’M NICK.",
+    "section": "⌨️ LANGUAGES & ENG",
+    "text": "⌨️ LANGUAGES & ENG\n\nLANGUAGES: SQL (EXPERT) • PYTHON • JS LIBRARIES: PANDAS • NUMPY • SCIKIT-LEARN • TENSORFLOW\n\nETL\n\n\nGIT\n\n\nWEB APPS"
+  },
+  {
+    "objectID": "index.html#ms-in-data-science",
+    "href": "index.html#ms-in-data-science",
+    "title": "HELLO, I’M NICK.",
+    "section": "MS in Data Science",
+    "text": "MS in Data Science\nFocus on Machine Learning."
+  },
+  {
+    "objectID": "index.html#freewheel",
+    "href": "index.html#freewheel",
+    "title": "HELLO, I’M NICK.",
+    "section": "FREEWHEEL",
+    "text": "FREEWHEEL\n\nLead Analyst • 2025-Present\n\nFounded, architected, and governed the analytics function for a 0-to-1 Commercial Operations business unit. Served as the primary C-Suite advisor to the Chief Commercial Officer (CCO), directing strategic decision support and scaling performance measurement across six sales organizations. &gt; &gt; &gt; Architected the end-to-end Sales Performance Monitoring ecosystem, deploying real-time pacing and KPI dashboards across six distinct sales organizations. This initiative streamlined operations by eliminating 120 hrs/week of manual data compilation and directly enabled &gt;$1 billion in annual quota attainment. Instituted and governed the unified metrics definition for the CCO’s Monthly Business Review (MBR) and Weekly Readouts. This established the single source of truth for growth and profitability, driving cross-organizational consensus at the C-level within the Comcast ecosystem Integrated ML-driven risk models into core commercial workflows to proactively highlight emerging portfolio risks and attention gaps, accelerating critical high-value commercial decisions by 48 hours and improving resource targeting\n\n\nPython\n\n\nTableau\n\n\nAWS\n\n\n⚡ IMPACT: 20+ HOURS SAVED / WEEK\nAutomated reporting pipelines using Python and SQL, eliminating manual bottleneck for the executive team."
+  },
+  {
+    "objectID": "index.html#freewheel-active-role",
+    "href": "index.html#freewheel-active-role",
+    "title": "HELLO, I’M NICK.",
+    "section": "FREEWHEEL ACTIVE ROLE",
+    "text": "FREEWHEEL ACTIVE ROLE\nACTIVE ROLE  ### Lead Analyst • 2025-Present\nACTIVE ROLE  * Founded, architected, and governed the analytics function for a 0-to-1 Commercial Operations business unit. Served as the primary C-Suite advisor to the Chief Commercial Officer (CCO), directing strategic decision support and scaling performance measurement across six sales organizations. &gt; &gt; &gt; Architected the end-to-end Sales Performance Monitoring ecosystem, deploying real-time pacing and KPI dashboards across six distinct sales organizations. This initiative streamlined operations by eliminating 120 hrs/week of manual data compilation and directly enabled &gt;$1 billion in annual quota attainment. Instituted and governed the unified metrics definition for the CCO’s Monthly Business Review (MBR) and Weekly Readouts. This established the single source of truth for growth and profitability, driving cross-organizational consensus at the C-level within the Comcast ecosystem Integrated ML-driven risk models into core commercial workflows to proactively highlight emerging portfolio risks and attention gaps, accelerating critical high-value commercial decisions by 48 hours and improving resource targeting\n\nPython\n\n\nTableau\n\n\nAWS\n\n\n⚡ IMPACT: 20+ HOURS SAVED / WEEK\nAutomated reporting pipelines using Python and SQL, eliminating manual bottleneck for the executive team."
+  },
+  {
+    "objectID": "posts/mazes.html",
+    "href": "posts/mazes.html",
+    "title": "Common Search Algorithms Applied to Mazes",
+    "section": "",
+    "text": "Maze & Pathing Generator\nData viz • Javascript • D3.js \n\nData Viz\n\n\n\nA 20x20 maze generated using Prim’s minimum spanning tree algorithm. Navigate using common search algorithms to visualize how each finds the solution.\nEvery time you click RUN, a new random maze is formed.\n\n\n🕹️ CONTROLS\n Select an Algorithm Breadth First Search Depth First Search \n\nRUN ALGORITHM"
+  },
+  {
+    "objectID": "posts/ab-test.html",
+    "href": "posts/ab-test.html",
+    "title": "Marketing A/B Test",
+    "section": "",
+    "text": "Python • Stats  \n\nBuisness Case\nFor this analysis, we’ll examine customer churn results based on an A/B test. We’ll pull our data from a CSV into a pandas dataframe.\nThis is the results of an A/B test so we’re mostly concerned with ‘test group’ as it identifies which experimental group the user was a part of. We’re also concerned with ‘converted’ as our variable of interest. It’s a 1/0 dichotmous variable so we’re not concerned with revenue of any sort.  For the sake of this example, we’ll assume all conversions are valued the same. We’ll do the same with ad cost. We’ll keep things simple and just examine the incrementality of the campaign.  As part of this, we’ll want to look into the details of each group individually. The easiest way to do this is to create one dataframe for the experimental group and the control group.\nNow since the only variable of concern here is conversions the following is all true:\n#number of bernoulli trials n_b = len(df_B)"
+  },
+  {
+    "objectID": "posts/ab-test.html#executive-summary",
+    "href": "posts/ab-test.html#executive-summary",
+    "title": "Marketing A/B Test",
+    "section": "⚡ EXECUTIVE SUMMARY",
+    "text": "⚡ EXECUTIVE SUMMARY\nWe tested a new “Single-Page Checkout” against the baseline. The test reached statistical significance (\\(p &lt; 0.05\\)) with a 4.2% lift in conversion, representing a potential $200k ARR increase"
+  },
+  {
+    "objectID": "posts/ab-test.html#recommendations",
+    "href": "posts/ab-test.html#recommendations",
+    "title": "Marketing A/B Test",
+    "section": "🚀 RECOMMENDATIONS",
+    "text": "🚀 RECOMMENDATIONS\n\nFull Rollout: Deploy the variant to 100% of traffic.\nMonitor LTV: Track these users for 90 days to ensure “Easy Checkout” doesn’t increase return rates.\nIterate: Test “Guest Checkout” next to further reduce friction."
+  },
+  {
+    "objectID": "posts/edaclust.html",
+    "href": "posts/edaclust.html",
+    "title": "Unveiling Hidden Patterns",
+    "section": "",
+    "text": "The Goal: Identify non-obvious store performance trends to assist marketing budget allocation.\nThe Result: Successfully segmented stores into 4 distinct performance clusters validated by ANOVA (\\(p &lt; 0.001\\)) and a strong effect size (Cohen’s \\(d &gt; 0.8\\))."
+  },
+  {
+    "objectID": "posts/edaclust.html#executive-summary",
+    "href": "posts/edaclust.html#executive-summary",
+    "title": "Unveiling Hidden Patterns",
+    "section": "",
+    "text": "The Goal: Identify non-obvious store performance trends to assist marketing budget allocation.\nThe Result: Successfully segmented stores into 4 distinct performance clusters validated by ANOVA (\\(p &lt; 0.001\\)) and a strong effect size (Cohen’s \\(d &gt; 0.8\\))."
+  },
+  {
+    "objectID": "posts/edaclust.html#the-hypothetical",
+    "href": "posts/edaclust.html#the-hypothetical",
+    "title": "Unveiling Hidden Patterns",
+    "section": "📋 The Hypothetical",
+    "text": "📋 The Hypothetical\n\nPrompt: A marketing decision-maker needs to determine if there are trends across store performance that aren’t initially obvious.\n\nWe are working with Walmart sales data. While limited in scope, this serves as a critical Exploratory Data Analysis (EDA) to justify deeper segmentation marketing strategies.\nimport pandas as pd import numpy as np import seaborn as sns import matplotlib.pyplot as plt from scipy.stats import f_oneway from sklearn.metrics import silhouette_score from scipy.cluster import hierarchy"
+  },
+  {
+    "objectID": "posts/mktlogit.html",
+    "href": "posts/mktlogit.html",
+    "title": "Predicting Marketing Success",
+    "section": "",
+    "text": "The Objective: Determine if Education level serves as a primary driver for marketing campaign acceptance.\nKey Finding: While Education initially appears significant, it is actually a proxy for Income. Income maintains a high correlation (0.82) with total spend and acts as a statistically significant predictor in logistic regression."
+  },
+  {
+    "objectID": "posts/mktlogit.html#executive-summary",
+    "href": "posts/mktlogit.html#executive-summary",
+    "title": "Predicting Marketing Success",
+    "section": "",
+    "text": "The Objective: Determine if Education level serves as a primary driver for marketing campaign acceptance.\nKey Finding: While Education initially appears significant, it is actually a proxy for Income. Income maintains a high correlation (0.82) with total spend and acts as a statistically significant predictor in logistic regression."
+  },
+  {
+    "objectID": "posts/mktlogit.html#project-motivation",
+    "href": "posts/mktlogit.html#project-motivation",
+    "title": "Predicting Marketing Success",
+    "section": "📋 Project Motivation",
+    "text": "📋 Project Motivation\nUsing a dataset provided by iFood, we examine the relationship between a user’s educational background and their likelihood to accept marketing offers.\nimport pandas as pd import numpy as np import seaborn as sns import matplotlib.pyplot as plt import scipy.stats as stats import statsmodels.api as sm"
   }
 ]

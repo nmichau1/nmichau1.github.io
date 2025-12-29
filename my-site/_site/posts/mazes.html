@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Nicholas Michaud</title>
+<title>Common Search Algorithms Applied to Mazes – Nicholas Michaud</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,20 +23,20 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6c19c941ea7738e33ab6ff84dd6fcc50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6c19c941ea7738e33ab6ff84dd6fcc50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -52,19 +52,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script type="module" src="mazes.js"></script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Nicholas Michaud</span>
     </a>
   </div>
@@ -74,11 +77,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
 </ul>
@@ -89,261 +92,72 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Common Search Algorithms Applied to Mazes</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="hello-im-nick." class="level1 column-screen bg-yellow" style="padding: 80px 20px; border-bottom: 5px solid black; text-align: center;">
-<h1>HELLO, I’M NICK.</h1>
-<section id="i-build-data-driven-solutions-with-mathematical-rigor-and-clean-code." class="level3">
-<h3 class="anchored" data-anchor-id="i-build-data-driven-solutions-with-mathematical-rigor-and-clean-code.">I build data-driven solutions with mathematical rigor and clean code.</h3>
-<div style="margin-top: 20px;">
-<p><a href="https://linkedin.com/in/yourprofile" class="btn-hero">LINKEDIN</a> <a href="https://github.com/yourusername" class="btn-hero">GITHUB</a> <a href="resume.pdf" class="btn-hero btn-resume">DOWNLOAD RESUME</a></p>
-</div>
-</section>
-</section>
-<div class="column-page" style="margin-top: 50px;">
-<section id="tech-stack" class="level2 brutal-card">
-<h2 class="anchored" data-anchor-id="tech-stack">🛠️ Tech Stack</h2>
-<div class="columns">
-<div class="column" style="width:48%;">
-<section id="languages-eng" class="level4 brutal-card">
-<h4 class="anchored" data-anchor-id="languages-eng">⌨️ LANGUAGES &amp; ENG</h4>
-<div class="skill-pill">
-A/B Testing
-</div>
-<div class="skill-pill">
-Causal Inference
-</div>
-<div class="skill-pill">
-Time-Series
-</div>
-<div class="skill-pill">
-Machine Learning
-</div>
-<div class="skill-pill">
-Statistical Analysis
-</div>
-<div class="skill-pill">
-ETL
-</div>
-<div class="skill-pill">
-GIT
-</div>
-<div class="skill-pill">
-WEB APPS
-</div>
-</section>
-</div><div class="column" style="width:4%;">
+    
+  
+    
+  </div>
+  
 
-</div><div class="column" style="width:48%;">
-<section id="data-warehousing" class="level4 brutal-card">
-<h4 class="anchored" data-anchor-id="data-warehousing">☁️ DATA WAREHOUSING</h4>
-<div class="skill-pill">
-Snowflake
-</div>
-<div class="skill-pill">
-Google Bigquery
-</div>
-<div class="skill-pill">
-Time-Series
-</div>
-<div class="skill-pill">
-ETL Pipeline Design
-</div>
-<div class="skill-pill">
-Data Governance
-</div>
-</section>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:48%;">
-<section id="modeling-analytics" class="level4 brutal-card">
-<h4 class="anchored" data-anchor-id="modeling-analytics">🧪 MODELING &amp; ANALYTICS</h4>
-<div class="skill-pill">
-A/B Testing
-</div>
-<div class="skill-pill">
-Causal Inference
-</div>
-<div class="skill-pill">
-Time-Series
-</div>
-<div class="skill-pill">
-Machine Learning
-</div>
-<div class="skill-pill">
-Statistical Analysis
-</div>
-<div class="skill-pill">
-MATH
-</div>
-<div class="skill-pill">
-STATS
-</div>
-</section>
-</div><div class="column" style="width:4%;">
 
-</div><div class="column" style="width:48%;">
-<section id="visualization" class="level4 brutal-card">
-<h4 class="anchored" data-anchor-id="visualization">📊 VISUALIZATION</h4>
-<div class="skill-pill">
-Tableau
-</div>
-<div class="skill-pill">
-Looker
-</div>
-<div class="skill-pill">
-D3.js
-</div>
-<div class="skill-pill">
-Dashboard Design
-</div>
-</section>
-</div>
-</div>
-<div style="margin-bottom: 40px;">
+</header>
 
-</div>
-</section>
-<section id="featured-projects" class="level1 featured-projects-container">
-<h1>🚀 FEATURED PROJECTS</h1>
-<div class="project-grid">
-<section id="project-one" class="level2 brutal-card">
-<h2 class="anchored" data-anchor-id="project-one">PROJECT ONE</h2>
-<p><strong>A Data Science Tool</strong></p>
-<p><a href="#" class="btn-hero">VIEW PROJECT</a></p>
-</section>
-<section id="project-two" class="level2 brutal-card">
-<h2 class="anchored" data-anchor-id="project-two">PROJECT TWO</h2>
-<p><strong>Neural Network Viz</strong> An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.</p>
-<p><a href="?var:project2.url" class="btn-hero">VIEW PROJECT</a></p>
-</section>
-<section id="project-three" class="level2 brutal-card">
-<h2 class="anchored" data-anchor-id="project-three">PROJECT THREE</h2>
-<p><strong>Neural Network Viz</strong> An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.</p>
-<p><a href="?var:project2.url" class="btn-hero">VIEW PROJECT</a></p>
-</section>
-</div>
-</section>
-<section id="currently-building" class="level2 brutal-card">
-<h2 class="anchored" data-anchor-id="currently-building">🛠️ CURRENTLY BUILDING</h2>
-<p>An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time. I’m currently deep-diving into **Large Language Model fiom RAG pipeline for local documentation. <a href="?var:project2.url" class="btn-hero">VIEW PROJECT</a></p>
-</section>
-<div style="margin-bottom: 120px;">
 
+<section id="maze-pathing-generator" class="level1 project-hero">
+<h1>Maze &amp; Pathing Generator</h1>
+<strong>Data viz • Javascript • D3.js</strong> <br>
+<div class="article-tag tag-viz">
+Data Viz
 </div>
+</section>
 <div class="brutal-card">
-<section id="experience" class="level2">
-<h2 class="anchored" data-anchor-id="experience">💼 EXPERIENCE</h2>
+<p>A 20x20 maze generated using <strong>Prim’s minimum spanning tree algorithm</strong>. Navigate using common search algorithms to visualize how each finds the solution.</p>
+<p>Every time you click <strong>RUN</strong>, a new random maze is formed.</p>
+</div>
+<section id="controls" class="level3 brutal-card" style="background: #CFFC00;">
+<h3 class="anchored" data-anchor-id="controls">🕹️ CONTROLS</h3>
+<p><select id="methodSelect" class="brutal-select"> <option value="">Select an Algorithm</option> <option value="breadthfirst">Breadth First Search</option> <option value="depthfirst">Depth First Search</option> </select></p>
+<button id="runMethodButton" class="btn-hero">
+RUN ALGORITHM
+</button>
 </section>
-<div class="experience-grid">
-<section id="freewheel" class="level2 brutal-card exp-main no-internal-borders">
-<h2 class="anchored" data-anchor-id="freewheel">FREEWHEEL</h2>
-<section id="lead-analyst-2025-present" class="level3">
-<h3 class="anchored" data-anchor-id="lead-analyst-2025-present">Lead Analyst • 2025-Present</h3>
-<ul>
-<li>Founded, architected, and governed the analytics function for a 0-to-1 Commercial Operations business unit. Served as the primary C-Suite advisor to the Chief Commercial Officer (CCO), directing strategic decision support and scaling performance measurement across six sales organizations. &gt; &gt; &gt; Architected the end-to-end Sales Performance Monitoring ecosystem, deploying real-time pacing and KPI dashboards across six distinct sales organizations. This initiative streamlined operations by eliminating 120 hrs/week of manual data compilation and directly enabled &gt;$1 billion in annual quota attainment. Instituted and governed the unified metrics definition for the CCO’s Monthly Business Review (MBR) and Weekly Readouts. This established the single source of truth for growth and profitability, driving cross-organizational consensus at the C-level within the Comcast ecosystem Integrated ML-driven risk models into core commercial workflows to proactively highlight emerging portfolio risks and attention gaps, accelerating critical high-value commercial decisions by 48 hours and improving resource targeting</li>
-</ul>
-<div class="skill-chip">
-Python
-</div>
-<div class="skill-chip">
-Tableau
-</div>
-<div class="skill-chip">
-AWS
-</div>
-<blockquote class="blockquote">
-<h4 id="impact-20-hours-saved-week" class="anchored">⚡ IMPACT: 20+ HOURS SAVED / WEEK</h4>
-<p>Automated reporting pipelines using Python and SQL, eliminating manual bottleneck for the executive team.</p>
-</blockquote>
-</section>
-</section>
-<section id="google" class="level1 brutal-card exp-small no-internal-borders exp-past">
-<h1>Google</h1>
-<section id="data-analyst-solutions-engineer-2020-2024" class="level3">
-<h3 class="anchored" data-anchor-id="data-analyst-solutions-engineer-2020-2024">Data Analyst / Solutions Engineer • 2020-2024</h3>
-<strong>@ Google</strong> Optimized NLP models for sentiment analysis.
-<div class="skill-chip">
-Python
-</div>
-<div class="skill-chip">
-Tableau
-</div>
-<div class="skill-chip">
-AWS
-</div>
-</section>
-</section>
-<section id="google-1" class="level1 brutal-card exp-small no-internal-borders exp-past">
-<h1>Google</h1>
-<section id="data-analyst-2019-2020" class="level3">
-<h3 class="anchored" data-anchor-id="data-analyst-2019-2020">Data Analyst • 2019-2020</h3>
-<strong>BS in Computer Science</strong> Focus on Machine Learning.
-<div class="skill-chip">
-Python
-</div>
-<div class="skill-chip">
-Tableau
-</div>
-<div class="skill-chip">
-AWS
-</div>
-</section>
-</section>
-<section id="columbia-university" class="level1 brutal-card exp-small no-internal-borders exp-past">
-<h1>Columbia University</h1>
-<section id="technical-instructor-2019-2020" class="level3">
-<h3 class="anchored" data-anchor-id="technical-instructor-2019-2020">Technical Instructor • 2019-2020</h3>
-<strong>BS in Computer Science</strong> Focus on Machine Learning.
-<div class="skill-chip">
-Python
-</div>
-<div class="skill-chip">
-Tableau
-</div>
-<div class="skill-chip">
-AWS
-</div>
-</section>
-</section>
-<section id="labelium" class="level1 brutal-card exp-small no-internal-borders exp-past">
-<h1>Labelium</h1>
-<section id="analyst-2018-2019" class="level3">
-<h3 class="anchored" data-anchor-id="analyst-2018-2019">Analyst • 2018-2019</h3>
-<strong>BS in Computer Science</strong> Focus on Machine Learning.
-<div class="skill-chip">
-Python
-</div>
-<div class="skill-chip">
-Tableau
-</div>
-<div class="skill-chip">
-AWS
-</div>
-</section>
-</section>
-</div>
-</div>
-<div style="margin-bottom: 120px;">
+<div id="maze-container" class="brutal-card" style="background: white; text-align: center;">
 
 </div>
-<section id="lets-work-together" class="level1 brutal-footer">
-<h1>LET’S WORK TOGETHER</h1>
-<p><a href="mailto:yourname@email.com" class="btn-hero" style="background-color: #CFFC00; color: black;">EMAIL ME</a></p>
-<p>Designed by Nick • Built with Quarto • 2024</p>
-</section>
+<script>
+const buttonElement = document.getElementById("runMethodButton");
+const selectElement = document.getElementById("methodSelect");
+
+buttonElement.addEventListener("click", () => {
+    const algo = selectElement.value; // "breadthfirst" or "depthfirst"
+    
+    // Map your select values to the 'bfs'/'dfs' expected by maze_maker
+    const type = algo === "breadthfirst" ? "bfs" : "dfs";
+    
+    if(window.draw_maze) {
+        window.draw_maze(type);
+    } else {
+        console.error("draw_maze function not loaded yet!");
+    }
+});
+</script>
 
 
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

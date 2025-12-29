@@ -1,5 +1,9 @@
 project:
   type: website
+  #favicon: favicon.png
+  resources:
+    - "mazes.js"
+    - "styles.css"
 
 website:
   title: "Nicholas Michaud"
@@ -12,6 +16,7 @@ website:
 
 format:
   html:
+    highlight-style: dracula
     theme:
       - brite.css
     css: styles.css
