@@ -1,0 +1,114 @@
+---
+title: "Causality"
+subtitle: "Statistical Significance Analysis"
+format:
+  html:
+    toc: true
+    toc-location: left
+    css: styles.css
+    code-copy: true
+---
+::: {.project-hero}
+# Causal Inference: Quantifying the 5% Retention Lift of Auto-Renew Features.
+**Machine Learning • Python • Stats **
+<br>
+<div class="article-tag tag-biz">Buisness Case</div>
+:::
+
+::: {.brutal-card style="background: #CFFC00;"}
+## ⚡ EXECUTIVE SUMMARY
+
+**The Challenge**: Engineered a high-performance pipeline to process 30GB of unstructured customer data into a clean analytical layer. The goal was to isolate the causal impact of "Auto-Renew" features on churn, moving beyond simple correlation.
+
+**The Engineering**: Leveraged DuckDB for lightning-fast local processing of large-scale Parquet/JSON files and dbt for modular, version-controlled transformations and data modeling.
+
+**The Analytics**: Applied Double Machine Learning (DoubleML) to account for self-selection bias, identifying a 5% causal lift in retention directly attributable to auto-billing.
+
+**The Outcome**: Successfully isolated a **5% causal lift** in retention by de-biasing the "Self-Selection" effect (where loyalists are naturally more likely to opt-in).
+ This provides a statistically sound foundation for projecting the ROI of auto-billing incentives. Robustness checks via DoubleML's orthogonalization confirmed that the effect remained significant even after controlling for 15+ high-dimensional confounding variables (Income, Tenure, Usage Frequency).
+:::
+::: {.brutal-card style="background: #CFFC00;"}
+## ⚡ Methods
+Step 1 (Nuisance Models): Using Random Forests to predict who is likely to choose auto-renew based on demographics.
+
+Step 2 (Orthogonalization): Removing that "predictable" part to look only at the unexpected behavior.
+
+Step 3 (The Estimator): Running the final causal model on the "cleaned" data.
+the KKbox dataset we were working in is in the realm of 30gigs in total of mostly unstructured data.
+ In order to perform any sort of analysis or ML on this data, we need some sort of ETL process completed to
+ ensure clean features are being passed to the model.
+
+In order to solve this problem, I loaded the raw data into duckdb and used dbt to create pipelines pulling from the raw csv, applying cleanliness steps, 
+and ultimately delivering a features table for the followup ML work.
+
+The ML work is done through querying the clean features table and using the Histogram Gradient Boosters from scikit-learn.
+THe work was also validated through a placebo test which showed that overfitting not driving the good results we saw.
+
+Model 1: Predicting the Treatment (Who chooses Auto-Renew?).
+
+Model 2: Predicting the Outcome (Who Churns?).
+The Challenge: Selection Bias (The "Why")
+This is where you show your seniority. Explain the Confounding Variable.
+
+Explain that "Power Users" are more likely to both (A) stay long-term and (B) turn on auto-renew.
+
+A simple regression would "over-credit" auto-renew because it’s picking up on the user's pre-existing loyalty.
+
+The Residuals: Analyzing the "unexplained" part of both to find the true causal effect. **$200k ARR increase**
+```python
+import pandas as pd
+import math
+
+df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv") 
+# Index(['user id', 'test group', 'converted', 'total ads', 'most ads day', 'most ads hour'])
+```
+:::
+::: {.brutal-card style="background: #CFFC00;"}
+## ⚡ The Data Pipeline
+I utilized DuckDB to process the 30GB dataset locally, avoiding the overhead and cost of a cloud warehouse while maintaining sub-minute query performance on large-scale unstructured files.
+
+**Extraction**: Processing 30GB of unstructured logs.
+
+**Processing**: Using DuckDB as an OLAP engine to aggregate data in seconds rather than hours.
+
+**Transformation**: dbt models for feature engineering (creating the "Nuisance" variables like tenure, usage frequency, and income proxies).
+
+**Modeling**: DoubleML via Python.
+:::
+
+
+::: {.brutal-card style="background: #CFFC00;"}
+### 📊 KEY RESULTS
+t(f"Theta: -5.78 (p < 0.05)")
+"\n--- PLACEBO RESULT ---"
+:::
+
+::: {.brutal-card style="background: #FF61D2;"}
+## 🚀 RECOMMENDATIONS
+1. **Followup Testing:** A/B Lift test to validate results and see if churn can be impacted further through direct action
+2. **Develop KPI:** Assess auto-renew rates as a measure of account health and churn likelihoods.
+3. **Iterate:** Investigate UI methods to incentive auto-renew enablement.
+:::
+
+
+
+
+
+
+
+<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+  TOP ↑
+</button>
+
+<script>
+
+// Show/Hide button based on scroll position
+window.onscroll = function() {
+  const btn = document.getElementById("back-to-top");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+</script>

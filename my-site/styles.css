@@ -193,6 +193,7 @@ th, td {
   box-shadow: 4px 4px 0px black;
   transition: all 0.2s ease;
   margin-right: 20px;
+  
 }
 
 /* Make it "squish" when you click it */
@@ -672,7 +673,11 @@ pre.sourceCode code {
   background-color: #f0f0f0;
   margin-bottom: -4px !important; /* Overlap the bottom border */
   padding: 10px 20px !important;
+   overflow: visible !important;
+ 
 }
+
+
 
 /* 4. The Active (Selected) Tab */
 .nav-link.active {
@@ -884,6 +889,11 @@ code {
   margin-bottom: 15px;
   box-shadow: 3px 3px 0px black;       /* Mini shadow for depth */
 }
+.brutal-card p {        
+
+  font-size:15px
+       
+}
 .brutal-card h4 {
   color: black !important;           /* Acid Lime text */
   background-color:#CFFC00!important;  /* Black background makes lime pop */
@@ -1059,10 +1069,17 @@ ul {
   list-style: none;
 }
 
-ul li::before {
+/* Update your bullet point rule like this */
+ul:not(.navbar-nav):not(.dropdown-menu) li::before {
   content: "> ";
   color: #FF61D2;
   font-weight: bold;
+}
+
+/* Update your general list rule */
+ul:not(.navbar-nav) {
+  list-style: none;
+  /* your other styles here */
 }
 
 

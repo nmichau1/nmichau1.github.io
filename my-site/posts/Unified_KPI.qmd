@@ -1,0 +1,125 @@
+---
+title: "Designing a Unified KPI Framework for Enterprise Decision-Making"
+format:
+  html:
+    toc: false
+    toc-location: left
+    css: styles.css
+    code-copy: true
+    page-layout: full
+---
+::: {.project-hero}
+# Designing a Unified KPI Framework for Enterprise Decision-Making.
+<br>
+<div class="article-tag tag-biz">Buisness Case</div>
+:::
+
+::: {.brutal-card style="background: #CFFC00;"}
+## ⚡ EXECUTIVE SUMMARY
+The Chief Commercial Officer lacked a consistent, trusted monthly view of performance
+ across four commercial business units, 
+limiting effective resource allocation and executive decision-making.
+Metric definitions varied by organization, data sources conflicted, 
+and gaps in coverage meant leadership reviews were dominated by reconciling conflicting numbers
+rather than evaluating tradeoffs or setting direction.
+
+I designed and led the establishment of a standardized monthly business review, 
+defining shared metric foundations, baseline KPIs, and performance narratives that
+ scaled across business units and created a durable executive-level decision surface.
+:::
+::: {.brutal-card style="background: #CFFC00;"}
+## ⚡ Problems and Constraints
+This effort operated within a low data- and analytics-maturity environment,
+ where many stakeholders lacked shared mental models for key KPIs and had limited 
+ tolerance for technical or methodological detail. Metrics that were analytically
+  sound often failed in practice unless they could be explained quickly and consistently
+   at the executive level.
+
+As a result, KPI definitions required multiple iterations to balance analytical rigor
+ with interpretability, and most metrics had to be expressed at a deliberately high
+  level to enable cross-organizational comparison. Detailed diagnostics and follow-up
+   analyses were intentionally separated into appendices, preserving simplicity in executive 
+   forums while maintaining analytical depth for downstream investigation. Over successive review cycles,
+    this structure created a shared vocabulary for performance, reducing iteration cycles and 
+    increasing the pace of executive decision-making.
+:::
+::: {.brutal-card style="background: #CFFC00;"}
+## ⚡ Design Principles
+
+**Interpretability over local optimization.** Metrics were designed to be immediately interpretable at the executive level, even when this required simplifying analytically richer measures. If a KPI could not be explained consistently across organizations, it was not suitable for inclusion in the core review.
+
+**Unified definitions with layered rollups.** Core metric definitions and KPIs were standardized across commercial organizations, with each business unit contributing metrics that rolled up into a coherent enterprise-level view. This allowed leadership to reason about the full business while preserving traceability down to individual org performance.
+
+**Comparability before completeness.** Metrics were selected and scoped to enable reliable cross-org comparison, even when this meant deferring more detailed or org-specific analyses to appendices. The primary review optimized for alignment and decision-making, not exhaustiveness.
+
+**Low-maintenance by default.** Tables, charts, and narratives were designed as reusable, automated components delivered on a fixed monthly cadence. This minimized manual rework, reduced ongoing maintenance cost, and ensured the analytics team remained focused on interpretation and decision support rather than report recreation.
+Over time, this structure reduced ongoing maintenance effort and created space for deeper analysis, as the monthly review no longer required ad hoc rebuilds or metric renegotiation.
+:::
+
+
+
+::: {.brutal-card style="background: #CFFC00;"}
+### Outcome & Ownership
+Following rollout, the monthly business review became the primary forum for evaluating 
+commercial performance and resource allocation across business units. Executive discussions
+ shifted from reconciling conflicting numbers to comparing trends, identifying tradeoffs, and 
+ assigning follow-up actions. Over successive cycles, leadership increasingly focused on
+  forward-looking risks and opportunities rather than re-litigating metric definitions.
+
+  The standardized structure and metric definitions remained stable across review cycles,
+   reducing churn and rework while creating a shared vocabulary for performance. 
+   As familiarity increased, iteration cycles shortened and the review cadence became 
+   more efficient, with less time spent on explanation and more on interpretation.
+
+  By designing the review as a low-maintenance, automated system, ongoing delivery no longer depended on ad hoc analyst effort.
+   Monthly business review preparation was reduced from a four-person, two-week effort 
+   to approximately two hours end to end, allowing team capacity to
+    shift away from report rebuilding toward deeper analysis, ad hoc investigation,
+     and proactive decision support. Over time, other teams began reusing elements
+      of the metric framework and reporting structure for their own leadership reviews.<br>
+      <br>The review ultimately became part of the operating rhythm for commercial leadership,
+      rather than a standalone reporting artifact.
+
+:::
+
+::: {.brutal-card style="background: #FF61D2;"}
+## 🚀 What I'd Improve
+While the monthly business review achieved consistent, trusted executive reporting,
+ subsequent iterations revealed opportunities to accelerate adoption and increase 
+ interpretability. I would prioritize defining business and KPI definitions upfront
+  with each VP organization, ensuring alignment on meaning and intent before building
+   the review, which would reduce iteration cycles and enable faster delivery of 
+   actionable insights. Additionally, I would allocate more energy to support each
+    VP in developing their organizational narratives, creating a stronger link
+     between metrics and decision-making at the unit level. Finally, embedding
+      optional explanatory context directly within the review or appendix—clarifying 
+      assumptions, variance drivers, and methodology—could further enhance interpretability
+       and reduce reliance on ad hoc analyst explanations.
+       <br><br>Introduce mini-onboarding materials for each VP org so they can interpret metrics independently.
+       <br><br>Include standardized variance explanations for each KPI, reducing analyst intervention.
+       <br><br>Set up proactive feedback loops with leadership to identify metrics that need refinement each quarter.
+
+:::
+
+
+
+
+
+
+
+<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+  TOP ↑
+</button>
+
+<script>
+
+// Show/Hide button based on scroll position
+window.onscroll = function() {
+  const btn = document.getElementById("back-to-top");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+</script>

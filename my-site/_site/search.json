@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "Portfolio",
     "section": "",
-    "text": "Common Search Algorithms Applied to Mazes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarketing A/B Test\n\n\nStatistical Significance Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPredicting Marketing Success\n\n\nAn Analysis of Education and Income as Predictors of Campaign Receptivity\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\n\nProject One: Housing Price Predictor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTwo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnveiling Hidden Patterns\n\n\nClustering and Statistical Validation of Walmart Store Sales\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\nNo matching items"
+    "text": "Causality\n\n\nStatistical Significance Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Search Algorithms Applied to Mazes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesigning a Unified KPI Framework for Enterprise Decision-Making\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarketing A/B Test\n\n\nStatistical Significance Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPredicting Marketing Success\n\n\nAn Analysis of Education and Income as Predictors of Campaign Receptivity\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\n\nProject One: Housing Price Predictor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTwo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnveiling Hidden Patterns\n\n\nClustering and Statistical Validation of Walmart Store Sales\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -222,5 +222,152 @@
     "title": "Predicting Marketing Success",
     "section": "📋 Project Motivation",
     "text": "📋 Project Motivation\nUsing a dataset provided by iFood, we examine the relationship between a user’s educational background and their likelihood to accept marketing offers."
+  },
+  {
+    "objectID": "posts/causality.html",
+    "href": "posts/causality.html",
+    "title": "Causality",
+    "section": "",
+    "text": "Machine Learning • Python • Stats  \n\nBuisness Case"
+  },
+  {
+    "objectID": "posts/causality.html#executive-summary",
+    "href": "posts/causality.html#executive-summary",
+    "title": "Causality",
+    "section": "⚡ EXECUTIVE SUMMARY",
+    "text": "⚡ EXECUTIVE SUMMARY\nThe Challenge: Engineered a high-performance pipeline to process 30GB of unstructured customer data into a clean analytical layer. The goal was to isolate the causal impact of “Auto-Renew” features on churn, moving beyond simple correlation.\nThe Engineering: Leveraged DuckDB for lightning-fast local processing of large-scale Parquet/JSON files and dbt for modular, version-controlled transformations and data modeling.\nThe Analytics: Applied Double Machine Learning (DoubleML) to account for self-selection bias, identifying a 5% causal lift in retention directly attributable to auto-billing.\nThe Outcome: Successfully isolated a 5% causal lift in retention by de-biasing the “Self-Selection” effect (where loyalists are naturally more likely to opt-in). This provides a statistically sound foundation for projecting the ROI of auto-billing incentives. Robustness checks via DoubleML’s orthogonalization confirmed that the effect remained significant even after controlling for 15+ high-dimensional confounding variables (Income, Tenure, Usage Frequency)."
+  },
+  {
+    "objectID": "posts/causality.html#recommendations",
+    "href": "posts/causality.html#recommendations",
+    "title": "Causality",
+    "section": "🚀 RECOMMENDATIONS",
+    "text": "🚀 RECOMMENDATIONS\n\nFollowup Testing: A/B Lift test to validate results and see if churn can be impacted further through direct action\nDevelop KPI: Assess auto-renew rates as a measure of account health and churn likelihoods.\nIterate: Investigate UI methods to incentive auto-renew enablement."
+  },
+  {
+    "objectID": "posts/causality.html#methods",
+    "href": "posts/causality.html#methods",
+    "title": "Causality",
+    "section": "⚡ Methods",
+    "text": "⚡ Methods\nStep 1 (Nuisance Models): Using Random Forests to predict who is likely to choose auto-renew based on demographics.\nStep 2 (Orthogonalization): Removing that “predictable” part to look only at the unexpected behavior.\nStep 3 (The Estimator): Running the final causal model on the “cleaned” data. the KKbox dataset we were working in is in the realm of 30gigs in total of mostly unstructured data. In order to perform any sort of analysis or ML on this data, we need some sort of ETL process completed to ensure clean features are being passed to the model.\nIn order to solve this problem, I loaded the raw data into duckdb and used dbt to create pipelines pulling from the raw csv, applying cleanliness steps, and ultimately delivering a features table for the followup ML work.\nThe ML work is done through querying the clean features table and using the Histogram Gradient Boosters from scikit-learn. THe work was also validated through a placebo test which showed that overfitting not driving the good results we saw.\nModel 1: Predicting the Treatment (Who chooses Auto-Renew?).\nModel 2: Predicting the Outcome (Who Churns?). The Challenge: Selection Bias (The “Why”) This is where you show your seniority. Explain the Confounding Variable.\nExplain that “Power Users” are more likely to both (A) stay long-term and (B) turn on auto-renew.\nA simple regression would “over-credit” auto-renew because it’s picking up on the user’s pre-existing loyalty.\nThe Residuals: Analyzing the “unexplained” part of both to find the true causal effect. $200k ARR increase\nimport pandas as pd\nimport math\n\ndf = pd.read_csv(\"WA_Fn-UseC_-Telco-Customer-Churn.csv\") \n# Index(['user id', 'test group', 'converted', 'total ads', 'most ads day', 'most ads hour'])"
+  },
+  {
+    "objectID": "posts/causality.html#methods-1",
+    "href": "posts/causality.html#methods-1",
+    "title": "Causality",
+    "section": "⚡ Methods",
+    "text": "⚡ Methods\nStep 1 (Nuisance Models): Using Random Forests to predict who is likely to choose auto-renew based on demographics.\nStep 2 (Orthogonalization): Removing that “predictable” part to look only at the unexpected behavior.\nStep 3 (The Estimator): Running the final causal model on the “cleaned” data. the KKbox dataset we were working in is in the realm of 30gigs in total of mostly unstructured data. In order to perform any sort of analysis or ML on this data, we need some sort of ETL process completed to ensure clean features are being passed to the model.\nIn order to solve this problem, I loaded the raw data into duckdb and used dbt to create pipelines pulling from the raw csv, applying cleanliness steps, and ultimately delivering a features table for the followup ML work.\nThe ML work is done through querying the clean features table and using the Histogram Gradient Boosters from scikit-learn. THe work was also validated through a placebo test which showed that overfitting not driving the good results we saw."
+  },
+  {
+    "objectID": "posts/causality.html#the-data-pipeline",
+    "href": "posts/causality.html#the-data-pipeline",
+    "title": "Causality",
+    "section": "⚡ The Data Pipeline",
+    "text": "⚡ The Data Pipeline\nI utilized DuckDB to process the 30GB dataset locally, avoiding the overhead and cost of a cloud warehouse while maintaining sub-minute query performance on large-scale unstructured files.\nExtraction: Processing 30GB of unstructured logs.\nProcessing: Using DuckDB as an OLAP engine to aggregate data in seconds rather than hours.\nTransformation: dbt models for feature engineering (creating the “Nuisance” variables like tenure, usage frequency, and income proxies).\nModeling: DoubleML via Python."
+  },
+  {
+    "objectID": "posts/causality copy.html",
+    "href": "posts/causality copy.html",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "",
+    "text": "Buisness Case"
+  },
+  {
+    "objectID": "posts/causality copy.html#executive-summary",
+    "href": "posts/causality copy.html#executive-summary",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "⚡ EXECUTIVE SUMMARY",
+    "text": "⚡ EXECUTIVE SUMMARY\nThe Chief Commercial Officer lacked a consistent, trusted monthly view of performance across four commercial business units, limiting effective resource allocation and executive decision-making. Metric definitions varied by organization, data sources conflicted, and gaps in coverage meant leadership reviews were dominated by reconciling conflicting numbers rather than evaluating tradeoffs or setting direction.\nI designed and led the establishment of a standardized monthly business review, defining shared metric foundations, baseline KPIs, and performance narratives that scaled across business units and created a durable executive-level decision surface."
+  },
+  {
+    "objectID": "posts/causality copy.html#methods",
+    "href": "posts/causality copy.html#methods",
+    "title": "Causality",
+    "section": "⚡ Methods",
+    "text": "⚡ Methods\nStep 1 (Nuisance Models): Using Random Forests to predict who is likely to choose auto-renew based on demographics.\nStep 2 (Orthogonalization): Removing that “predictable” part to look only at the unexpected behavior.\nStep 3 (The Estimator): Running the final causal model on the “cleaned” data. the KKbox dataset we were working in is in the realm of 30gigs in total of mostly unstructured data. In order to perform any sort of analysis or ML on this data, we need some sort of ETL process completed to ensure clean features are being passed to the model.\nIn order to solve this problem, I loaded the raw data into duckdb and used dbt to create pipelines pulling from the raw csv, applying cleanliness steps, and ultimately delivering a features table for the followup ML work.\nThe ML work is done through querying the clean features table and using the Histogram Gradient Boosters from scikit-learn. THe work was also validated through a placebo test which showed that overfitting not driving the good results we saw.\nModel 1: Predicting the Treatment (Who chooses Auto-Renew?).\nModel 2: Predicting the Outcome (Who Churns?). The Challenge: Selection Bias (The “Why”) This is where you show your seniority. Explain the Confounding Variable.\nExplain that “Power Users” are more likely to both (A) stay long-term and (B) turn on auto-renew.\nA simple regression would “over-credit” auto-renew because it’s picking up on the user’s pre-existing loyalty.\nThe Residuals: Analyzing the “unexplained” part of both to find the true causal effect. $200k ARR increase\nimport pandas as pd\nimport math\n\ndf = pd.read_csv(\"WA_Fn-UseC_-Telco-Customer-Churn.csv\") \n# Index(['user id', 'test group', 'converted', 'total ads', 'most ads day', 'most ads hour'])"
+  },
+  {
+    "objectID": "posts/causality copy.html#the-data-pipeline",
+    "href": "posts/causality copy.html#the-data-pipeline",
+    "title": "Causality",
+    "section": "⚡ The Data Pipeline",
+    "text": "⚡ The Data Pipeline\nI utilized DuckDB to process the 30GB dataset locally, avoiding the overhead and cost of a cloud warehouse while maintaining sub-minute query performance on large-scale unstructured files.\nExtraction: Processing 30GB of unstructured logs.\nProcessing: Using DuckDB as an OLAP engine to aggregate data in seconds rather than hours.\nTransformation: dbt models for feature engineering (creating the “Nuisance” variables like tenure, usage frequency, and income proxies).\nModeling: DoubleML via Python."
+  },
+  {
+    "objectID": "posts/causality copy.html#recommendations",
+    "href": "posts/causality copy.html#recommendations",
+    "title": "Causality",
+    "section": "🚀 RECOMMENDATIONS",
+    "text": "🚀 RECOMMENDATIONS\n\nFollowup Testing: A/B Lift test to validate results and see if churn can be impacted further through direct action\nDevelop KPI: Assess auto-renew rates as a measure of account health and churn likelihoods.\nIterate: Investigate UI methods to incentive auto-renew enablement."
+  },
+  {
+    "objectID": "posts/causality copy.html#problems-and-constraints",
+    "href": "posts/causality copy.html#problems-and-constraints",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "⚡ Problems and Constraints",
+    "text": "⚡ Problems and Constraints\nThis effort operated within a low data- and analytics-maturity environment, where many stakeholders lacked shared mental models for key KPIs and had limited tolerance for technical or methodological detail. Metrics that were analytically sound often failed in practice unless they could be explained quickly and consistently at the executive level.\nAs a result, KPI definitions required multiple iterations to balance analytical rigor with interpretability, and most metrics had to be expressed at a deliberately high level to enable cross-organizational comparison. Detailed diagnostics and follow-up analyses were intentionally separated into appendices, preserving simplicity in executive forums while maintaining analytical depth for downstream investigation. Over successive review cycles, this structure created a shared vocabulary for performance, reducing iteration cycles and increasing the pace of executive decision-making."
+  },
+  {
+    "objectID": "posts/causality copy.html#metrics-definition-ownership",
+    "href": "posts/causality copy.html#metrics-definition-ownership",
+    "title": "Causality",
+    "section": "⚡ Metrics & Definition Ownership",
+    "text": "⚡ Metrics & Definition Ownership\nI utilized DuckDB to process the 30GB dataset locally, avoiding the overhead and cost of a cloud warehouse while maintaining sub-minute query performance on large-scale unstructured files.\nExtraction: Processing 30GB of unstructured logs.\nProcessing: Using DuckDB as an OLAP engine to aggregate data in seconds rather than hours.\nTransformation: dbt models for feature engineering (creating the “Nuisance” variables like tenure, usage frequency, and income proxies).\nModeling: DoubleML via Python."
+  },
+  {
+    "objectID": "posts/causality copy.html#what-id-improve",
+    "href": "posts/causality copy.html#what-id-improve",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "🚀 What I’d Improve",
+    "text": "🚀 What I’d Improve\nWhile the monthly business review achieved consistent, trusted executive reporting, subsequent iterations revealed opportunities to accelerate adoption and increase interpretability. I would prioritize defining business and KPI definitions upfront with each VP organization, ensuring alignment on meaning and intent before building the review, which would reduce iteration cycles and enable faster delivery of actionable insights. Additionally, I would allocate more energy to support each VP in developing their organizational narratives, creating a stronger link between metrics and decision-making at the unit level. Finally, embedding optional explanatory context directly within the review or appendix—clarifying assumptions, variance drivers, and methodology—could further enhance interpretability and reduce reliance on ad hoc analyst explanations.\n   &lt;ul&gt;\n   Introduce mini-onboarding materials for each VP org so they can interpret metrics independently.\nInclude standardized variance explanations for each KPI, reducing analyst intervention.\nSet up proactive feedback loops with leadership to identify metrics that need refinement each quarter."
+  },
+  {
+    "objectID": "posts/causality copy.html#design-principles",
+    "href": "posts/causality copy.html#design-principles",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "⚡ Design Principles",
+    "text": "⚡ Design Principles\nInterpretability over local optimization. Metrics were designed to be immediately interpretable at the executive level, even when this required simplifying analytically richer measures. If a KPI could not be explained consistently across organizations, it was not suitable for inclusion in the core review.\nUnified definitions with layered rollups. Core metric definitions and KPIs were standardized across commercial organizations, with each business unit contributing metrics that rolled up into a coherent enterprise-level view. This allowed leadership to reason about the full business while preserving traceability down to individual org performance.\nComparability before completeness. Metrics were selected and scoped to enable reliable cross-org comparison, even when this meant deferring more detailed or org-specific analyses to appendices. The primary review optimized for alignment and decision-making, not exhaustiveness.\nLow-maintenance by default. Tables, charts, and narratives were designed as reusable, automated components delivered on a fixed monthly cadence. This minimized manual rework, reduced ongoing maintenance cost, and ensured the analytics team remained focused on interpretation and decision support rather than report recreation. Over time, this structure reduced ongoing maintenance effort and created space for deeper analysis, as the monthly review no longer required ad hoc rebuilds or metric renegotiation."
+  },
+  {
+    "objectID": "posts/Unified_KPI.html",
+    "href": "posts/Unified_KPI.html",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "",
+    "text": "Buisness Case"
+  },
+  {
+    "objectID": "posts/Unified_KPI.html#executive-summary",
+    "href": "posts/Unified_KPI.html#executive-summary",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "⚡ EXECUTIVE SUMMARY",
+    "text": "⚡ EXECUTIVE SUMMARY\nThe Chief Commercial Officer lacked a consistent, trusted monthly view of performance across four commercial business units, limiting effective resource allocation and executive decision-making. Metric definitions varied by organization, data sources conflicted, and gaps in coverage meant leadership reviews were dominated by reconciling conflicting numbers rather than evaluating tradeoffs or setting direction.\nI designed and led the establishment of a standardized monthly business review, defining shared metric foundations, baseline KPIs, and performance narratives that scaled across business units and created a durable executive-level decision surface."
+  },
+  {
+    "objectID": "posts/Unified_KPI.html#problems-and-constraints",
+    "href": "posts/Unified_KPI.html#problems-and-constraints",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "⚡ Problems and Constraints",
+    "text": "⚡ Problems and Constraints\nThis effort operated within a low data- and analytics-maturity environment, where many stakeholders lacked shared mental models for key KPIs and had limited tolerance for technical or methodological detail. Metrics that were analytically sound often failed in practice unless they could be explained quickly and consistently at the executive level.\nAs a result, KPI definitions required multiple iterations to balance analytical rigor with interpretability, and most metrics had to be expressed at a deliberately high level to enable cross-organizational comparison. Detailed diagnostics and follow-up analyses were intentionally separated into appendices, preserving simplicity in executive forums while maintaining analytical depth for downstream investigation. Over successive review cycles, this structure created a shared vocabulary for performance, reducing iteration cycles and increasing the pace of executive decision-making."
+  },
+  {
+    "objectID": "posts/Unified_KPI.html#design-principles",
+    "href": "posts/Unified_KPI.html#design-principles",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "⚡ Design Principles",
+    "text": "⚡ Design Principles\nInterpretability over local optimization. Metrics were designed to be immediately interpretable at the executive level, even when this required simplifying analytically richer measures. If a KPI could not be explained consistently across organizations, it was not suitable for inclusion in the core review.\nUnified definitions with layered rollups. Core metric definitions and KPIs were standardized across commercial organizations, with each business unit contributing metrics that rolled up into a coherent enterprise-level view. This allowed leadership to reason about the full business while preserving traceability down to individual org performance.\nComparability before completeness. Metrics were selected and scoped to enable reliable cross-org comparison, even when this meant deferring more detailed or org-specific analyses to appendices. The primary review optimized for alignment and decision-making, not exhaustiveness.\nLow-maintenance by default. Tables, charts, and narratives were designed as reusable, automated components delivered on a fixed monthly cadence. This minimized manual rework, reduced ongoing maintenance cost, and ensured the analytics team remained focused on interpretation and decision support rather than report recreation. Over time, this structure reduced ongoing maintenance effort and created space for deeper analysis, as the monthly review no longer required ad hoc rebuilds or metric renegotiation."
+  },
+  {
+    "objectID": "posts/Unified_KPI.html#what-id-improve",
+    "href": "posts/Unified_KPI.html#what-id-improve",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "🚀 What I’d Improve",
+    "text": "🚀 What I’d Improve\nWhile the monthly business review achieved consistent, trusted executive reporting, subsequent iterations revealed opportunities to accelerate adoption and increase interpretability. I would prioritize defining business and KPI definitions upfront with each VP organization, ensuring alignment on meaning and intent before building the review, which would reduce iteration cycles and enable faster delivery of actionable insights. Additionally, I would allocate more energy to support each VP in developing their organizational narratives, creating a stronger link between metrics and decision-making at the unit level. Finally, embedding optional explanatory context directly within the review or appendix—clarifying assumptions, variance drivers, and methodology—could further enhance interpretability and reduce reliance on ad hoc analyst explanations. Introduce mini-onboarding materials for each VP org so they can interpret metrics independently. Include standardized variance explanations for each KPI, reducing analyst intervention. Set up proactive feedback loops with leadership to identify metrics that need refinement each quarter."
+  },
+  {
+    "objectID": "posts/Unified_KPI.html#the-chief-commercial-officer-lacked-a-consistent-trusted-monthly-view-of-performance",
+    "href": "posts/Unified_KPI.html#the-chief-commercial-officer-lacked-a-consistent-trusted-monthly-view-of-performance",
+    "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "section": "The Chief Commercial Officer lacked a consistent, trusted monthly view of performance",
+    "text": "The Chief Commercial Officer lacked a consistent, trusted monthly view of performance\nacross four commercial business units, limiting effective resource allocation and executive decision-making. Metric definitions varied by organization, data sources conflicted, and gaps in coverage meant leadership reviews were dominated by reconciling conflicting numbers rather than evaluating tradeoffs or setting direction.\nI designed and led the establishment of a standardized monthly business review, defining shared metric foundations, baseline KPIs, and performance narratives that scaled across business units and created a durable executive-level decision surface."
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Portfolio – Nicholas Michaud</title>
+<title>Designing a Unified KPI Framework for Enterprise Decision-Making – Nicholas Michaud</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,20 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6c19c941ea7738e33ab6ff84dd6fcc50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5b455d6c7cce902ea5f84b1d2a69b1be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -54,77 +52,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
+<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Nicholas Michaud</span>
     </a>
   </div>
@@ -134,11 +75,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
 </ul>
@@ -149,21 +90,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Portfolio</h1>
+<h1 class="title">Designing a Unified KPI Framework for Enterprise Decision-Making</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -175,202 +118,67 @@ window.Quarto = {
 </header>
 
 
-<div class="bg-white">
+<section id="designing-a-unified-kpi-framework-for-enterprise-decision-making." class="level1 project-hero">
+<h1>Designing a Unified KPI Framework for Enterprise Decision-Making.</h1>
+<br>
+<div class="article-tag tag-biz">
+Buisness Case
+</div>
+</section>
+<section id="executive-summary" class="level2 brutal-card" style="background: #CFFC00;">
+<h2 class="anchored" data-anchor-id="executive-summary">⚡ EXECUTIVE SUMMARY</h2>
+<p>The Chief Commercial Officer lacked a consistent, trusted monthly view of performance across four commercial business units, limiting effective resource allocation and executive decision-making. Metric definitions varied by organization, data sources conflicted, and gaps in coverage meant leadership reviews were dominated by reconciling conflicting numbers rather than evaluating tradeoffs or setting direction.</p>
+<p>I designed and led the establishment of a standardized monthly business review, defining shared metric foundations, baseline KPIs, and performance narratives that scaled across business units and created a durable executive-level decision surface.</p>
+</section>
+<section id="problems-and-constraints" class="level2 brutal-card" style="background: #CFFC00;">
+<h2 class="anchored" data-anchor-id="problems-and-constraints">⚡ Problems and Constraints</h2>
+<p>This effort operated within a low data- and analytics-maturity environment, where many stakeholders lacked shared mental models for key KPIs and had limited tolerance for technical or methodological detail. Metrics that were analytically sound often failed in practice unless they could be explained quickly and consistently at the executive level.</p>
+<p>As a result, KPI definitions required multiple iterations to balance analytical rigor with interpretability, and most metrics had to be expressed at a deliberately high level to enable cross-organizational comparison. Detailed diagnostics and follow-up analyses were intentionally separated into appendices, preserving simplicity in executive forums while maintaining analytical depth for downstream investigation. Over successive review cycles, this structure created a shared vocabulary for performance, reducing iteration cycles and increasing the pace of executive decision-making.</p>
+</section>
+<section id="design-principles" class="level2 brutal-card" style="background: #CFFC00;">
+<h2 class="anchored" data-anchor-id="design-principles">⚡ Design Principles</h2>
+<p><strong>Interpretability over local optimization.</strong> Metrics were designed to be immediately interpretable at the executive level, even when this required simplifying analytically richer measures. If a KPI could not be explained consistently across organizations, it was not suitable for inclusion in the core review.</p>
+<p><strong>Unified definitions with layered rollups.</strong> Core metric definitions and KPIs were standardized across commercial organizations, with each business unit contributing metrics that rolled up into a coherent enterprise-level view. This allowed leadership to reason about the full business while preserving traceability down to individual org performance.</p>
+<p><strong>Comparability before completeness.</strong> Metrics were selected and scoped to enable reliable cross-org comparison, even when this meant deferring more detailed or org-specific analyses to appendices. The primary review optimized for alignment and decision-making, not exhaustiveness.</p>
+<p><strong>Low-maintenance by default.</strong> Tables, charts, and narratives were designed as reusable, automated components delivered on a fixed monthly cadence. This minimized manual rework, reduced ongoing maintenance cost, and ensured the analytics team remained focused on interpretation and decision support rather than report recreation. Over time, this structure reduced ongoing maintenance effort and created space for deeper analysis, as the monthly review no longer required ad hoc rebuilds or metric renegotiation.</p>
+</section>
+<section id="outcome-ownership" class="level3 brutal-card" style="background: #CFFC00;">
+<h3 class="anchored" data-anchor-id="outcome-ownership">Outcome &amp; Ownership</h3>
+<p>Following rollout, the monthly business review became the primary forum for evaluating commercial performance and resource allocation across business units. Executive discussions shifted from reconciling conflicting numbers to comparing trends, identifying tradeoffs, and assigning follow-up actions. Over successive cycles, leadership increasingly focused on forward-looking risks and opportunities rather than re-litigating metric definitions.</p>
+<p>The standardized structure and metric definitions remained stable across review cycles, reducing churn and rework while creating a shared vocabulary for performance. As familiarity increased, iteration cycles shortened and the review cadence became more efficient, with less time spent on explanation and more on interpretation.</p>
+<p>By designing the review as a low-maintenance, automated system, ongoing delivery no longer depended on ad hoc analyst effort. Monthly business review preparation was reduced from a four-person, two-week effort to approximately two hours end to end, allowing team capacity to shift away from report rebuilding toward deeper analysis, ad hoc investigation, and proactive decision support. Over time, other teams began reusing elements of the metric framework and reporting structure for their own leadership reviews.</p>
+<pre><code> The review ultimately became part of the operating rhythm for commercial leadership,
+  rather than a standalone reporting artifact.</code></pre>
+<p>“— PLACEBO RESULT —”</p>
+</section>
+<section id="what-id-improve" class="level2 brutal-card" style="background: #FF61D2;">
+<h2 class="anchored" data-anchor-id="what-id-improve">🚀 What I’d Improve</h2>
+<p>While the monthly business review achieved consistent, trusted executive reporting, subsequent iterations revealed opportunities to accelerate adoption and increase interpretability. I would prioritize defining business and KPI definitions upfront with each VP organization, ensuring alignment on meaning and intent before building the review, which would reduce iteration cycles and enable faster delivery of actionable insights. Additionally, I would allocate more energy to support each VP in developing their organizational narratives, creating a stronger link between metrics and decision-making at the unit level. Finally, embedding optional explanatory context directly within the review or appendix—clarifying assumptions, variance drivers, and methodology—could further enhance interpretability and reduce reliance on ad hoc analyst explanations.</p>
+<pre><code>   &lt;ul&gt;
+   Introduce mini-onboarding materials for each VP org so they can interpret metrics independently.</code></pre>
+<p>Include standardized variance explanations for each KPI, reducing analyst intervention.</p>
+Set up proactive feedback loops with leadership to identify metrics that need refinement each quarter.
 
-</div>
+</section>
+<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+TOP ↑
+</button>
+<script>
+
+// Show/Hide button based on scroll position
+window.onscroll = function() {
+  const btn = document.getElementById("back-to-top");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+</script>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1768793697880" data-listing-reading-time-sort="3" data-listing-word-count-sort="595">
-<div class="thumbnail"><a href="./posts/causality.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/causality.html" class="no-external">Causality</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/causality.html" class="no-external">Statistical Significance Analysis</a>
-</div>
-<div class="delink listing-description"><a href="./posts/causality.html" class="no-external">
-<strong>The Challenge</strong>: Engineered a high-performance pipeline to process 30GB of unstructured customer data into a clean analytical layer. The goal was to isolate the causal impact…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/causality.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1766971659434" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
-<div class="thumbnail"><a href="./posts/mazes.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/mazes.html" class="no-external">Common Search Algorithms Applied to Mazes</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/mazes.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="./posts/mazes.html" class="no-external">
-A 20x20 maze generated using <strong>Prim’s minimum spanning tree algorithm</strong>. Navigate using common search algorithms to visualize how each finds the solution.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/mazes.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1768793727191" data-listing-reading-time-sort="5" data-listing-word-count-sort="919">
-<div class="thumbnail"><a href="./posts/Unified_KPI.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Unified_KPI.html" class="no-external">Designing a Unified KPI Framework for Enterprise Decision-Making</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/Unified_KPI.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="./posts/Unified_KPI.html" class="no-external">
-The Chief Commercial Officer lacked a consistent, trusted monthly view of performance across four commercial business units, limiting effective resource allocation and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Unified_KPI.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1767027857504" data-listing-reading-time-sort="6" data-listing-word-count-sort="1151">
-<div class="thumbnail"><a href="./posts/ab-test.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/ab-test.html" class="no-external">Marketing A/B Test</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/ab-test.html" class="no-external">Statistical Significance Analysis</a>
-</div>
-<div class="delink listing-description"><a href="./posts/ab-test.html" class="no-external">
-<strong>Python / A/B Test / Binomial Dist. / Proportions</strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/ab-test.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1767027972920" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
-<div class="thumbnail"><a href="./posts/mktlogit.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/mktlogit.html" class="no-external">Predicting Marketing Success</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/mktlogit.html" class="no-external">An Analysis of Education and Income as Predictors of Campaign Receptivity</a>
-</div>
-<div class="delink listing-description"><a href="./posts/mktlogit.html" class="no-external">
-<strong>The Objective:</strong> Determine if Education level serves as a primary driver for marketing campaign acceptance.<br>
-<strong>Key Finding:</strong> While Education initially appears significant, it is…<strong></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/mktlogit.html" class="no-external">
-<div class="listing-author">
-Your Name
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1766861161453" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
-<div class="thumbnail"><a href="./posts/one.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/correlation-plot.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/one.html" class="no-external">Project One: Housing Price Predictor</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/one.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="./posts/one.html" class="no-external">
-Manually predicting housing prices was taking too long and had a high margin of error. Stakeholders needed a reliable tool.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/one.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1766442198207" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail"><a href="./posts/two.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/two.html" class="no-external">Two</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/two.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="./posts/two.html" class="no-external">
-
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/two.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1767019549129" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
-<div class="thumbnail"><a href="./posts/edaclust.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/edaclust.html" class="no-external">Unveiling Hidden Patterns</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/edaclust.html" class="no-external">Clustering and Statistical Validation of Walmart Store Sales</a>
-</div>
-<div class="delink listing-description"><a href="./posts/edaclust.html" class="no-external">
-<strong>The Goal:</strong> Identify non-obvious store performance trends to assist marketing budget allocation.<br>
-<strong>The Result:</strong> Successfully segmented stores into <strong>4 distinct performance clusters</strong> …<span class="math inline"></span><span class="math inline"></span>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/edaclust.html" class="no-external">
-<div class="listing-author">
-Your Name
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
