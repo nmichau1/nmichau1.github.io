@@ -5,7 +5,7 @@ page-layout: full
 
 ::: {.column-screen .bg-yellow style="padding: 80px 20px; border-bottom: 5px solid black; text-align: center;"}
 # HELLO, I'M NICK.
-### I build data-driven solutions with mathematical rigor and clean code.
+### I combine data architecture, predictive modeling, and strategic analytics to create scalable systems that inform executive decision-making and optimize commercial performance.
 
 <div style="margin-top: 20px;">
   <a href="https://linkedin.com/in/yourprofile" class="btn-hero">LINKEDIN</a>
@@ -16,19 +16,16 @@ page-layout: full
 
 ::: {.column-page style="margin-top: 50px;"}
 :::: {.brutal-card}
-## 🛠️ Tech Stack
+## 🛠️ Areas of Impact
 ::::: {.columns}
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### ⌨️ LANGUAGES & ENG
-<div class="skill-pill">A/B Testing</div>
-<div class="skill-pill">Causal Inference</div>
-<div class="skill-pill">Time-Series</div>
-<div class="skill-pill">Machine Learning</div>
-<div class="skill-pill">Statistical Analysis</div>
-<div class="skill-pill">ETL</div>
-<div class="skill-pill">GIT</div> 
-<div class="skill-pill">WEB APPS</div>
+#### ⌨️ Executive Decision Support & KPI Governance
+##### **Translating complex commercial and product data into trusted executive decisions**
+<div class="skill-pill">Trusted advisor to C-suite and VP leadership on revenue architecture and KPI design</div>
+<div class="skill-pill">Ownership of SSOT logic for executive MBRs across global sales organizations</div>
+<div class="skill-pill">Resolution of cross-functional metric conflicts through shared definitions and governance</div>
+<div class="skill-pill">Decision framing for quota management, forecasting, and long-range planning</div>
 :::
 :::
 ::: {.column width="4%"}
@@ -37,12 +34,12 @@ page-layout: full
 
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### ☁️ DATA WAREHOUSING
-<div class="skill-pill">Snowflake</div>
-<div class="skill-pill">Google Bigquery</div>
-<div class="skill-pill">Time-Series</div>
-<div class="skill-pill">ETL Pipeline Design</div>
-<div class="skill-pill">Data Governance</div>
+#### ☁️ Forecasting, Experimentation & Risk Modeling
+##### **Enabling proactive decisions under uncertainty**
+<div class="skill-pill">Probabilistic demand and revenue forecasting for capacity and budget planning</div>
+<div class="skill-pill">Validation frameworks to support high-stakes resource allocation decisions</div>
+<div class="skill-pill">Scenario analysis and risk modeling for operational optimization</div>
+<div class="skill-pill">Tools: Python, SQL, scikit-learn, Prophet</div>
 :::
 :::
 :::::
@@ -52,14 +49,12 @@ page-layout: full
 
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### 🧪 MODELING & ANALYTICS
-<div class="skill-pill">A/B Testing</div>
-<div class="skill-pill">Causal Inference</div>
-<div class="skill-pill">Time-Series</div>
-<div class="skill-pill">Machine Learning</div>
-<div class="skill-pill">Statistical Analysis</div>
-<div class="skill-pill">MATH</div>
-<div class="skill-pill">STATS</div>
+#### 🧪 Productized Analytics & Data Platforms
+##### **Building analytics systems that scale decision-making**
+<div class="skill-pill">Architected centralized analytics platforms serving sales, product, and operations</div>
+<div class="skill-pill">Productized Python- and SQL-based analytics used by hundreds of stakeholders</div>
+<div class="skill-pill">Enabled self-service analytics while preserving data quality and governance</div>
+<div class="skill-pill">Tools: BigQuery, Snowflake, dbt, Python, Airflow-style orchestration</div>
 :::
 :::
 ::: {.column width="4%"}
@@ -67,121 +62,84 @@ page-layout: full
 
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### 📊 VISUALIZATION
-<div class="skill-pill">Tableau</div>
-<div class="skill-pill">Looker</div>
-<div class="skill-pill">D3.js</div>
-<div class="skill-pill">Dashboard Design</div>
-
+#### 📊 Data Architecture, Quality & Governance
+##### **Ensuring trust, scale, and consistency in enterprise analytics**
+<div class="skill-pill">Metric standardization, lineage, and metadata governance</div>
+<div class="skill-pill">Design of scalable data models for petabyte-scale datasets</div>
+<div class="skill-pill">Privacy-safe analytics architecture and compliance leadership</div>
+<div class="skill-pill">Tools: dbt, Snowflake, BigQuery, SQL optimization</div>
 :::
-
 :::
 :::::
+::::: {.columns}
+
+::: {.column width="48%"}
+::: {.brutal-card}
+#### 📊 Cross-Functional Leadership & Influence
+##### **Leading through influence across product, engineering, and commercial teams**
+<div class= 'skill-pill'>Founding analytics lead for new orgs and initiatives</div>
+<div class="skill-pill">Alignment of Sales, Finance, Product, and Engineering on shared data strategy</div>
+<div class="skill-pill">Technical mentorship and enablement for global teams</div>
+<div class="skill-pill">Org-wide standards and best-practice development</div>
+:::
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+::: {.brutal-card}
+#### 📊 Strategic Translation & Storytelling
+##### **Turning analysis into clear, defensible narratives**
+<div class="skill-pill">Executive-level decision memos and readouts</div>
+<div class="skill-pill">Tradeoff framing and scenario communication</div>
+<div class="skill-pill">Translation of statistical uncertainty into business action</div>
+<div class="skill-pill">Stakeholder-ready storytelling for technical and non-technical audiences</div>
+:::
+:::
+:::::
+
+
 <div style="margin-bottom: 40px;"></div>
 
 ::::
 ::::: {.featured-projects-container}
-# 🚀 FEATURED PROJECTS
+# 🚀 High-Leverage Projects
 
-:::: {.project-grid}
+
 
 ::: {.brutal-card}
-## PROJECT ONE
-**A Data Science Tool**
+#### Standardized Metrics Across 4 Business Units | Freewheel
+##### **Cut monthly business review prep from 2 weeks to 2 hours, enabling C-suite decision-making**
 
-[VIEW PROJECT](#){.btn-hero}
+[VIEW CASE STUDY](#){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
 :::
 
 ::: {.brutal-card}
-## PROJECT TWO
-**Neural Network Viz**
-An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.
-
-[VIEW PROJECT]({{< var project2.url >}}){.btn-hero}
+#### Global Diagnostic & ETL Engine | Google
+##### **Automated anomaly detection for 250+ engineers, reducing MTTR 30% and improving operational insights**
+[VIEW CASE STUDY]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
+:::
+::: {.brutal-card} 
+#### Re-Architecting Commercial Operations Analytics | Freewheel
+##### **Productizing a suite of Python-based probabilistic forecasting and risk models; shifted the organization from descriptive reporting to a proactive risk-mitigation model.**
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
 :::
 ::: {.brutal-card}
-## PROJECT THREE
-**Neural Network Viz**
-An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.
-
-[VIEW PROJECT]({{< var project2.url >}}){.btn-hero}
+#### Feature Effect Analysis: Applied Causal Study
+##### **Applied causal inference to measure feature impact, revealing actionable insights for product optimization**
+[VIEW PERSONAL PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
+:::
+::: {.brutal-card}
+#### Analyst Enablement: Data Science & Analytics | Columbia University
+##### **Delivered a full course, upskilling 50+ analysts to turn complex data into actionable insights**
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
 :::
 
-::::
 
+[SEE MORE PROJECTS ->]({{< var project2.url >}}){.btn-hero}
 :::::
-
-::: {.brutal-card }
-## 🛠️ CURRENTLY BUILDING
-An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.
-I'm currently deep-diving into **Large Language Model fiom RAG pipeline for local documentation.
-[VIEW PROJECT]({{< var project2.url >}}){.btn-hero}
+<div style="margin-bottom: 80px;"></div>
 :::
 
-<div style="margin-bottom: 120px;"></div>
-:::: {.brutal-card}
-## 💼 EXPERIENCE
-::: {.experience-grid}
-
-::: {.brutal-card .exp-main .no-internal-borders }
-## FREEWHEEL 
-
-### Lead Analyst • 2025-Present
-* Founded, architected, and governed the analytics function for a 0-to-1 Commercial Operations business unit. Served as the primary C-Suite advisor to the Chief Commercial Officer (CCO), directing strategic decision support and scaling performance measurement across six sales organizations.
->
->
->
-Architected the end-to-end Sales Performance Monitoring ecosystem, deploying real-time pacing and KPI dashboards across six distinct sales organizations. This initiative streamlined operations by eliminating 120 hrs/week of manual data compilation and directly enabled >$1 billion in annual quota attainment.
-Instituted and governed the unified metrics definition for the CCO’s Monthly Business Review (MBR) and Weekly Readouts. This established the single source of truth for growth and profitability, driving cross-organizational consensus at the C-level within the Comcast ecosystem
-Integrated ML-driven risk models into core commercial workflows to proactively highlight emerging portfolio risks and attention gaps, accelerating critical high-value commercial decisions by 48 hours and improving resource targeting
-
-<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
-> #### ⚡ IMPACT: 20+ HOURS SAVED / WEEK
-> Automated reporting pipelines using Python and SQL, eliminating manual bottleneck for the executive team.
-:::
-
-::: {.brutal-card .exp-small .no-internal-borders .exp-past}
-# Google
-### Data Analyst / Solutions Engineer • 2020-2024
-* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
-* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
-* **Strategy:** Developed performance models for RFP responses and budget reallocation.
-* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
-<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
-:::
-
-::: {.brutal-card .exp-small .no-internal-borders .exp-past}
-# Google
-### Data Analyst • 2019-2020
-* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
-* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
-* **Strategy:** Developed performance models for RFP responses and budget reallocation.
-* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
-<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
-:::
-::: {.brutal-card .exp-small .no-internal-borders .exp-past}
-# Columbia University
-### Technical Instructor • 2019-2020
-* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
-* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
-* **Strategy:** Developed performance models for RFP responses and budget reallocation.
-* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
-<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
-:::
-::: {.brutal-card .exp-small .no-internal-borders .exp-past} 
-# Labelium
-### Analyst • 2018-2019
-* **Metric Impact:** Scaled ROAS by **20%** via a new foundational measurement framework.
-* **Optimization:** Unified PPC, Programmatic, and Social data to establish "Single Source of Truth" performance definitions.
-* **Strategy:** Developed performance models for RFP responses and budget reallocation.
-* **Accuracy:** Standardized KPIs to significantly improve internal forecast precision.
-<div class="skill-chip">Python</div><div class="skill-chip">Tableau</div><div class="skill-chip">AWS</div>
-::::::
-:::
-
-:::
-::::
-<div style="margin-bottom: 120px;"></div>
 ::: {.brutal-footer .column-screen}
 # LET'S WORK TOGETHER
 

@@ -2,7 +2,7 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Portfolio",
+    "title": "Projects",
     "section": "",
     "text": "Causality\n\n\nStatistical Significance Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Search Algorithms Applied to Mazes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesigning a Unified KPI Framework for Enterprise Decision-Making\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarketing A/B Test\n\n\nStatistical Significance Analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPredicting Marketing Success\n\n\nAn Analysis of Education and Income as Predictors of Campaign Receptivity\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\n\nProject One: Housing Price Predictor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTwo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnveiling Hidden Patterns\n\n\nClustering and Statistical Validation of Walmart Store Sales\n\n\n\n\n\n\n\n\nYour Name\n\n\n\n\n\nNo matching items"
   },
@@ -18,7 +18,7 @@
     "href": "index.html#tech-stack",
     "title": "HELLO, I’M NICK.",
     "section": "🛠️ Tech Stack",
-    "text": "🛠️ Tech Stack\n\n\n\n⌨️ LANGUAGES & ENG\n\nA/B Testing\n\n\nCausal Inference\n\n\nTime-Series\n\n\nMachine Learning\n\n\nStatistical Analysis\n\n\nETL\n\n\nGIT\n\n\nWEB APPS\n\n\n\n\n\n\n☁️ DATA WAREHOUSING\n\nSnowflake\n\n\nGoogle Bigquery\n\n\nTime-Series\n\n\nETL Pipeline Design\n\n\nData Governance\n\n\n\n\n\n\n\n🧪 MODELING & ANALYTICS\n\nA/B Testing\n\n\nCausal Inference\n\n\nTime-Series\n\n\nMachine Learning\n\n\nStatistical Analysis\n\n\nMATH\n\n\nSTATS\n\n\n\n\n\n\n📊 VISUALIZATION\n\nTableau\n\n\nLooker\n\n\nD3.js\n\n\nDashboard Design"
+    "text": "🛠️ Tech Stack\n\n\n\n⌨️ Executive Decision Support & KPI Governance\nTranslating complex commercial and product data into trusted executive decisions\n\nTrusted advisor to C-suite and VP leadership on revenue architecture and KPI design\n\n\nOwnership of SSOT logic for executive MBRs across global sales organizations\n\n\nResolution of cross-functional metric conflicts through shared definitions and governance\n\n\nDecision framing for quota management, forecasting, and long-range planning\n\n\n\n\n\n\n☁️ Forecasting, Experimentation & Risk Modeling\nEnabling proactive decisions under uncertainty\n\nProbabilistic demand and revenue forecasting for capacity and budget planning\n\n\nValidation frameworks to support high-stakes resource allocation decisions\n\n\nScenario analysis and risk modeling for operational optimization\n\n\nTools: Python, SQL, scikit-learn, Prophet\n\n\n\n\n\n\n\n🧪 Productized Analytics & Data Platforms\nBuilding analytics systems that scale decision-making\n\nArchitected centralized analytics platforms serving sales, product, and operations\n\n\nProductized Python- and SQL-based analytics used by hundreds of stakeholders\n\n\nEnabled self-service analytics while preserving data quality and governance\n\n\nTools: BigQuery, Snowflake, dbt, Python, Airflow-style orchestration\n\n\n\n\n\n\n📊 Data Architecture, Quality & Governance\nEnsuring trust, scale, and consistency in enterprise analytics\n\nMetric standardization, lineage, and metadata governance\n\n\nDesign of scalable data models for petabyte-scale datasets\n\n\nPrivacy-safe analytics architecture and compliance leadership\n\n\nTools: dbt, Snowflake, BigQuery, SQL optimization/div&gt;\n:::\n\n📊 Cross-Functional Leadership & Influence\nLeading through influence across product, engineering, and commercial teams &lt;div class=Founding analytics lead for new orgs and initiatives\n\n\nAlignment of Sales, Finance, Product, and Engineering on shared data strategy\n\n\nTechnical mentorship and enablement for global teams\n\n\nOrg-wide standards and best-practice development\n\n\n\n📊 Strategic Translation & Storytelling\nTurning analysis into clear, defensible narratives &lt;div class=“skill-pill”Executive-level decision memos and readouts\n\n\n\nTradeoff framing and scenario communication\n\n\nTranslation of statistical uncertainty into business action\n\n\nStakeholder-ready storytelling for technical and non-technical audiences"
   },
   {
     "objectID": "index.html#featured-projects",
@@ -67,7 +67,7 @@
     "href": "index.html#project-two",
     "title": "HELLO, I’M NICK.",
     "section": "PROJECT TWO",
-    "text": "PROJECT TWO\nNeural Network Viz An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.\nVIEW PROJECT"
+    "text": "PROJECT TWO\nGlobal Diagnostic & ETL Engine | Google An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.\nVIEW PROJECT"
   },
   {
     "objectID": "index.html#project-three",
@@ -369,5 +369,33 @@
     "title": "Designing a Unified KPI Framework for Enterprise Decision-Making",
     "section": "The Chief Commercial Officer lacked a consistent, trusted monthly view of performance",
     "text": "The Chief Commercial Officer lacked a consistent, trusted monthly view of performance\nacross four commercial business units, limiting effective resource allocation and executive decision-making. Metric definitions varied by organization, data sources conflicted, and gaps in coverage meant leadership reviews were dominated by reconciling conflicting numbers rather than evaluating tradeoffs or setting direction.\nI designed and led the establishment of a standardized monthly business review, defining shared metric foundations, baseline KPIs, and performance narratives that scaled across business units and created a durable executive-level decision surface."
+  },
+  {
+    "objectID": "index.html#areas-of-impact",
+    "href": "index.html#areas-of-impact",
+    "title": "HELLO, I’M NICK.",
+    "section": "🛠️ Areas of Impact",
+    "text": "🛠️ Areas of Impact\n\n\n\n⌨️ Executive Decision Support & KPI Governance\n\nTranslating complex commercial and product data into trusted executive decisions\n\nTrusted advisor to C-suite and VP leadership on revenue architecture and KPI design\n\n\nOwnership of SSOT logic for executive MBRs across global sales organizations\n\n\nResolution of cross-functional metric conflicts through shared definitions and governance\n\n\nDecision framing for quota management, forecasting, and long-range planning\n\n\n\n\n\n\n\n☁️ Forecasting, Experimentation & Risk Modeling\n\nEnabling proactive decisions under uncertainty\n\nProbabilistic demand and revenue forecasting for capacity and budget planning\n\n\nValidation frameworks to support high-stakes resource allocation decisions\n\n\nScenario analysis and risk modeling for operational optimization\n\n\nTools: Python, SQL, scikit-learn, Prophet\n\n\n\n\n\n\n\n\n🧪 Productized Analytics & Data Platforms\n\nBuilding analytics systems that scale decision-making\n\nArchitected centralized analytics platforms serving sales, product, and operations\n\n\nProductized Python- and SQL-based analytics used by hundreds of stakeholders\n\n\nEnabled self-service analytics while preserving data quality and governance\n\n\nTools: BigQuery, Snowflake, dbt, Python, Airflow-style orchestration\n\n\n\n\n\n\n\n📊 Data Architecture, Quality & Governance\n\nEnsuring trust, scale, and consistency in enterprise analytics\n\nMetric standardization, lineage, and metadata governance\n\n\nDesign of scalable data models for petabyte-scale datasets\n\n\nPrivacy-safe analytics architecture and compliance leadership\n\n\nTools: dbt, Snowflake, BigQuery, SQL optimization\n\n\n\n\n\n\n\n\n📊 Cross-Functional Leadership & Influence\n\nLeading through influence across product, engineering, and commercial teams\n\nFounding analytics lead for new orgs and initiatives\n\n\nAlignment of Sales, Finance, Product, and Engineering on shared data strategy\n\n\nTechnical mentorship and enablement for global teams\n\n\nOrg-wide standards and best-practice development\n\n\n\n\n\n\n\n📊 Strategic Translation & Storytelling\n\nTurning analysis into clear, defensible narratives\n\nExecutive-level decision memos and readouts\n\n\nTradeoff framing and scenario communication\n\n\nTranslation of statistical uncertainty into business action\n\n\nStakeholder-ready storytelling for technical and non-technical audiences"
+  },
+  {
+    "objectID": "index.html#project-four",
+    "href": "index.html#project-four",
+    "title": "HELLO, I’M NICK.",
+    "section": "PROJECT FOUR",
+    "text": "PROJECT FOUR\nNeural Network Viz An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time."
+  },
+  {
+    "objectID": "index.html#designing-a-unified-kpi-framework-for-enterprise-decision-making",
+    "href": "index.html#designing-a-unified-kpi-framework-for-enterprise-decision-making",
+    "title": "HELLO, I’M NICK.",
+    "section": "Designing a Unified KPI Framework for Enterprise Decision-Making",
+    "text": "Designing a Unified KPI Framework for Enterprise Decision-Making\n\nStandardized monthly business review → unified metrics across 4 business units, cut prep from 2 weeks to 2 hours, enabling C-suite focus on decisions.\nVIEW PROJECT"
+  },
+  {
+    "objectID": "index.html#global-diagnostic-etl-engine-google",
+    "href": "index.html#global-diagnostic-etl-engine-google",
+    "title": "HELLO, I’M NICK.",
+    "section": "##Global Diagnostic & ETL Engine | Google",
+    "text": "##Global Diagnostic & ETL Engine | Google\nNeural Network Viz An interactive dashboard using PyTorch and Shiny. Visualizes how weights change during backpropagation in real-time.\nVIEW PROJECT"
   }
 ]

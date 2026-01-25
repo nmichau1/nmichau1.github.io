@@ -889,6 +889,14 @@ code {
   margin-bottom: 15px;
   box-shadow: 3px 3px 0px black;       /* Mini shadow for depth */
 }
+.brutal-card h5 {
+ font-family: 'Courier New', monospace;
+  display: inline-block;
+  padding: 2px 5px;
+  font-size: 1.1rem;
+  margin-right: -10px;
+
+}
 .brutal-card p {        
 
   font-size:15px
