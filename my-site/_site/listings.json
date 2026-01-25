@@ -11,5 +11,18 @@
       "/posts/two.html",
       "/posts/edaclust.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/posts/causality.html",
+      "/posts/mazes.html",
+      "/posts/Unified_KPI.html",
+      "/posts/ab-test.html",
+      "/posts/mktlogit.html",
+      "/posts/one.html",
+      "/posts/two.html",
+      "/posts/edaclust.html"
+    ]
   }
 ]

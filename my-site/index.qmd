@@ -8,7 +8,7 @@ page-layout: full
 ### I combine data architecture, predictive modeling, and strategic analytics to create scalable systems that inform executive decision-making and optimize commercial performance.
 
 <div style="margin-top: 20px;">
-  <a href="https://linkedin.com/in/yourprofile" class="btn-hero">LINKEDIN</a>
+  <a href="https://linkedin.com/in/nicholas-michaud/" class="btn-hero">LINKEDIN</a>
   <a href="https://github.com/yourusername" class="btn-hero">GITHUB</a>
   <a href="resume.pdf" class="btn-hero btn-resume">DOWNLOAD RESUME</a>
 </div>
@@ -20,7 +20,7 @@ page-layout: full
 ::::: {.columns}
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### ⌨️ Executive Decision Support & KPI Governance
+#### Executive Decision Support & KPI Governance
 ##### **Translating complex commercial and product data into trusted executive decisions**
 <div class="skill-pill">Trusted advisor to C-suite and VP leadership on revenue architecture and KPI design</div>
 <div class="skill-pill">Ownership of SSOT logic for executive MBRs across global sales organizations</div>
@@ -34,7 +34,7 @@ page-layout: full
 
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### ☁️ Forecasting, Experimentation & Risk Modeling
+#### Forecasting, Experimentation & Risk Modeling
 ##### **Enabling proactive decisions under uncertainty**
 <div class="skill-pill">Probabilistic demand and revenue forecasting for capacity and budget planning</div>
 <div class="skill-pill">Validation frameworks to support high-stakes resource allocation decisions</div>
@@ -49,7 +49,7 @@ page-layout: full
 
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### 🧪 Productized Analytics & Data Platforms
+#### Productized Analytics & Data Platforms
 ##### **Building analytics systems that scale decision-making**
 <div class="skill-pill">Architected centralized analytics platforms serving sales, product, and operations</div>
 <div class="skill-pill">Productized Python- and SQL-based analytics used by hundreds of stakeholders</div>
@@ -62,7 +62,7 @@ page-layout: full
 
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### 📊 Data Architecture, Quality & Governance
+#### Data Architecture, Quality & Governance
 ##### **Ensuring trust, scale, and consistency in enterprise analytics**
 <div class="skill-pill">Metric standardization, lineage, and metadata governance</div>
 <div class="skill-pill">Design of scalable data models for petabyte-scale datasets</div>
@@ -75,7 +75,7 @@ page-layout: full
 
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### 📊 Cross-Functional Leadership & Influence
+#### Cross-Functional Leadership & Influence
 ##### **Leading through influence across product, engineering, and commercial teams**
 <div class= 'skill-pill'>Founding analytics lead for new orgs and initiatives</div>
 <div class="skill-pill">Alignment of Sales, Finance, Product, and Engineering on shared data strategy</div>
@@ -87,7 +87,7 @@ page-layout: full
 :::
 ::: {.column width="48%"}
 ::: {.brutal-card}
-#### 📊 Strategic Translation & Storytelling
+#### Strategic Translation & Storytelling
 ##### **Turning analysis into clear, defensible narratives**
 <div class="skill-pill">Executive-level decision memos and readouts</div>
 <div class="skill-pill">Tradeoff framing and scenario communication</div>
@@ -110,32 +110,33 @@ page-layout: full
 #### Standardized Metrics Across 4 Business Units | Freewheel
 ##### **Cut monthly business review prep from 2 weeks to 2 hours, enabling C-suite decision-making**
 
-[VIEW CASE STUDY](#){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
+[VIEW PROJECT](http://localhost:6986/projects.html){.btn-hero} <div class="article-tag tag-biz">case study</div>
 :::
 
 ::: {.brutal-card}
 #### Global Diagnostic & ETL Engine | Google
+
 ##### **Automated anomaly detection for 250+ engineers, reducing MTTR 30% and improving operational insights**
-[VIEW CASE STUDY]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Case Study</div>
 :::
 ::: {.brutal-card} 
 #### Re-Architecting Commercial Operations Analytics | Freewheel
 ##### **Productizing a suite of Python-based probabilistic forecasting and risk models; shifted the organization from descriptive reporting to a proactive risk-mitigation model.**
-[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Case Study</div>
 :::
 ::: {.brutal-card}
 #### Feature Effect Analysis: Applied Causal Study
 ##### **Applied causal inference to measure feature impact, revealing actionable insights for product optimization**
-[VIEW PERSONAL PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-viz">Personal Project</div>
 :::
 ::: {.brutal-card}
 #### Analyst Enablement: Data Science & Analytics | Columbia University
 ##### **Delivered a full course, upskilling 50+ analysts to turn complex data into actionable insights**
-[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Buisness Case</div>
+[VIEW PROJECT]({{< var project2.url >}}){.btn-hero} <div class="article-tag tag-biz">Case Study</div>
 :::
 
 
-[SEE MORE PROJECTS ->]({{< var project2.url >}}){.btn-hero}
+[SEE MORE PROJECTS ->]({{< var project2.url >}}){.btn-antihero}
 :::::
 <div style="margin-bottom: 80px;"></div>
 :::
@@ -143,7 +144,6 @@ page-layout: full
 ::: {.brutal-footer .column-screen}
 # LET'S WORK TOGETHER
 
-[EMAIL ME](mailto:yourname@email.com){.btn-hero style="background-color: #CFFC00; color: black;"}
+[EMAIL ME](mailto:nicholas.michaud14@gmail.com){.btn-hero  style="background-color: #CFFC00; color: black;"}
 
-Designed by Nick &bull; Built with Quarto &bull; 2024
 :::

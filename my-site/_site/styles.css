@@ -99,11 +99,35 @@ th {
   text-transform: uppercase;
 }
 
+.btn-antihero {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #FFD700;
+  color: black !important;
+  border: 4px solid black;
+  font-weight: 900;
+  text-decoration: none !important;
+  margin: 10px;
+  box-shadow: 6px 6px 0px black; /* The Neobrutalist Shadow */
+  transition: all 0.1s;
+  text-transform: uppercase;
+}
+
+.btn-antihero:hover {
+  background-color: #FFD700 !important; /* Your Brand Yellow */
+  color: black;
+  transform: translate(2px, 2px);      /* Moves it "into" the shadow */
+  box-shadow: 2px 2px 0px black;       /* Makes the shadow smaller */
+  cursor: pointer;
+}
+
 .btn-hero:hover {
   transform: translate(-3px, -3px);
   box-shadow: 9px 9px 0px black;
-  background-color: #CFFC00; /* Pops lime green on hover */
+  background-color: #CFFC00 !important; /* Pops lime green on hover */
 }
+
+
 /* Special styling for the Resume Button */
 .btn-resume {
   background-color: #2D5BFF !important; /* Electric Blue */
@@ -482,6 +506,7 @@ footer {
 .brutal-footer .btn-hero:hover {
   transform: translate(-4px, -4px);
   box-shadow: 12px 12px 0px #CFFC00 !important;
+  background-color: #CFFC00 !important;
 }
 body, 
 #quarto-container, 
@@ -719,7 +744,7 @@ pre.sourceCode code {
 }
 .tag-biz { background-color: #2D5BFF; } /* Blue for Business */
 .tag-tech { background-color: #FF61D2; } /* Pink for Tech */
-.tag-viz { background-color: #2D5BFF; color: black; } /* Lime for Viz */
+.tag-viz { background-color: #8a8a8a; color: black; } /* Lime for Viz */
 /* Specificity Fix: No space between the classes means "must have both" */
 .article-tag.tag-tech {
   background-color: #FF61D2 !important; /* Neon Pink */
@@ -732,7 +757,7 @@ pre.sourceCode code {
 }
 
 .article-tag.tag-viz {
-  background-color: #2D5BFF!important; /* Lime */
+  background-color: #8a8a8a!important; /* Lime */
   color: white !important;
 }
 .brutal-card h3 {

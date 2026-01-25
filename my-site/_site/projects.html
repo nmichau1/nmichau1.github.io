@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Causality – Nicholas Michaud</title>
+<title>Projects – Nicholas Michaud</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,58 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5b455d6c7cce902ea5f84b1d2a69b1be.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-fc8d3d93f0a84b7619e1f8ff6eb63d42.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6c19c941ea7738e33ab6ff84dd6fcc50.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -87,20 +54,77 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-subtitle','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Nicholas Michaud</span>
     </a>
   </div>
@@ -110,11 +134,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects.html"> 
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -127,31 +151,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#causal-inference-quantifying-the-5-retention-lift-of-auto-renew-features." id="toc-causal-inference-quantifying-the-5-retention-lift-of-auto-renew-features." class="nav-link active" data-scroll-target="#causal-inference-quantifying-the-5-retention-lift-of-auto-renew-features.">Causal Inference: Quantifying the 5% Retention Lift of Auto-Renew Features.</a></li>
-  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link" data-scroll-target="#executive-summary">⚡ EXECUTIVE SUMMARY</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">⚡ Methods</a></li>
-  <li><a href="#the-data-pipeline" id="toc-the-data-pipeline" class="nav-link" data-scroll-target="#the-data-pipeline">⚡ The Data Pipeline</a></li>
-  <li><a href="#key-results" id="toc-key-results" class="nav-link" data-scroll-target="#key-results">📊 KEY RESULTS</a></li>
-  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">🚀 RECOMMENDATIONS</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Causality</h1>
-<p class="subtitle lead">Statistical Significance Analysis</p>
+<h1 class="title">Projects</h1>
 </div>
 
 
@@ -168,77 +175,202 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="causal-inference-quantifying-the-5-retention-lift-of-auto-renew-features." class="level1 project-hero">
-<h1>Causal Inference: Quantifying the 5% Retention Lift of Auto-Renew Features.</h1>
-<strong>Machine Learning • Python • Stats </strong> <br>
-<div class="article-tag tag-biz">
-Buisness Case
+<div class="bg-white">
+
 </div>
-</section>
-<section id="executive-summary" class="level2 brutal-card" style="background: #CFFC00;">
-<h2 class="anchored" data-anchor-id="executive-summary">⚡ EXECUTIVE SUMMARY</h2>
-<p><strong>The Challenge</strong>: Engineered a high-performance pipeline to process 30GB of unstructured customer data into a clean analytical layer. The goal was to isolate the causal impact of “Auto-Renew” features on churn, moving beyond simple correlation.</p>
-<p><strong>The Engineering</strong>: Leveraged DuckDB for lightning-fast local processing of large-scale Parquet/JSON files and dbt for modular, version-controlled transformations and data modeling.</p>
-<p><strong>The Analytics</strong>: Applied Double Machine Learning (DoubleML) to account for self-selection bias, identifying a 5% causal lift in retention directly attributable to auto-billing.</p>
-<p><strong>The Outcome</strong>: Successfully isolated a <strong>5% causal lift</strong> in retention by de-biasing the “Self-Selection” effect (where loyalists are naturally more likely to opt-in). This provides a statistically sound foundation for projecting the ROI of auto-billing incentives. Robustness checks via DoubleML’s orthogonalization confirmed that the effect remained significant even after controlling for 15+ high-dimensional confounding variables (Income, Tenure, Usage Frequency).</p>
-</section>
-<section id="methods" class="level2 brutal-card" style="background: #CFFC00;">
-<h2 class="anchored" data-anchor-id="methods">⚡ Methods</h2>
-<p>Step 1 (Nuisance Models): Using Random Forests to predict who is likely to choose auto-renew based on demographics.</p>
-<p>Step 2 (Orthogonalization): Removing that “predictable” part to look only at the unexpected behavior.</p>
-<p>Step 3 (The Estimator): Running the final causal model on the “cleaned” data. the KKbox dataset we were working in is in the realm of 30gigs in total of mostly unstructured data. In order to perform any sort of analysis or ML on this data, we need some sort of ETL process completed to ensure clean features are being passed to the model.</p>
-<p>In order to solve this problem, I loaded the raw data into duckdb and used dbt to create pipelines pulling from the raw csv, applying cleanliness steps, and ultimately delivering a features table for the followup ML work.</p>
-<p>The ML work is done through querying the clean features table and using the Histogram Gradient Boosters from scikit-learn. THe work was also validated through a placebo test which showed that overfitting not driving the good results we saw.</p>
-<p>Model 1: Predicting the Treatment (Who chooses Auto-Renew?).</p>
-<p>Model 2: Predicting the Outcome (Who Churns?). The Challenge: Selection Bias (The “Why”) This is where you show your seniority. Explain the Confounding Variable.</p>
-<p>Explain that “Power Users” are more likely to both (A) stay long-term and (B) turn on auto-renew.</p>
-<p>A simple regression would “over-credit” auto-renew because it’s picking up on the user’s pre-existing loyalty.</p>
-<p>The Residuals: Analyzing the “unexplained” part of both to find the true causal effect. <strong>$200k ARR increase</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"WA_Fn-UseC_-Telco-Customer-Churn.csv"</span>) </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Index(['user id', 'test group', 'converted', 'total ads', 'most ads day', 'most ads hour'])</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="the-data-pipeline" class="level2 brutal-card" style="background: #CFFC00;">
-<h2 class="anchored" data-anchor-id="the-data-pipeline">⚡ The Data Pipeline</h2>
-<p>I utilized DuckDB to process the 30GB dataset locally, avoiding the overhead and cost of a cloud warehouse while maintaining sub-minute query performance on large-scale unstructured files.</p>
-<p><strong>Extraction</strong>: Processing 30GB of unstructured logs.</p>
-<p><strong>Processing</strong>: Using DuckDB as an OLAP engine to aggregate data in seconds rather than hours.</p>
-<p><strong>Transformation</strong>: dbt models for feature engineering (creating the “Nuisance” variables like tenure, usage frequency, and income proxies).</p>
-<p><strong>Modeling</strong>: DoubleML via Python.</p>
-</section>
-<section id="key-results" class="level3 brutal-card" style="background: #CFFC00;">
-<h3 class="anchored" data-anchor-id="key-results">📊 KEY RESULTS</h3>
-<p>t(f”Theta: -5.78 (p &lt; 0.05)“)”— PLACEBO RESULT —”</p>
-</section>
-<section id="recommendations" class="level2 brutal-card" style="background: #FF61D2;">
-<h2 class="anchored" data-anchor-id="recommendations">🚀 RECOMMENDATIONS</h2>
-<ol type="1">
-<li><strong>Followup Testing:</strong> A/B Lift test to validate results and see if churn can be impacted further through direct action</li>
-<li><strong>Develop KPI:</strong> Assess auto-renew rates as a measure of account health and churn likelihoods.</li>
-<li><strong>Iterate:</strong> Investigate UI methods to incentive auto-renew enablement.</li>
-</ol>
-</section>
-<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-TOP ↑
-</button>
-<script>
-
-// Show/Hide button based on scroll position
-window.onscroll = function() {
-  const btn = document.getElementById("back-to-top");
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    btn.style.display = "block";
-  } else {
-    btn.style.display = "none";
-  }
-};
-</script>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1768793697880" data-listing-reading-time-sort="3" data-listing-word-count-sort="595">
+<div class="thumbnail"><a href="./posts/causality.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/causality.html" class="no-external">Causality</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/causality.html" class="no-external">Statistical Significance Analysis</a>
+</div>
+<div class="delink listing-description"><a href="./posts/causality.html" class="no-external">
+<strong>The Challenge</strong>: Engineered a high-performance pipeline to process 30GB of unstructured customer data into a clean analytical layer. The goal was to isolate the causal impact…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/causality.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1766971659434" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
+<div class="thumbnail"><a href="./posts/mazes.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/mazes.html" class="no-external">Common Search Algorithms Applied to Mazes</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/mazes.html" class="no-external"></a>
+</div>
+<div class="delink listing-description"><a href="./posts/mazes.html" class="no-external">
+A 20x20 maze generated using <strong>Prim’s minimum spanning tree algorithm</strong>. Navigate using common search algorithms to visualize how each finds the solution.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/mazes.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-file-modified-sort="1768793727191" data-listing-reading-time-sort="5" data-listing-word-count-sort="919">
+<div class="thumbnail"><a href="./posts/Unified_KPI.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/Unified_KPI.html" class="no-external">Designing a Unified KPI Framework for Enterprise Decision-Making</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/Unified_KPI.html" class="no-external"></a>
+</div>
+<div class="delink listing-description"><a href="./posts/Unified_KPI.html" class="no-external">
+The Chief Commercial Officer lacked a consistent, trusted monthly view of performance across four commercial business units, limiting effective resource allocation and…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/Unified_KPI.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-file-modified-sort="1767027857504" data-listing-reading-time-sort="6" data-listing-word-count-sort="1151">
+<div class="thumbnail"><a href="./posts/ab-test.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/ab-test.html" class="no-external">Marketing A/B Test</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/ab-test.html" class="no-external">Statistical Significance Analysis</a>
+</div>
+<div class="delink listing-description"><a href="./posts/ab-test.html" class="no-external">
+<strong>Python / A/B Test / Binomial Dist. / Proportions</strong>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/ab-test.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-file-modified-sort="1767027972920" data-listing-reading-time-sort="1" data-listing-word-count-sort="105">
+<div class="thumbnail"><a href="./posts/mktlogit.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/mktlogit.html" class="no-external">Predicting Marketing Success</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/mktlogit.html" class="no-external">An Analysis of Education and Income as Predictors of Campaign Receptivity</a>
+</div>
+<div class="delink listing-description"><a href="./posts/mktlogit.html" class="no-external">
+<strong>The Objective:</strong> Determine if Education level serves as a primary driver for marketing campaign acceptance.<br>
+<strong>Key Finding:</strong> While Education initially appears significant, it is…<strong></strong>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/mktlogit.html" class="no-external">
+<div class="listing-author">
+Your Name
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-file-modified-sort="1766861161453" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
+<div class="thumbnail"><a href="./posts/one.html" class="no-external">
+
+<p class="card-img-top"><img src="posts/correlation-plot.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/one.html" class="no-external">Project One: Housing Price Predictor</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/one.html" class="no-external"></a>
+</div>
+<div class="delink listing-description"><a href="./posts/one.html" class="no-external">
+Manually predicting housing prices was taking too long and had a high margin of error. Stakeholders needed a reliable tool.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/one.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-file-modified-sort="1766442198207" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail"><a href="./posts/two.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/two.html" class="no-external">Two</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/two.html" class="no-external"></a>
+</div>
+<div class="delink listing-description"><a href="./posts/two.html" class="no-external">
+
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/two.html" class="no-external">
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-file-modified-sort="1767019549129" data-listing-reading-time-sort="1" data-listing-word-count-sort="190">
+<div class="thumbnail"><a href="./posts/edaclust.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/edaclust.html" class="no-external">Unveiling Hidden Patterns</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/edaclust.html" class="no-external">Clustering and Statistical Validation of Walmart Store Sales</a>
+</div>
+<div class="delink listing-description"><a href="./posts/edaclust.html" class="no-external">
+<strong>The Goal:</strong> Identify non-obvious store performance trends to assist marketing budget allocation.<br>
+<strong>The Result:</strong> Successfully segmented stores into <strong>4 distinct performance clusters</strong> …<span class="math inline"></span><span class="math inline"></span>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/edaclust.html" class="no-external">
+<div class="listing-author">
+Your Name
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
